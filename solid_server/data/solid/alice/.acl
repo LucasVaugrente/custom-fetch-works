@@ -1,0 +1,15 @@
+@prefix acl: <http://www.w3.org/ns/auth/acl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<#ReadAccess>
+    a acl:Authorization ;
+    acl:agentClass foaf:Agent ;  # Public access
+    acl:accessTo <profile/card.ttl> ;
+    acl:default <./> ;
+    acl:mode acl:Read .
+
+<#Owner>
+    a acl:Authorization ;
+    acl:agent <http://localhost:3000/alice/profile/card#me> ;
+    acl:accessTo <./> ;
+    acl:mode acl:Read, acl:Write, acl:Control .

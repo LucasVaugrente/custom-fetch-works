@@ -1,0 +1,6 @@
+PREFIX ex: <http://www.example.com/>
+PREFIX ocp: <http://www.oc.com/>
+
+<http://vendor1.fr> ex:hasProduct <http://vendor1.fr/product1> .
+<http://vendor1.fr/product1> ex:sameAs ocp:product1 .
+<http://vendor1.fr/product1> ex:hasPrice 42 .

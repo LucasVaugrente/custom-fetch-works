@@ -1,0 +1,18 @@
+{
+  "name": "comunica-custom-fetch2",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@comunica/logger-void": "^4.1.0",
+    "@comunica/query-sparql": "^4.1.0",
+    "@inrupt/solid-client-authn-core": "^2.3.0",
+    "express": "^4.21.2",
+    "http-proxy-middleware": "^3.0.3",
+    "jose": "^6.0.10",
+    "node-fetch": "^2.6.7"
+  }
+}

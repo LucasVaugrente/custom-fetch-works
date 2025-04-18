@@ -1,0 +1,5 @@
+PREFIX ex: <http://www.example.com/>
+select * {
+    ?s ex:sameAs ?product . 
+    ?s ex:hasPrice ?price .
+}

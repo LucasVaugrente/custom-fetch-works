@@ -1,0 +1,13 @@
+{
+  "name": "comunica-custom-fetch2",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "genToken.js",
+  "scripts": {
+    "start": "node genToken.js"
+  },
+  "dependencies": {
+    "@inrupt/solid-client-authn-core": "^2.3.0",
+    "jose": "^6.0.10"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-optimize-query-operation-construct-distinct/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-optimize-query-operation-construct-distinct",
+  "@type": "Module",
+  "requireName": "@comunica/actor-optimize-query-operation-construct-distinct",
+  "import": [
+    "caoqocd:components/ActorOptimizeQueryOperationConstructDistinct.jsonld"
+  ]
+}

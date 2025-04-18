@@ -1,0 +1,64 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "carjws": "npmd:@comunica/actor-rdf-join-wrap-stream/^4.0.0/",
+      "ActorRdfJoinWrapStream": {
+        "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorIteratorTransform": {
+            "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_mediatorIteratorTransform"
+          },
+          "args_mediatorJoin": {
+            "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_mediatorJoin"
+          },
+          "args_mediatorJoinSelectivity": {
+            "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_mediatorJoinSelectivity"
+          },
+          "args_name": {
+            "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_name"
+          },
+          "args_bus": {
+            "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorIteratorTransform": {
+            "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_mediatorIteratorTransform"
+          },
+          "mediatorJoin": {
+            "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_mediatorJoin"
+          },
+          "mediatorJoinSelectivity": {
+            "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_mediatorJoinSelectivity"
+          },
+          "name": {
+            "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_name"
+          },
+          "bus": {
+            "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorRdfJoinWrapStreamArgs": {
+        "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#IActorRdfJoinWrapStreamArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

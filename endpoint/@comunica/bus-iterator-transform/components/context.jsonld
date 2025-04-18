@@ -1,0 +1,89 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cbit": "npmd:@comunica/bus-iterator-transform/^4.0.0/",
+      "ActorIteratorTransform": {
+        "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform",
+        "@prefix": true,
+        "@context": {
+          "args_wraps": {
+            "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args_wraps",
+            "@container": "@list"
+          },
+          "args_name": {
+            "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args_name"
+          },
+          "args_bus": {
+            "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args_beforeActors",
+            "@container": "@list"
+          },
+          "wraps": {
+            "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args_wraps",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args_name"
+          },
+          "bus": {
+            "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActionIteratorTransform": {
+        "@id": "cbit:components/ActorIteratorTransform.jsonld#IActionIteratorTransform",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IActionIteratorTransformBindings": {
+        "@id": "cbit:components/ActorIteratorTransform.jsonld#IActionIteratorTransformBindings",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IActionIteratorTransformQuads": {
+        "@id": "cbit:components/ActorIteratorTransform.jsonld#IActionIteratorTransformQuads",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IActorIteratorTransformOutput": {
+        "@id": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformOutput",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IActorIteratorTransformBindingsOutput": {
+        "@id": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformBindingsOutput",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IActorIteratorTransformQuadOutput": {
+        "@id": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformQuadOutput",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ITransformIteratorOutput": {
+        "@id": "cbit:components/ActorIteratorTransform.jsonld#ITransformIteratorOutput",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IActorIteratorTransformArgs": {
+        "@id": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-source-identify-hypermedia-annotate-source/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-source-identify-hypermedia-annotate-source",
+  "@type": "Module",
+  "requireName": "@comunica/actor-query-source-identify-hypermedia-annotate-source",
+  "import": [
+    "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld",
+    "caqsihas:components/QuerySourceAddSourceAttribution.jsonld"
+  ]
+}

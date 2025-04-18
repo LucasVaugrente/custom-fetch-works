@@ -1,0 +1,226 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-source-identify-hypermedia-annotate-source/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-query-source-identify-hypermedia/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-source-identify-hypermedia-annotate-source",
+  "components": [
+    {
+      "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#ActorQuerySourceIdentifyHypermediaAnnotateSource",
+      "@type": "Class",
+      "requireElement": "ActorQuerySourceIdentifyHypermediaAnnotateSource",
+      "extends": [
+        "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia"
+      ],
+      "comment": "A comunica None Query Source Identify Hypermedia Actor.",
+      "parameters": [
+        {
+          "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#ActorQuerySourceIdentifyHypermediaAnnotateSource_args_mediatorMergeBindingsContext",
+          "range": "cc:components/Mediator.jsonld#Mediator",
+          "comment": "A mediator for creating binding context merge handlers"
+        },
+        {
+          "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#ActorQuerySourceIdentifyHypermediaAnnotateSource_args_mediatorQuerySourceIdentifyHypermedia",
+          "range": "cc:components/Mediator.jsonld#Mediator",
+          "comment": "A mediator to create the wrapped query source"
+        },
+        {
+          "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#ActorQuerySourceIdentifyHypermediaAnnotateSource_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#ActorQuerySourceIdentifyHypermediaAnnotateSource_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_default_bus",
+            "@type": "cc:components/Bus.jsonld#Bus"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#ActorQuerySourceIdentifyHypermediaAnnotateSource_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "Query source hypermedia identification failed: none of the configured actors were able to identify ${action.url}",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#ActorQuerySourceIdentifyHypermediaAnnotateSource_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#ActorQuerySourceIdentifyHypermediaAnnotateSource__member_mediatorMergeBindingsContext",
+          "memberFieldName": "mediatorMergeBindingsContext",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#ActorQuerySourceIdentifyHypermediaAnnotateSource__member_mediatorQuerySourceIdentifyHypermedia",
+          "memberFieldName": "mediatorQuerySourceIdentifyHypermedia",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#ActorQuerySourceIdentifyHypermediaAnnotateSource__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#ActorQuerySourceIdentifyHypermediaAnnotateSource__member_testMetadata",
+          "memberFieldName": "testMetadata"
+        },
+        {
+          "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#ActorQuerySourceIdentifyHypermediaAnnotateSource__member_run",
+          "memberFieldName": "run"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#ActorQuerySourceIdentifyHypermediaAnnotateSource_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "mediatorMergeBindingsContext",
+              "value": {
+                "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#ActorQuerySourceIdentifyHypermediaAnnotateSource_args_mediatorMergeBindingsContext"
+              }
+            },
+            {
+              "keyRaw": "mediatorQuerySourceIdentifyHypermedia",
+              "value": {
+                "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#ActorQuerySourceIdentifyHypermediaAnnotateSource_args_mediatorQuerySourceIdentifyHypermedia"
+              }
+            },
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#ActorQuerySourceIdentifyHypermediaAnnotateSource_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#ActorQuerySourceIdentifyHypermediaAnnotateSource_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#ActorQuerySourceIdentifyHypermediaAnnotateSource_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#ActorQuerySourceIdentifyHypermediaAnnotateSource_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#IActorQuerySourceIdentifyHypermediaAnnotateSourceArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IActorQuerySourceIdentifyHypermediaAnnotateSourceArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#IActorQuerySourceIdentifyHypermediaAnnotateSourceArgs__member_mediatorMergeBindingsContext",
+          "memberFieldName": "mediatorMergeBindingsContext"
+        },
+        {
+          "@id": "caqsihas:components/ActorQuerySourceIdentifyHypermediaAnnotateSource.jsonld#IActorQuerySourceIdentifyHypermediaAnnotateSourceArgs__member_mediatorQuerySourceIdentifyHypermedia",
+          "memberFieldName": "mediatorQuerySourceIdentifyHypermedia"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

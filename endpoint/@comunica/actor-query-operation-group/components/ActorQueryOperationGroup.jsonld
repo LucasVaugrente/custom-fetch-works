@@ -1,0 +1,243 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-operation-group/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-query-operation/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-operation-group",
+  "components": [
+    {
+      "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup",
+      "@type": "Class",
+      "requireElement": "ActorQueryOperationGroup",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "cbqo:components/ActorQueryOperationTypedMediated.jsonld#ActorQueryOperationTypedMediated",
+          "genericTypeInstances": [
+            "urn:npm:sparqlalgebrajs:Group"
+          ]
+        }
+      ],
+      "comment": "A comunica Group Query Operation Actor.",
+      "parameters": [
+        {
+          "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup_args_mediatorMergeBindingsContext",
+          "range": "cc:components/Mediator.jsonld#Mediator",
+          "comment": "A mediator for creating binding context merge handlers"
+        },
+        {
+          "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup_args_mediatorBindingsAggregatorFactory",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup_args_mediatorQueryOperation",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbqo:components/ActorQueryOperation.jsonld#ActorQueryOperation_default_bus",
+            "@type": "cbqo:components/BusQueryOperation.jsonld#BusQueryOperation"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "Query operation processing failed: none of the configured actors were able to handle the operation type ${action.operation.type}",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup__member_mediatorMergeBindingsContext",
+          "memberFieldName": "mediatorMergeBindingsContext",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup__member_mediatorBindingsAggregatorFactory",
+          "memberFieldName": "mediatorBindingsAggregatorFactory"
+        },
+        {
+          "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup__member_testOperation",
+          "memberFieldName": "testOperation"
+        },
+        {
+          "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup__member_runOperation",
+          "memberFieldName": "runOperation"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "mediatorMergeBindingsContext",
+              "value": {
+                "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup_args_mediatorMergeBindingsContext"
+              }
+            },
+            {
+              "keyRaw": "mediatorBindingsAggregatorFactory",
+              "value": {
+                "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup_args_mediatorBindingsAggregatorFactory"
+              }
+            },
+            {
+              "keyRaw": "mediatorQueryOperation",
+              "value": {
+                "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup_args_mediatorQueryOperation"
+              }
+            },
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "caqog:components/ActorQueryOperationGroup.jsonld#ActorQueryOperationGroup_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "caqog:components/ActorQueryOperationGroup.jsonld#IActorQueryOperationGroupArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IActorQueryOperationGroupArgs",
+      "extends": [
+        "cbqo:components/ActorQueryOperationTypedMediated.jsonld#IActorQueryOperationTypedMediatedArgs"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "caqog:components/ActorQueryOperationGroup.jsonld#IActorQueryOperationGroupArgs__member_mediatorMergeBindingsContext",
+          "memberFieldName": "mediatorMergeBindingsContext"
+        },
+        {
+          "@id": "caqog:components/ActorQueryOperationGroup.jsonld#IActorQueryOperationGroupArgs__member_mediatorBindingsAggregatorFactory",
+          "memberFieldName": "mediatorBindingsAggregatorFactory"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

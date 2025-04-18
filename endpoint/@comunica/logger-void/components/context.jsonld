@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "clv": "npmd:@comunica/logger-void/^4.0.0/",
+      "LoggerVoid": {
+        "@id": "clv:components/LoggerVoid.jsonld#LoggerVoid",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

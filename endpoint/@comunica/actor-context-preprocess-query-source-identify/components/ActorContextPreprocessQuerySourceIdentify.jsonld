@@ -1,0 +1,287 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-context-preprocess-query-source-identify/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-http-invalidate/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-context-preprocess/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-context-preprocess-query-source-identify",
+  "components": [
+    {
+      "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify",
+      "@type": "Class",
+      "requireElement": "ActorContextPreprocessQuerySourceIdentify",
+      "extends": [
+        "cbcp:components/ActorContextPreprocess.jsonld#ActorContextPreprocess"
+      ],
+      "comment": "A comunica Query Source Identify Context Preprocess Actor.",
+      "parameters": [
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify_args_cacheSize",
+          "range": "xsd:integer",
+          "default": "100",
+          "comment": "The maximum number of entries in the LRU cache, set to 0 to disable."
+        },
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify_args_httpInvalidator",
+          "range": "cbhi:components/ActorHttpInvalidateListenable.jsonld#ActorHttpInvalidateListenable",
+          "default": {
+            "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#IActorContextPreprocessQuerySourceIdentifyArgs_default_invalidator",
+            "@type": "npmd:@comunica/bus-http-invalidate/^4.0.0/components/ActorHttpInvalidateListenable.jsonld#ActorHttpInvalidateListenable"
+          },
+          "comment": "An actor that listens to HTTP invalidation events"
+        },
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify_args_mediatorQuerySourceIdentify",
+          "range": "cc:components/Mediator.jsonld#Mediator",
+          "comment": "Mediator for identifying query sources."
+        },
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify_args_mediatorContextPreprocess",
+          "range": "cc:components/Mediator.jsonld#Mediator",
+          "comment": "The context processing combinator"
+        },
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbcp:components/ActorContextPreprocess.jsonld#ActorContextPreprocess_default_bus",
+            "@type": "cc:components/Bus.jsonld#Bus"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "Context preprocessing failed",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify__member_cacheSize",
+          "memberFieldName": "cacheSize",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify__member_httpInvalidator",
+          "memberFieldName": "httpInvalidator",
+          "range": "cbhi:components/ActorHttpInvalidateListenable.jsonld#ActorHttpInvalidateListenable"
+        },
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify__member_mediatorQuerySourceIdentify",
+          "memberFieldName": "mediatorQuerySourceIdentify",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify__member_mediatorContextPreprocess",
+          "memberFieldName": "mediatorContextPreprocess",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify__member_cache",
+          "memberFieldName": "cache",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify__member_test",
+          "memberFieldName": "test"
+        },
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify__member_run",
+          "memberFieldName": "run"
+        },
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify__member_expandSource",
+          "memberFieldName": "expandSource"
+        },
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify__member_identifySource",
+          "memberFieldName": "identifySource"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "cacheSize",
+              "value": {
+                "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify_args_cacheSize"
+              }
+            },
+            {
+              "keyRaw": "httpInvalidator",
+              "value": {
+                "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify_args_httpInvalidator"
+              }
+            },
+            {
+              "keyRaw": "mediatorQuerySourceIdentify",
+              "value": {
+                "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify_args_mediatorQuerySourceIdentify"
+              }
+            },
+            {
+              "keyRaw": "mediatorContextPreprocess",
+              "value": {
+                "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify_args_mediatorContextPreprocess"
+              }
+            },
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#ActorContextPreprocessQuerySourceIdentify_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#IActorContextPreprocessQuerySourceIdentifyArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IActorContextPreprocessQuerySourceIdentifyArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#IActorContextPreprocessQuerySourceIdentifyArgs__member_cacheSize",
+          "memberFieldName": "cacheSize"
+        },
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#IActorContextPreprocessQuerySourceIdentifyArgs__member_httpInvalidator",
+          "memberFieldName": "httpInvalidator"
+        },
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#IActorContextPreprocessQuerySourceIdentifyArgs__member_mediatorQuerySourceIdentify",
+          "memberFieldName": "mediatorQuerySourceIdentify"
+        },
+        {
+          "@id": "cacpqsi:components/ActorContextPreprocessQuerySourceIdentify.jsonld#IActorContextPreprocessQuerySourceIdentifyArgs__member_mediatorContextPreprocess",
+          "memberFieldName": "mediatorContextPreprocess"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-bindings-aggregator-factory-sum/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-bindings-aggregator-factory-sum",
+  "@type": "Module",
+  "requireName": "@comunica/actor-bindings-aggregator-factory-sum",
+  "import": [
+    "cabafs:components/ActorBindingsAggregatorFactorySum.jsonld",
+    "cabafs:components/SumAggregator.jsonld"
+  ]
+}

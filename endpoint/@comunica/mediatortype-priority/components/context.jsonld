@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cmp": "npmd:@comunica/mediatortype-priority/^4.0.0/",
+      "IMediatorTypePriority": {
+        "@id": "cmp:components/MediatorTypePriority.jsonld#IMediatorTypePriority",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

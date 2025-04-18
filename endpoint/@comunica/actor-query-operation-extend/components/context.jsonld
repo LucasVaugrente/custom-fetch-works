@@ -1,0 +1,58 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caqoe": "npmd:@comunica/actor-query-operation-extend/^4.0.0/",
+      "ActorQueryOperationExtend": {
+        "@id": "caqoe:components/ActorQueryOperationExtend.jsonld#ActorQueryOperationExtend",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorExpressionEvaluatorFactory": {
+            "@id": "caqoe:components/ActorQueryOperationExtend.jsonld#ActorQueryOperationExtend_args_mediatorExpressionEvaluatorFactory"
+          },
+          "args_mediatorQueryOperation": {
+            "@id": "caqoe:components/ActorQueryOperationExtend.jsonld#ActorQueryOperationExtend_args_mediatorQueryOperation"
+          },
+          "args_name": {
+            "@id": "caqoe:components/ActorQueryOperationExtend.jsonld#ActorQueryOperationExtend_args_name"
+          },
+          "args_bus": {
+            "@id": "caqoe:components/ActorQueryOperationExtend.jsonld#ActorQueryOperationExtend_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caqoe:components/ActorQueryOperationExtend.jsonld#ActorQueryOperationExtend_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caqoe:components/ActorQueryOperationExtend.jsonld#ActorQueryOperationExtend_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorExpressionEvaluatorFactory": {
+            "@id": "caqoe:components/ActorQueryOperationExtend.jsonld#ActorQueryOperationExtend_args_mediatorExpressionEvaluatorFactory"
+          },
+          "mediatorQueryOperation": {
+            "@id": "caqoe:components/ActorQueryOperationExtend.jsonld#ActorQueryOperationExtend_args_mediatorQueryOperation"
+          },
+          "name": {
+            "@id": "caqoe:components/ActorQueryOperationExtend.jsonld#ActorQueryOperationExtend_args_name"
+          },
+          "bus": {
+            "@id": "caqoe:components/ActorQueryOperationExtend.jsonld#ActorQueryOperationExtend_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caqoe:components/ActorQueryOperationExtend.jsonld#ActorQueryOperationExtend_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caqoe:components/ActorQueryOperationExtend.jsonld#ActorQueryOperationExtend_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorQueryOperationExtendArgs": {
+        "@id": "caqoe:components/ActorQueryOperationExtend.jsonld#IActorQueryOperationExtendArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

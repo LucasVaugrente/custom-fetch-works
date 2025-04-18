@@ -1,0 +1,51 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cbqsi": "npmd:@comunica/bus-query-source-identify/^4.0.0/",
+      "ActorQuerySourceIdentify": {
+        "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify_args_name"
+          },
+          "args_bus": {
+            "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify_args_name"
+          },
+          "bus": {
+            "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActionQuerySourceIdentify": {
+        "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#IActionQuerySourceIdentify",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IActorQuerySourceIdentifyOutput": {
+        "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#IActorQuerySourceIdentifyOutput",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

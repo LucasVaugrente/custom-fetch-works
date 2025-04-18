@@ -1,0 +1,12 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-bindings-aggregator-factory-group-concat/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-bindings-aggregator-factory-group-concat",
+  "@type": "Module",
+  "requireName": "@comunica/actor-bindings-aggregator-factory-group-concat",
+  "import": [
+    "cabafgc:components/ActorBindingsAggregatorFactoryGroupConcat.jsonld",
+    "cabafgc:components/GroupConcatAggregator.jsonld"
+  ]
+}

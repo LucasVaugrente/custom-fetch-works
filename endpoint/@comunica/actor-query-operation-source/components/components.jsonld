@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-operation-source/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-operation-source",
+  "@type": "Module",
+  "requireName": "@comunica/actor-query-operation-source",
+  "import": [
+    "caqos:components/ActorQueryOperationSource.jsonld"
+  ]
+}

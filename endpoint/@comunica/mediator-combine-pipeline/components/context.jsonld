@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cmcp": "npmd:@comunica/mediator-combine-pipeline/^4.0.0/",
+      "MediatorCombinePipeline": {
+        "@id": "cmcp:components/MediatorCombinePipeline.jsonld#MediatorCombinePipeline",
+        "@prefix": true,
+        "@context": {
+          "args_filterFailures": {
+            "@id": "cmcp:components/MediatorCombinePipeline.jsonld#MediatorCombinePipeline_args_filterFailures"
+          },
+          "args_field": {
+            "@id": "cmcp:components/MediatorCombinePipeline.jsonld#MediatorCombinePipeline_args_field"
+          },
+          "args_order": {
+            "@id": "cmcp:components/MediatorCombinePipeline.jsonld#MediatorCombinePipeline_args_order"
+          },
+          "args_name": {
+            "@id": "cmcp:components/MediatorCombinePipeline.jsonld#MediatorCombinePipeline_args_name"
+          },
+          "args_bus": {
+            "@id": "cmcp:components/MediatorCombinePipeline.jsonld#MediatorCombinePipeline_args_bus"
+          },
+          "filterFailures": {
+            "@id": "cmcp:components/MediatorCombinePipeline.jsonld#MediatorCombinePipeline_args_filterFailures"
+          },
+          "field": {
+            "@id": "cmcp:components/MediatorCombinePipeline.jsonld#MediatorCombinePipeline_args_field"
+          },
+          "order": {
+            "@id": "cmcp:components/MediatorCombinePipeline.jsonld#MediatorCombinePipeline_args_order"
+          },
+          "name": {
+            "@id": "cmcp:components/MediatorCombinePipeline.jsonld#MediatorCombinePipeline_args_name"
+          },
+          "bus": {
+            "@id": "cmcp:components/MediatorCombinePipeline.jsonld#MediatorCombinePipeline_args_bus"
+          }
+        }
+      },
+      "IMediatorCombinePipelineArgs": {
+        "@id": "cmcp:components/MediatorCombinePipeline.jsonld#IMediatorCombinePipelineArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

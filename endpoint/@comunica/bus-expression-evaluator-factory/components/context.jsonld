@@ -1,0 +1,74 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cbeef": "npmd:@comunica/bus-expression-evaluator-factory/^4.0.0/",
+      "ActorExpressionEvaluatorFactory": {
+        "@id": "cbeef:components/ActorExpressionEvaluatorFactory.jsonld#ActorExpressionEvaluatorFactory",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorQueryOperation": {
+            "@id": "cbeef:components/ActorExpressionEvaluatorFactory.jsonld#ActorExpressionEvaluatorFactory_args_mediatorQueryOperation"
+          },
+          "args_mediatorFunctionFactory": {
+            "@id": "cbeef:components/ActorExpressionEvaluatorFactory.jsonld#ActorExpressionEvaluatorFactory_args_mediatorFunctionFactory"
+          },
+          "args_mediatorMergeBindingsContext": {
+            "@id": "cbeef:components/ActorExpressionEvaluatorFactory.jsonld#ActorExpressionEvaluatorFactory_args_mediatorMergeBindingsContext"
+          },
+          "args_name": {
+            "@id": "cbeef:components/ActorExpressionEvaluatorFactory.jsonld#ActorExpressionEvaluatorFactory_args_name"
+          },
+          "args_bus": {
+            "@id": "cbeef:components/ActorExpressionEvaluatorFactory.jsonld#ActorExpressionEvaluatorFactory_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cbeef:components/ActorExpressionEvaluatorFactory.jsonld#ActorExpressionEvaluatorFactory_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cbeef:components/ActorExpressionEvaluatorFactory.jsonld#ActorExpressionEvaluatorFactory_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorQueryOperation": {
+            "@id": "cbeef:components/ActorExpressionEvaluatorFactory.jsonld#ActorExpressionEvaluatorFactory_args_mediatorQueryOperation"
+          },
+          "mediatorFunctionFactory": {
+            "@id": "cbeef:components/ActorExpressionEvaluatorFactory.jsonld#ActorExpressionEvaluatorFactory_args_mediatorFunctionFactory"
+          },
+          "mediatorMergeBindingsContext": {
+            "@id": "cbeef:components/ActorExpressionEvaluatorFactory.jsonld#ActorExpressionEvaluatorFactory_args_mediatorMergeBindingsContext"
+          },
+          "name": {
+            "@id": "cbeef:components/ActorExpressionEvaluatorFactory.jsonld#ActorExpressionEvaluatorFactory_args_name"
+          },
+          "bus": {
+            "@id": "cbeef:components/ActorExpressionEvaluatorFactory.jsonld#ActorExpressionEvaluatorFactory_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cbeef:components/ActorExpressionEvaluatorFactory.jsonld#ActorExpressionEvaluatorFactory_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cbeef:components/ActorExpressionEvaluatorFactory.jsonld#ActorExpressionEvaluatorFactory_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActionExpressionEvaluatorFactory": {
+        "@id": "cbeef:components/ActorExpressionEvaluatorFactory.jsonld#IActionExpressionEvaluatorFactory",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IActorExpressionEvaluatorFactoryOutput": {
+        "@id": "cbeef:components/ActorExpressionEvaluatorFactory.jsonld#IActorExpressionEvaluatorFactoryOutput",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IActorExpressionEvaluatorFactoryArgs": {
+        "@id": "cbeef:components/ActorExpressionEvaluatorFactory.jsonld#IActorExpressionEvaluatorFactoryArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

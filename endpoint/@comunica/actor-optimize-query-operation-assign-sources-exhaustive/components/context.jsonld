@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caoqoase": "npmd:@comunica/actor-optimize-query-operation-assign-sources-exhaustive/^4.0.0/",
+      "ActorOptimizeQueryOperationAssignSourcesExhaustive": {
+        "@id": "caoqoase:components/ActorOptimizeQueryOperationAssignSourcesExhaustive.jsonld#ActorOptimizeQueryOperationAssignSourcesExhaustive",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "caoqoase:components/ActorOptimizeQueryOperationAssignSourcesExhaustive.jsonld#ActorOptimizeQueryOperationAssignSourcesExhaustive_args_name"
+          },
+          "args_bus": {
+            "@id": "caoqoase:components/ActorOptimizeQueryOperationAssignSourcesExhaustive.jsonld#ActorOptimizeQueryOperationAssignSourcesExhaustive_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caoqoase:components/ActorOptimizeQueryOperationAssignSourcesExhaustive.jsonld#ActorOptimizeQueryOperationAssignSourcesExhaustive_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caoqoase:components/ActorOptimizeQueryOperationAssignSourcesExhaustive.jsonld#ActorOptimizeQueryOperationAssignSourcesExhaustive_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "caoqoase:components/ActorOptimizeQueryOperationAssignSourcesExhaustive.jsonld#ActorOptimizeQueryOperationAssignSourcesExhaustive_args_name"
+          },
+          "bus": {
+            "@id": "caoqoase:components/ActorOptimizeQueryOperationAssignSourcesExhaustive.jsonld#ActorOptimizeQueryOperationAssignSourcesExhaustive_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caoqoase:components/ActorOptimizeQueryOperationAssignSourcesExhaustive.jsonld#ActorOptimizeQueryOperationAssignSourcesExhaustive_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caoqoase:components/ActorOptimizeQueryOperationAssignSourcesExhaustive.jsonld#ActorOptimizeQueryOperationAssignSourcesExhaustive_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

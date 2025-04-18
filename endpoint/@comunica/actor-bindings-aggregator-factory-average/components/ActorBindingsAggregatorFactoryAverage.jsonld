@@ -1,0 +1,217 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-bindings-aggregator-factory-average/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-bindings-aggregator-factory/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-bindings-aggregator-factory-average",
+  "components": [
+    {
+      "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage",
+      "@type": "Class",
+      "requireElement": "ActorBindingsAggregatorFactoryAverage",
+      "extends": [
+        "cbbaf:components/ActorBindingsAggregatorFactory.jsonld#ActorBindingsAggregatorFactory"
+      ],
+      "comment": "A comunica Average Expression Evaluator Aggregate Actor.",
+      "parameters": [
+        {
+          "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_mediatorFunctionFactory",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_mediatorExpressionEvaluatorFactory",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbbaf:components/ActorBindingsAggregatorFactory.jsonld#ActorBindingsAggregatorFactory_default_bus",
+            "@type": "cc:components/Bus.jsonld#Bus"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "Creation of Aggregator failed: none of the configured actors were able to handle ${action.expr.aggregator}",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage__member_mediatorFunctionFactory",
+          "memberFieldName": "mediatorFunctionFactory"
+        },
+        {
+          "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage__member_test",
+          "memberFieldName": "test"
+        },
+        {
+          "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage__member_run",
+          "memberFieldName": "run"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "mediatorFunctionFactory",
+              "value": {
+                "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_mediatorFunctionFactory"
+              }
+            },
+            {
+              "keyRaw": "mediatorExpressionEvaluatorFactory",
+              "value": {
+                "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_mediatorExpressionEvaluatorFactory"
+              }
+            },
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#IActorBindingsAggregatorFactoryAverageArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IActorBindingsAggregatorFactoryAverageArgs",
+      "extends": [
+        "cbbaf:components/ActorBindingsAggregatorFactory.jsonld#IActorBindingsAggregatorFactoryArgs"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#IActorBindingsAggregatorFactoryAverageArgs__member_mediatorFunctionFactory",
+          "memberFieldName": "mediatorFunctionFactory"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cafftt": "npmd:@comunica/actor-function-factory-term-timezone/^4.0.0/",
+      "ActorFunctionFactoryTermTimezone": {
+        "@id": "cafftt:components/ActorFunctionFactoryTermTimezone.jsonld#ActorFunctionFactoryTermTimezone",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cafftt:components/ActorFunctionFactoryTermTimezone.jsonld#ActorFunctionFactoryTermTimezone_args_name"
+          },
+          "args_bus": {
+            "@id": "cafftt:components/ActorFunctionFactoryTermTimezone.jsonld#ActorFunctionFactoryTermTimezone_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cafftt:components/ActorFunctionFactoryTermTimezone.jsonld#ActorFunctionFactoryTermTimezone_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cafftt:components/ActorFunctionFactoryTermTimezone.jsonld#ActorFunctionFactoryTermTimezone_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cafftt:components/ActorFunctionFactoryTermTimezone.jsonld#ActorFunctionFactoryTermTimezone_args_name"
+          },
+          "bus": {
+            "@id": "cafftt:components/ActorFunctionFactoryTermTimezone.jsonld#ActorFunctionFactoryTermTimezone_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cafftt:components/ActorFunctionFactoryTermTimezone.jsonld#ActorFunctionFactoryTermTimezone_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cafftt:components/ActorFunctionFactoryTermTimezone.jsonld#ActorFunctionFactoryTermTimezone_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-unary-minus/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-unary-minus",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-unary-minus",
+  "import": [
+    "cafftum:components/ActorFunctionFactoryTermUnaryMinus.jsonld"
+  ]
+}

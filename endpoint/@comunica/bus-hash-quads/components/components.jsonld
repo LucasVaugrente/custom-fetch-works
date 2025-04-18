@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-hash-quads/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-hash-quads",
+  "@type": "Module",
+  "requireName": "@comunica/bus-hash-quads",
+  "import": [
+    "cbhq:components/ActorHashQuads.jsonld"
+  ]
+}

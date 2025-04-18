@@ -1,0 +1,68 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cabafgc": "npmd:@comunica/actor-bindings-aggregator-factory-group-concat/^4.0.0/",
+      "ActorBindingsAggregatorFactoryGroupConcat": {
+        "@id": "cabafgc:components/ActorBindingsAggregatorFactoryGroupConcat.jsonld#ActorBindingsAggregatorFactoryGroupConcat",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorExpressionEvaluatorFactory": {
+            "@id": "cabafgc:components/ActorBindingsAggregatorFactoryGroupConcat.jsonld#ActorBindingsAggregatorFactoryGroupConcat_args_mediatorExpressionEvaluatorFactory"
+          },
+          "args_name": {
+            "@id": "cabafgc:components/ActorBindingsAggregatorFactoryGroupConcat.jsonld#ActorBindingsAggregatorFactoryGroupConcat_args_name"
+          },
+          "args_bus": {
+            "@id": "cabafgc:components/ActorBindingsAggregatorFactoryGroupConcat.jsonld#ActorBindingsAggregatorFactoryGroupConcat_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cabafgc:components/ActorBindingsAggregatorFactoryGroupConcat.jsonld#ActorBindingsAggregatorFactoryGroupConcat_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cabafgc:components/ActorBindingsAggregatorFactoryGroupConcat.jsonld#ActorBindingsAggregatorFactoryGroupConcat_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorExpressionEvaluatorFactory": {
+            "@id": "cabafgc:components/ActorBindingsAggregatorFactoryGroupConcat.jsonld#ActorBindingsAggregatorFactoryGroupConcat_args_mediatorExpressionEvaluatorFactory"
+          },
+          "name": {
+            "@id": "cabafgc:components/ActorBindingsAggregatorFactoryGroupConcat.jsonld#ActorBindingsAggregatorFactoryGroupConcat_args_name"
+          },
+          "bus": {
+            "@id": "cabafgc:components/ActorBindingsAggregatorFactoryGroupConcat.jsonld#ActorBindingsAggregatorFactoryGroupConcat_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cabafgc:components/ActorBindingsAggregatorFactoryGroupConcat.jsonld#ActorBindingsAggregatorFactoryGroupConcat_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cabafgc:components/ActorBindingsAggregatorFactoryGroupConcat.jsonld#ActorBindingsAggregatorFactoryGroupConcat_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "GroupConcatAggregator": {
+        "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator",
+        "@prefix": true,
+        "@context": {
+          "distinct": {
+            "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator_distinct"
+          },
+          "evaluator": {
+            "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator_evaluator"
+          },
+          "separator": {
+            "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator_separator"
+          },
+          "throwError": {
+            "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator_throwError"
+          },
+          "dataFactory": {
+            "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator_dataFactory"
+          }
+        }
+      }
+    }
+  ]
+}

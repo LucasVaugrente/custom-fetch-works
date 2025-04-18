@@ -1,0 +1,247 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-rdf-join-wrap-stream/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-rdf-join/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-rdf-join-wrap-stream",
+  "components": [
+    {
+      "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream",
+      "@type": "Class",
+      "requireElement": "ActorRdfJoinWrapStream",
+      "extends": [
+        "cbrj:components/ActorRdfJoin.jsonld#ActorRdfJoin"
+      ],
+      "comment": "A comunica Wrap Stream RDF Join Actor.",
+      "parameters": [
+        {
+          "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_mediatorIteratorTransform",
+          "range": "cc:components/Mediator.jsonld#Mediator",
+          "comment": "Mediator that runs all transforms defined by user over the output stream of the query operation"
+        },
+        {
+          "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_mediatorJoin",
+          "range": "cc:components/Mediator.jsonld#Mediator",
+          "comment": "Mediator that calls next join to be wrapped"
+        },
+        {
+          "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_mediatorJoinSelectivity",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbrj:components/ActorRdfJoin.jsonld#ActorRdfJoin_default_bus",
+            "@type": "cc:components/Bus.jsonld#Bus"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "RDF joining failed: none of the configured actors were able to handle the join type ${action.type}",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream__member_mediatorJoin",
+          "memberFieldName": "mediatorJoin",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream__member_mediatorIteratorTransform",
+          "memberFieldName": "mediatorIteratorTransform",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream__member_test",
+          "memberFieldName": "test"
+        },
+        {
+          "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream__member_getOutput",
+          "memberFieldName": "getOutput"
+        },
+        {
+          "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream__member_getJoinCoefficients",
+          "memberFieldName": "getJoinCoefficients"
+        },
+        {
+          "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream__member_setContextWrapped",
+          "memberFieldName": "setContextWrapped"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "mediatorIteratorTransform",
+              "value": {
+                "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_mediatorIteratorTransform"
+              }
+            },
+            {
+              "keyRaw": "mediatorJoin",
+              "value": {
+                "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_mediatorJoin"
+              }
+            },
+            {
+              "keyRaw": "mediatorJoinSelectivity",
+              "value": {
+                "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_mediatorJoinSelectivity"
+              }
+            },
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#ActorRdfJoinWrapStream_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#IActorRdfJoinWrapStreamArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IActorRdfJoinWrapStreamArgs",
+      "extends": [
+        "cbrj:components/ActorRdfJoin.jsonld#IActorRdfJoinArgs"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#IActorRdfJoinWrapStreamArgs__member_mediatorIteratorTransform",
+          "memberFieldName": "mediatorIteratorTransform"
+        },
+        {
+          "@id": "carjws:components/ActorRdfJoinWrapStream.jsonld#IActorRdfJoinWrapStreamArgs__member_mediatorJoin",
+          "memberFieldName": "mediatorJoin"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

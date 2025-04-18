@@ -1,0 +1,76 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cabafm": "npmd:@comunica/actor-bindings-aggregator-factory-min/^4.0.0/",
+      "ActorBindingsAggregatorFactoryMin": {
+        "@id": "cabafm:components/ActorBindingsAggregatorFactoryMin.jsonld#ActorBindingsAggregatorFactoryMin",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorTermComparatorFactory": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMin.jsonld#ActorBindingsAggregatorFactoryMin_args_mediatorTermComparatorFactory"
+          },
+          "args_mediatorExpressionEvaluatorFactory": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMin.jsonld#ActorBindingsAggregatorFactoryMin_args_mediatorExpressionEvaluatorFactory"
+          },
+          "args_name": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMin.jsonld#ActorBindingsAggregatorFactoryMin_args_name"
+          },
+          "args_bus": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMin.jsonld#ActorBindingsAggregatorFactoryMin_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMin.jsonld#ActorBindingsAggregatorFactoryMin_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMin.jsonld#ActorBindingsAggregatorFactoryMin_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorTermComparatorFactory": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMin.jsonld#ActorBindingsAggregatorFactoryMin_args_mediatorTermComparatorFactory"
+          },
+          "mediatorExpressionEvaluatorFactory": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMin.jsonld#ActorBindingsAggregatorFactoryMin_args_mediatorExpressionEvaluatorFactory"
+          },
+          "name": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMin.jsonld#ActorBindingsAggregatorFactoryMin_args_name"
+          },
+          "bus": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMin.jsonld#ActorBindingsAggregatorFactoryMin_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMin.jsonld#ActorBindingsAggregatorFactoryMin_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMin.jsonld#ActorBindingsAggregatorFactoryMin_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorBindingsAggregatorFactoryMinArgs": {
+        "@id": "cabafm:components/ActorBindingsAggregatorFactoryMin.jsonld#IActorBindingsAggregatorFactoryMinArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "MinAggregator": {
+        "@id": "cabafm:components/MinAggregator.jsonld#MinAggregator",
+        "@prefix": true,
+        "@context": {
+          "distinct": {
+            "@id": "cabafm:components/MinAggregator.jsonld#MinAggregator_distinct"
+          },
+          "evaluator": {
+            "@id": "cabafm:components/MinAggregator.jsonld#MinAggregator_evaluator"
+          },
+          "orderByEvaluator": {
+            "@id": "cabafm:components/MinAggregator.jsonld#MinAggregator_orderByEvaluator"
+          },
+          "throwError": {
+            "@id": "cabafm:components/MinAggregator.jsonld#MinAggregator_throwError"
+          }
+        }
+      }
+    }
+  ]
+}

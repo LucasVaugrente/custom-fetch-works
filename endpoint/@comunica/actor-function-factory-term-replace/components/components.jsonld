@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-replace/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-replace",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-replace",
+  "import": [
+    "cafftr:components/ActorFunctionFactoryTermReplace.jsonld"
+  ]
+}

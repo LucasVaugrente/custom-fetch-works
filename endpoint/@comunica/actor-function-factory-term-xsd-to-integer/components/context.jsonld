@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cafftxti": "npmd:@comunica/actor-function-factory-term-xsd-to-integer/^4.0.0/",
+      "ActorFunctionFactoryTermXsdToInteger": {
+        "@id": "cafftxti:components/ActorFunctionFactoryTermXsdToInteger.jsonld#ActorFunctionFactoryTermXsdToInteger",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cafftxti:components/ActorFunctionFactoryTermXsdToInteger.jsonld#ActorFunctionFactoryTermXsdToInteger_args_name"
+          },
+          "args_bus": {
+            "@id": "cafftxti:components/ActorFunctionFactoryTermXsdToInteger.jsonld#ActorFunctionFactoryTermXsdToInteger_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cafftxti:components/ActorFunctionFactoryTermXsdToInteger.jsonld#ActorFunctionFactoryTermXsdToInteger_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cafftxti:components/ActorFunctionFactoryTermXsdToInteger.jsonld#ActorFunctionFactoryTermXsdToInteger_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cafftxti:components/ActorFunctionFactoryTermXsdToInteger.jsonld#ActorFunctionFactoryTermXsdToInteger_args_name"
+          },
+          "bus": {
+            "@id": "cafftxti:components/ActorFunctionFactoryTermXsdToInteger.jsonld#ActorFunctionFactoryTermXsdToInteger_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cafftxti:components/ActorFunctionFactoryTermXsdToInteger.jsonld#ActorFunctionFactoryTermXsdToInteger_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cafftxti:components/ActorFunctionFactoryTermXsdToInteger.jsonld#ActorFunctionFactoryTermXsdToInteger_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

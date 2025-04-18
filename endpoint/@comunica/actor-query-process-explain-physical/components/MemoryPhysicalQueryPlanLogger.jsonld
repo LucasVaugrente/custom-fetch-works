@@ -1,0 +1,86 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-process-explain-physical/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/types/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-process-explain-physical",
+  "components": [
+    {
+      "@id": "caqpep:components/MemoryPhysicalQueryPlanLogger.jsonld#MemoryPhysicalQueryPlanLogger",
+      "@type": "Class",
+      "requireElement": "MemoryPhysicalQueryPlanLogger",
+      "extends": [
+        "ct:components/IPhysicalQueryPlanLogger.jsonld#IPhysicalQueryPlanLogger"
+      ],
+      "comment": "A physical query plan logger that stores everything in memory.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "caqpep:components/MemoryPhysicalQueryPlanLogger.jsonld#MemoryPhysicalQueryPlanLogger__member_planNodes",
+          "memberFieldName": "planNodes"
+        },
+        {
+          "@id": "caqpep:components/MemoryPhysicalQueryPlanLogger.jsonld#MemoryPhysicalQueryPlanLogger__member_rootNode",
+          "memberFieldName": "rootNode"
+        },
+        {
+          "@id": "caqpep:components/MemoryPhysicalQueryPlanLogger.jsonld#MemoryPhysicalQueryPlanLogger__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "caqpep:components/MemoryPhysicalQueryPlanLogger.jsonld#MemoryPhysicalQueryPlanLogger__member_logOperation",
+          "memberFieldName": "logOperation"
+        },
+        {
+          "@id": "caqpep:components/MemoryPhysicalQueryPlanLogger.jsonld#MemoryPhysicalQueryPlanLogger__member_stashChildren",
+          "memberFieldName": "stashChildren"
+        },
+        {
+          "@id": "caqpep:components/MemoryPhysicalQueryPlanLogger.jsonld#MemoryPhysicalQueryPlanLogger__member_unstashChild",
+          "memberFieldName": "unstashChild"
+        },
+        {
+          "@id": "caqpep:components/MemoryPhysicalQueryPlanLogger.jsonld#MemoryPhysicalQueryPlanLogger__member_appendMetadata",
+          "memberFieldName": "appendMetadata"
+        },
+        {
+          "@id": "caqpep:components/MemoryPhysicalQueryPlanLogger.jsonld#MemoryPhysicalQueryPlanLogger__member_toJson",
+          "memberFieldName": "toJson"
+        },
+        {
+          "@id": "caqpep:components/MemoryPhysicalQueryPlanLogger.jsonld#MemoryPhysicalQueryPlanLogger__member_planNodeToJson",
+          "memberFieldName": "planNodeToJson"
+        },
+        {
+          "@id": "caqpep:components/MemoryPhysicalQueryPlanLogger.jsonld#MemoryPhysicalQueryPlanLogger__member_getPlanHash",
+          "memberFieldName": "getPlanHash"
+        },
+        {
+          "@id": "caqpep:components/MemoryPhysicalQueryPlanLogger.jsonld#MemoryPhysicalQueryPlanLogger__member_compactMetadata",
+          "memberFieldName": "compactMetadata"
+        },
+        {
+          "@id": "caqpep:components/MemoryPhysicalQueryPlanLogger.jsonld#MemoryPhysicalQueryPlanLogger__member_compactMetadataValue",
+          "memberFieldName": "compactMetadataValue"
+        },
+        {
+          "@id": "caqpep:components/MemoryPhysicalQueryPlanLogger.jsonld#MemoryPhysicalQueryPlanLogger__member_getLogicalMetadata",
+          "memberFieldName": "getLogicalMetadata"
+        },
+        {
+          "@id": "caqpep:components/MemoryPhysicalQueryPlanLogger.jsonld#MemoryPhysicalQueryPlanLogger__member_quadToString",
+          "memberFieldName": "quadToString"
+        },
+        {
+          "@id": "caqpep:components/MemoryPhysicalQueryPlanLogger.jsonld#MemoryPhysicalQueryPlanLogger__member_toCompactString",
+          "memberFieldName": "toCompactString"
+        },
+        {
+          "@id": "caqpep:components/MemoryPhysicalQueryPlanLogger.jsonld#MemoryPhysicalQueryPlanLogger__member_nodeToCompactString",
+          "memberFieldName": "nodeToCompactString"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

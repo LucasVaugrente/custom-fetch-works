@@ -1,0 +1,256 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-http-retry/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-http-invalidate/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-http/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-http-retry",
+  "components": [
+    {
+      "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry",
+      "@type": "Class",
+      "requireElement": "ActorHttpRetry",
+      "extends": [
+        "cbh:components/ActorHttp.jsonld#ActorHttp"
+      ],
+      "parameters": [
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry_args_mediatorHttp",
+          "range": "cc:components/Mediator.jsonld#Mediator",
+          "comment": "The HTTP mediator."
+        },
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry_args_httpInvalidator",
+          "range": "cbhi:components/ActorHttpInvalidateListenable.jsonld#ActorHttpInvalidateListenable",
+          "default": {
+            "@id": "cahr:components/ActorHttpRetry.jsonld#IActorHttpQueueArgs_default_invalidator",
+            "@type": "npmd:@comunica/bus-http-invalidate/^4.0.0/components/ActorHttpInvalidateListenable.jsonld#ActorHttpInvalidateListenable"
+          },
+          "comment": "An actor that listens to HTTP invalidation events"
+        },
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbh:components/ActorHttp.jsonld#ActorHttp_default_bus",
+            "@type": "cc:components/Bus.jsonld#Bus"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "HTTP request failed: none of the configured actors were able to handle ${action.input}",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry__member_activeDelays",
+          "memberFieldName": "activeDelays"
+        },
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry__member_httpInvalidator",
+          "memberFieldName": "httpInvalidator"
+        },
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry__member_mediatorHttp",
+          "memberFieldName": "mediatorHttp"
+        },
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry__member_dateRegex",
+          "memberFieldName": "dateRegex"
+        },
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry__member_numberRegex",
+          "memberFieldName": "numberRegex"
+        },
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry__member_keyWrapped",
+          "memberFieldName": "keyWrapped"
+        },
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry__member_test",
+          "memberFieldName": "test"
+        },
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry__member_run",
+          "memberFieldName": "run"
+        },
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry__member_sleep",
+          "memberFieldName": "sleep"
+        },
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry__member_parseRetryAfterHeader",
+          "memberFieldName": "parseRetryAfterHeader"
+        },
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry__member_handleHttpInvalidateEvent",
+          "memberFieldName": "handleHttpInvalidateEvent"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "mediatorHttp",
+              "value": {
+                "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry_args_mediatorHttp"
+              }
+            },
+            {
+              "keyRaw": "httpInvalidator",
+              "value": {
+                "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry_args_httpInvalidator"
+              }
+            },
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "cahr:components/ActorHttpRetry.jsonld#ActorHttpRetry_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "cahr:components/ActorHttpRetry.jsonld#IActorHttpQueueArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IActorHttpQueueArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#IActorHttpQueueArgs__member_mediatorHttp",
+          "memberFieldName": "mediatorHttp"
+        },
+        {
+          "@id": "cahr:components/ActorHttpRetry.jsonld#IActorHttpQueueArgs__member_httpInvalidator",
+          "memberFieldName": "httpInvalidator"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-str-starts/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-str-starts",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-str-starts",
+  "import": [
+    "cafftss:components/ActorFunctionFactoryTermStrStarts.jsonld"
+  ]
+}

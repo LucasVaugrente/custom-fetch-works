@@ -1,0 +1,53 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cacpqss": "npmd:@comunica/actor-context-preprocess-query-source-skolemize/^4.0.0/",
+      "ActorContextPreprocessQuerySourceSkolemize": {
+        "@id": "cacpqss:components/ActorContextPreprocessQuerySourceSkolemize.jsonld#ActorContextPreprocessQuerySourceSkolemize",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cacpqss:components/ActorContextPreprocessQuerySourceSkolemize.jsonld#ActorContextPreprocessQuerySourceSkolemize_args_name"
+          },
+          "args_bus": {
+            "@id": "cacpqss:components/ActorContextPreprocessQuerySourceSkolemize.jsonld#ActorContextPreprocessQuerySourceSkolemize_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cacpqss:components/ActorContextPreprocessQuerySourceSkolemize.jsonld#ActorContextPreprocessQuerySourceSkolemize_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cacpqss:components/ActorContextPreprocessQuerySourceSkolemize.jsonld#ActorContextPreprocessQuerySourceSkolemize_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cacpqss:components/ActorContextPreprocessQuerySourceSkolemize.jsonld#ActorContextPreprocessQuerySourceSkolemize_args_name"
+          },
+          "bus": {
+            "@id": "cacpqss:components/ActorContextPreprocessQuerySourceSkolemize.jsonld#ActorContextPreprocessQuerySourceSkolemize_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cacpqss:components/ActorContextPreprocessQuerySourceSkolemize.jsonld#ActorContextPreprocessQuerySourceSkolemize_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cacpqss:components/ActorContextPreprocessQuerySourceSkolemize.jsonld#ActorContextPreprocessQuerySourceSkolemize_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "QuerySourceSkolemized": {
+        "@id": "cacpqss:components/QuerySourceSkolemized.jsonld#QuerySourceSkolemized",
+        "@prefix": true,
+        "@context": {
+          "innerSource": {
+            "@id": "cacpqss:components/QuerySourceSkolemized.jsonld#QuerySourceSkolemized_innerSource"
+          },
+          "sourceId": {
+            "@id": "cacpqss:components/QuerySourceSkolemized.jsonld#QuerySourceSkolemized_sourceId"
+          }
+        }
+      }
+    }
+  ]
+}

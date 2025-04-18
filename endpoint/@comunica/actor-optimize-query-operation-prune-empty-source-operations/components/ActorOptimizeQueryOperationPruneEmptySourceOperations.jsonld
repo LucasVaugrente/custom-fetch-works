@@ -1,0 +1,222 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-optimize-query-operation-prune-empty-source-operations/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-optimize-query-operation/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-optimize-query-operation-prune-empty-source-operations",
+  "components": [
+    {
+      "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#ActorOptimizeQueryOperationPruneEmptySourceOperations",
+      "@type": "Class",
+      "requireElement": "ActorOptimizeQueryOperationPruneEmptySourceOperations",
+      "extends": [
+        "cboqo:components/ActorOptimizeQueryOperation.jsonld#ActorOptimizeQueryOperation"
+      ],
+      "comment": "A comunica Prune Empty Source Operations Optimize Query Operation Actor.",
+      "parameters": [
+        {
+          "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#ActorOptimizeQueryOperationPruneEmptySourceOperations_args_useAskIfSupported",
+          "range": "xsd:boolean",
+          "default": "false",
+          "comment": "If true, ASK queries will be sent to the source instead of COUNT queries to check emptiness for patterns. This will only be done for sources that accept ASK queries."
+        },
+        {
+          "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#ActorOptimizeQueryOperationPruneEmptySourceOperations_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#ActorOptimizeQueryOperationPruneEmptySourceOperations_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cboqo:components/ActorOptimizeQueryOperation.jsonld#ActorOptimizeQueryOperation_default_bus",
+            "@type": "cc:components/Bus.jsonld#Bus"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#ActorOptimizeQueryOperationPruneEmptySourceOperations_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "Query optimization failed: none of the configured actors were able to optimize",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#ActorOptimizeQueryOperationPruneEmptySourceOperations_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#ActorOptimizeQueryOperationPruneEmptySourceOperations__member_useAskIfSupported",
+          "memberFieldName": "useAskIfSupported"
+        },
+        {
+          "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#ActorOptimizeQueryOperationPruneEmptySourceOperations__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#ActorOptimizeQueryOperationPruneEmptySourceOperations__member_test",
+          "memberFieldName": "test"
+        },
+        {
+          "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#ActorOptimizeQueryOperationPruneEmptySourceOperations__member_run",
+          "memberFieldName": "run"
+        },
+        {
+          "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#ActorOptimizeQueryOperationPruneEmptySourceOperations__member_hasEmptyOperation",
+          "memberFieldName": "hasEmptyOperation"
+        },
+        {
+          "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#ActorOptimizeQueryOperationPruneEmptySourceOperations__member_collectMultiOperationInputs",
+          "memberFieldName": "collectMultiOperationInputs"
+        },
+        {
+          "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#ActorOptimizeQueryOperationPruneEmptySourceOperations__member_mapMultiOperation",
+          "memberFieldName": "mapMultiOperation"
+        },
+        {
+          "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#ActorOptimizeQueryOperationPruneEmptySourceOperations__member_hasSourceResults",
+          "memberFieldName": "hasSourceResults"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#ActorOptimizeQueryOperationPruneEmptySourceOperations_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "useAskIfSupported",
+              "value": {
+                "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#ActorOptimizeQueryOperationPruneEmptySourceOperations_args_useAskIfSupported"
+              }
+            },
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#ActorOptimizeQueryOperationPruneEmptySourceOperations_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#ActorOptimizeQueryOperationPruneEmptySourceOperations_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#ActorOptimizeQueryOperationPruneEmptySourceOperations_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#ActorOptimizeQueryOperationPruneEmptySourceOperations_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#IActorOptimizeQueryOperationPruneEmptySourceOperationsArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IActorOptimizeQueryOperationPruneEmptySourceOperationsArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld#IActorOptimizeQueryOperationPruneEmptySourceOperationsArgs__member_useAskIfSupported",
+          "memberFieldName": "useAskIfSupported"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

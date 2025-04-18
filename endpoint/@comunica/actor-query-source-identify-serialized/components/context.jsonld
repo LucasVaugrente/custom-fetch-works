@@ -1,0 +1,58 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caqsis": "npmd:@comunica/actor-query-source-identify-serialized/^4.0.0/",
+      "ActorQuerySourceIdentifySerialized": {
+        "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorRdfParse": {
+            "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_mediatorRdfParse"
+          },
+          "args_mediatorQuerySourceIdentify": {
+            "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_mediatorQuerySourceIdentify"
+          },
+          "args_name": {
+            "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_name"
+          },
+          "args_bus": {
+            "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorRdfParse": {
+            "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_mediatorRdfParse"
+          },
+          "mediatorQuerySourceIdentify": {
+            "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_mediatorQuerySourceIdentify"
+          },
+          "name": {
+            "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_name"
+          },
+          "bus": {
+            "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorQuerySourceIdentifySerializedArgs": {
+        "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#IActorQuerySourceIdentifySerializedArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

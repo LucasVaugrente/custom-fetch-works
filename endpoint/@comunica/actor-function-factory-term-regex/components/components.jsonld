@@ -1,0 +1,12 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-regex/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-regex",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-regex",
+  "import": [
+    "cafftr:components/ActorFunctionFactoryTermRegex.jsonld",
+    "cafftr:components/TermFunctionRegex.jsonld"
+  ]
+}

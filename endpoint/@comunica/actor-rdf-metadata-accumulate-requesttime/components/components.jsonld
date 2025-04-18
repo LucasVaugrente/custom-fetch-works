@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-rdf-metadata-accumulate-requesttime/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-rdf-metadata-accumulate-requesttime",
+  "@type": "Module",
+  "requireName": "@comunica/actor-rdf-metadata-accumulate-requesttime",
+  "import": [
+    "carmar:components/ActorRdfMetadataAccumulateRequestTime.jsonld"
+  ]
+}

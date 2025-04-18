@@ -1,0 +1,58 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caqopa": "npmd:@comunica/actor-query-operation-path-alt/^4.0.0/",
+      "ActorQueryOperationPathAlt": {
+        "@id": "caqopa:components/ActorQueryOperationPathAlt.jsonld#ActorQueryOperationPathAlt",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorRdfMetadataAccumulate": {
+            "@id": "caqopa:components/ActorQueryOperationPathAlt.jsonld#ActorQueryOperationPathAlt_args_mediatorRdfMetadataAccumulate"
+          },
+          "args_mediatorQueryOperation": {
+            "@id": "caqopa:components/ActorQueryOperationPathAlt.jsonld#ActorQueryOperationPathAlt_args_mediatorQueryOperation"
+          },
+          "args_name": {
+            "@id": "caqopa:components/ActorQueryOperationPathAlt.jsonld#ActorQueryOperationPathAlt_args_name"
+          },
+          "args_bus": {
+            "@id": "caqopa:components/ActorQueryOperationPathAlt.jsonld#ActorQueryOperationPathAlt_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caqopa:components/ActorQueryOperationPathAlt.jsonld#ActorQueryOperationPathAlt_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caqopa:components/ActorQueryOperationPathAlt.jsonld#ActorQueryOperationPathAlt_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorRdfMetadataAccumulate": {
+            "@id": "caqopa:components/ActorQueryOperationPathAlt.jsonld#ActorQueryOperationPathAlt_args_mediatorRdfMetadataAccumulate"
+          },
+          "mediatorQueryOperation": {
+            "@id": "caqopa:components/ActorQueryOperationPathAlt.jsonld#ActorQueryOperationPathAlt_args_mediatorQueryOperation"
+          },
+          "name": {
+            "@id": "caqopa:components/ActorQueryOperationPathAlt.jsonld#ActorQueryOperationPathAlt_args_name"
+          },
+          "bus": {
+            "@id": "caqopa:components/ActorQueryOperationPathAlt.jsonld#ActorQueryOperationPathAlt_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caqopa:components/ActorQueryOperationPathAlt.jsonld#ActorQueryOperationPathAlt_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caqopa:components/ActorQueryOperationPathAlt.jsonld#ActorQueryOperationPathAlt_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorQueryOperationPathAltArgs": {
+        "@id": "caqopa:components/ActorQueryOperationPathAlt.jsonld#IActorQueryOperationPathAltArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

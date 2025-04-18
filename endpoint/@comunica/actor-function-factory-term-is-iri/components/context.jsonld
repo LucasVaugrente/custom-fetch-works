@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cafftii": "npmd:@comunica/actor-function-factory-term-is-iri/^4.0.0/",
+      "ActorFunctionFactoryTermIsIri": {
+        "@id": "cafftii:components/ActorFunctionFactoryTermIsIri.jsonld#ActorFunctionFactoryTermIsIri",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cafftii:components/ActorFunctionFactoryTermIsIri.jsonld#ActorFunctionFactoryTermIsIri_args_name"
+          },
+          "args_bus": {
+            "@id": "cafftii:components/ActorFunctionFactoryTermIsIri.jsonld#ActorFunctionFactoryTermIsIri_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cafftii:components/ActorFunctionFactoryTermIsIri.jsonld#ActorFunctionFactoryTermIsIri_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cafftii:components/ActorFunctionFactoryTermIsIri.jsonld#ActorFunctionFactoryTermIsIri_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cafftii:components/ActorFunctionFactoryTermIsIri.jsonld#ActorFunctionFactoryTermIsIri_args_name"
+          },
+          "bus": {
+            "@id": "cafftii:components/ActorFunctionFactoryTermIsIri.jsonld#ActorFunctionFactoryTermIsIri_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cafftii:components/ActorFunctionFactoryTermIsIri.jsonld#ActorFunctionFactoryTermIsIri_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cafftii:components/ActorFunctionFactoryTermIsIri.jsonld#ActorFunctionFactoryTermIsIri_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

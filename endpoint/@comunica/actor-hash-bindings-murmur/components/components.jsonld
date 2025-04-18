@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-hash-bindings-murmur/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-hash-bindings-murmur",
+  "@type": "Module",
+  "requireName": "@comunica/actor-hash-bindings-murmur",
+  "import": [
+    "cahbm:components/ActorHashBindingsMurmur.jsonld"
+  ]
+}

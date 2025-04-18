@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caoqocd": "npmd:@comunica/actor-optimize-query-operation-construct-distinct/^4.0.0/",
+      "ActorOptimizeQueryOperationConstructDistinct": {
+        "@id": "caoqocd:components/ActorOptimizeQueryOperationConstructDistinct.jsonld#ActorOptimizeQueryOperationConstructDistinct",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "caoqocd:components/ActorOptimizeQueryOperationConstructDistinct.jsonld#ActorOptimizeQueryOperationConstructDistinct_args_name"
+          },
+          "args_bus": {
+            "@id": "caoqocd:components/ActorOptimizeQueryOperationConstructDistinct.jsonld#ActorOptimizeQueryOperationConstructDistinct_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caoqocd:components/ActorOptimizeQueryOperationConstructDistinct.jsonld#ActorOptimizeQueryOperationConstructDistinct_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caoqocd:components/ActorOptimizeQueryOperationConstructDistinct.jsonld#ActorOptimizeQueryOperationConstructDistinct_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "caoqocd:components/ActorOptimizeQueryOperationConstructDistinct.jsonld#ActorOptimizeQueryOperationConstructDistinct_args_name"
+          },
+          "bus": {
+            "@id": "caoqocd:components/ActorOptimizeQueryOperationConstructDistinct.jsonld#ActorOptimizeQueryOperationConstructDistinct_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caoqocd:components/ActorOptimizeQueryOperationConstructDistinct.jsonld#ActorOptimizeQueryOperationConstructDistinct_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caoqocd:components/ActorOptimizeQueryOperationConstructDistinct.jsonld#ActorOptimizeQueryOperationConstructDistinct_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

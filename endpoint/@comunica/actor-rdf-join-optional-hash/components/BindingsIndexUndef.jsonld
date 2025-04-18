@@ -1,0 +1,112 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-rdf-join-optional-hash/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-rdf-join-optional-hash",
+  "components": [
+    {
+      "@id": "carjoh:components/BindingsIndexUndef.jsonld#BindingsIndexUndef",
+      "@type": "Class",
+      "requireElement": "BindingsIndexUndef",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "carjoh:components/IBindingsIndex.jsonld#IBindingsIndex",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "carjoh:components/BindingsIndexUndef.jsonld#BindingsIndexUndef__generic_V"
+            }
+          ]
+        }
+      ],
+      "comment": "A simple efficient tree-based index for maintaining bindings, and checking whether or not a bindings is contained in this index.  This will consider bindings with a variable term or an undefined term as a 'match-all' with other terms.",
+      "genericTypeParameters": [
+        {
+          "@id": "carjoh:components/BindingsIndexUndef.jsonld#BindingsIndexUndef__generic_V"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "carjoh:components/BindingsIndexUndef.jsonld#BindingsIndexUndef_hashFn",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexUndef.jsonld#BindingsIndexUndef_keys",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "urn:npm:@rdfjs/types:Variable"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "carjoh:components/BindingsIndexUndef.jsonld#BindingsIndexUndef__member_keys",
+          "memberFieldName": "keys"
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexUndef.jsonld#BindingsIndexUndef__member_data",
+          "memberFieldName": "data"
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexUndef.jsonld#BindingsIndexUndef__member_hashFn",
+          "memberFieldName": "hashFn"
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexUndef.jsonld#BindingsIndexUndef__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexUndef.jsonld#BindingsIndexUndef__member_put",
+          "memberFieldName": "put"
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexUndef.jsonld#BindingsIndexUndef__member_isBindingsValid",
+          "memberFieldName": "isBindingsValid"
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexUndef.jsonld#BindingsIndexUndef__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexUndef.jsonld#BindingsIndexUndef__member_getRecursive",
+          "memberFieldName": "getRecursive"
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexUndef.jsonld#BindingsIndexUndef__member_getFirst",
+          "memberFieldName": "getFirst"
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexUndef.jsonld#BindingsIndexUndef__member_getRecursiveFirst",
+          "memberFieldName": "getRecursiveFirst"
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexUndef.jsonld#BindingsIndexUndef__member_values",
+          "memberFieldName": "values"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "carjoh:components/BindingsIndexUndef.jsonld#BindingsIndexUndef_keys"
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexUndef.jsonld#BindingsIndexUndef_hashFn"
+        }
+      ]
+    },
+    {
+      "@id": "carjoh:components/BindingsIndexUndef.jsonld#IDataIndex",
+      "@type": "AbstractClass",
+      "requireElement": "IDataIndex",
+      "genericTypeParameters": [
+        {
+          "@id": "carjoh:components/BindingsIndexUndef.jsonld#IDataIndex__generic_V"
+        }
+      ],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

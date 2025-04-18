@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-expression-same-term/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-expression-same-term",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-expression-same-term",
+  "import": [
+    "caffest:components/ActorFunctionFactoryExpressionSameTerm.jsonld"
+  ]
+}

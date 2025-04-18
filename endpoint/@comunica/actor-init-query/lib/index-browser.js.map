@@ -1,0 +1,1 @@
+{"version":3,"file":"index-browser.js","sourceRoot":"","sources":["index-browser.ts"],"names":[],"mappings":";;;;;;;;;;;;;;;;;AAAA,uDAAqC;AACrC,2DAAyC;AACzC,qDAAoD;AAA3C,kHAAA,eAAe,OAAA","sourcesContent":["export * from './ActorInitQueryBase';\nexport * from './ActorInitQuery-browser';\nexport { QueryEngineBase } from './QueryEngineBase';\n"]}

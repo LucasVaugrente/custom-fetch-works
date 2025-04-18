@@ -1,0 +1,58 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "carjino": "npmd:@comunica/actor-rdf-join-inner-none/^4.0.0/",
+      "ActorRdfJoinNone": {
+        "@id": "carjino:components/ActorRdfJoinNone.jsonld#ActorRdfJoinNone",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorMergeBindingsContext": {
+            "@id": "carjino:components/ActorRdfJoinNone.jsonld#ActorRdfJoinNone_args_mediatorMergeBindingsContext"
+          },
+          "args_mediatorJoinSelectivity": {
+            "@id": "carjino:components/ActorRdfJoinNone.jsonld#ActorRdfJoinNone_args_mediatorJoinSelectivity"
+          },
+          "args_name": {
+            "@id": "carjino:components/ActorRdfJoinNone.jsonld#ActorRdfJoinNone_args_name"
+          },
+          "args_bus": {
+            "@id": "carjino:components/ActorRdfJoinNone.jsonld#ActorRdfJoinNone_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "carjino:components/ActorRdfJoinNone.jsonld#ActorRdfJoinNone_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "carjino:components/ActorRdfJoinNone.jsonld#ActorRdfJoinNone_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorMergeBindingsContext": {
+            "@id": "carjino:components/ActorRdfJoinNone.jsonld#ActorRdfJoinNone_args_mediatorMergeBindingsContext"
+          },
+          "mediatorJoinSelectivity": {
+            "@id": "carjino:components/ActorRdfJoinNone.jsonld#ActorRdfJoinNone_args_mediatorJoinSelectivity"
+          },
+          "name": {
+            "@id": "carjino:components/ActorRdfJoinNone.jsonld#ActorRdfJoinNone_args_name"
+          },
+          "bus": {
+            "@id": "carjino:components/ActorRdfJoinNone.jsonld#ActorRdfJoinNone_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "carjino:components/ActorRdfJoinNone.jsonld#ActorRdfJoinNone_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "carjino:components/ActorRdfJoinNone.jsonld#ActorRdfJoinNone_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorRdfJoinNoneArgs": {
+        "@id": "carjino:components/ActorRdfJoinNone.jsonld#IActorRdfJoinNoneArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

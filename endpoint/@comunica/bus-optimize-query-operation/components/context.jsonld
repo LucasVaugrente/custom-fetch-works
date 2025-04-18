@@ -1,0 +1,51 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cboqo": "npmd:@comunica/bus-optimize-query-operation/^4.0.0/",
+      "ActorOptimizeQueryOperation": {
+        "@id": "cboqo:components/ActorOptimizeQueryOperation.jsonld#ActorOptimizeQueryOperation",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cboqo:components/ActorOptimizeQueryOperation.jsonld#ActorOptimizeQueryOperation_args_name"
+          },
+          "args_bus": {
+            "@id": "cboqo:components/ActorOptimizeQueryOperation.jsonld#ActorOptimizeQueryOperation_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cboqo:components/ActorOptimizeQueryOperation.jsonld#ActorOptimizeQueryOperation_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cboqo:components/ActorOptimizeQueryOperation.jsonld#ActorOptimizeQueryOperation_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cboqo:components/ActorOptimizeQueryOperation.jsonld#ActorOptimizeQueryOperation_args_name"
+          },
+          "bus": {
+            "@id": "cboqo:components/ActorOptimizeQueryOperation.jsonld#ActorOptimizeQueryOperation_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cboqo:components/ActorOptimizeQueryOperation.jsonld#ActorOptimizeQueryOperation_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cboqo:components/ActorOptimizeQueryOperation.jsonld#ActorOptimizeQueryOperation_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActionOptimizeQueryOperation": {
+        "@id": "cboqo:components/ActorOptimizeQueryOperation.jsonld#IActionOptimizeQueryOperation",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IActorOptimizeQueryOperationOutput": {
+        "@id": "cboqo:components/ActorOptimizeQueryOperation.jsonld#IActorOptimizeQueryOperationOutput",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

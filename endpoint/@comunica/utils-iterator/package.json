@@ -1,0 +1,46 @@
+{
+  "name": "@comunica/utils-iterator",
+  "version": "4.0.1",
+  "description": "Async iterator utilities",
+  "license": "MIT",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/comunica-association"
+  },
+  "homepage": "https://comunica.dev/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/comunica/comunica.git",
+    "directory": "packages/utils-iterator"
+  },
+  "bugs": {
+    "url": "https://github.com/comunica/comunica/issues"
+  },
+  "keywords": [
+    "semantic",
+    "actor",
+    "framework",
+    "events",
+    "messages",
+    "asynciterator",
+    "iterator"
+  ],
+  "sideEffects": false,
+  "main": "lib/index.js",
+  "typings": "lib/index",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib/**/*.d.ts",
+    "lib/**/*.js",
+    "lib/**/*.js.map"
+  ],
+  "scripts": {
+    "build": "node \"../../node_modules/typescript/bin/tsc\""
+  },
+  "dependencies": {
+    "asynciterator": "^3.9.0"
+  },
+  "gitHead": "67831ba79e45ea1ced41fe3f83c5d6e8802dbeaa"
+}

@@ -1,0 +1,79 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cbtcf": "npmd:@comunica/bus-term-comparator-factory/^4.0.0/",
+      "ActorTermComparatorFactory": {
+        "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorQueryOperation": {
+            "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_mediatorQueryOperation"
+          },
+          "args_mediatorFunctionFactory": {
+            "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_mediatorFunctionFactory"
+          },
+          "args_mediatorMergeBindingsContext": {
+            "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_mediatorMergeBindingsContext"
+          },
+          "args_name": {
+            "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_name"
+          },
+          "args_bus": {
+            "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorQueryOperation": {
+            "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_mediatorQueryOperation"
+          },
+          "mediatorFunctionFactory": {
+            "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_mediatorFunctionFactory"
+          },
+          "mediatorMergeBindingsContext": {
+            "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_mediatorMergeBindingsContext"
+          },
+          "name": {
+            "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_name"
+          },
+          "bus": {
+            "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActionTermComparatorFactory": {
+        "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#IActionTermComparatorFactory",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ITermComparator": {
+        "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ITermComparator",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IActorTermComparatorFactoryOutput": {
+        "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#IActorTermComparatorFactoryOutput",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IActorTermComparatorFactoryArgs": {
+        "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#IActorTermComparatorFactoryArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

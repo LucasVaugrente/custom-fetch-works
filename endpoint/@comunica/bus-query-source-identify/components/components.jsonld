@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-query-source-identify/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-query-source-identify",
+  "@type": "Module",
+  "requireName": "@comunica/bus-query-source-identify",
+  "import": [
+    "cbqsi:components/ActorQuerySourceIdentify.jsonld"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "name": "@comunica/actor-query-operation-update-load",
+  "version": "4.1.0",
+  "description": "A load query-operation actor",
+  "lsd:module": true,
+  "license": "MIT",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/comunica-association"
+  },
+  "homepage": "https://comunica.dev/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/comunica/comunica.git",
+    "directory": "packages/actor-query-operation-update-load"
+  },
+  "bugs": {
+    "url": "https://github.com/comunica/comunica/issues"
+  },
+  "keywords": [
+    "comunica",
+    "actor",
+    "query-operation",
+    "load"
+  ],
+  "sideEffects": false,
+  "main": "lib/index.js",
+  "typings": "lib/index",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "components",
+    "lib/**/*.d.ts",
+    "lib/**/*.js",
+    "lib/**/*.js.map"
+  ],
+  "scripts": {
+    "build": "yarn run build:ts && yarn run build:components",
+    "build:ts": "node \"../../node_modules/typescript/bin/tsc\"",
+    "build:components": "componentsjs-generator"
+  },
+  "dependencies": {
+    "@comunica/bus-query-operation": "^4.1.0",
+    "@comunica/bus-query-source-identify": "^4.1.0",
+    "@comunica/bus-rdf-update-quads": "^4.1.0",
+    "@comunica/context-entries": "^4.1.0",
+    "@comunica/core": "^4.1.0",
+    "@comunica/types": "^4.1.0",
+    "@comunica/utils-query-operation": "^4.1.0",
+    "sparqlalgebrajs": "^4.3.8"
+  },
+  "gitHead": "711446473d18f5fd47aa1a67e6c23582234221ec"
+}

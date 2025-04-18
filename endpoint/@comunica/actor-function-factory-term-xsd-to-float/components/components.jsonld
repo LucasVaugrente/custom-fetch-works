@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-xsd-to-float/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-xsd-to-float",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-xsd-to-float",
+  "import": [
+    "cafftxtf:components/ActorFunctionFactoryTermXsdToFloat.jsonld"
+  ]
+}

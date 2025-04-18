@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cafftxtymd": "npmd:@comunica/actor-function-factory-term-xsd-to-year-month-duration/^4.0.0/",
+      "ActorFunctionFactoryTermXsdToYearMonthDuration": {
+        "@id": "cafftxtymd:components/ActorFunctionFactoryTermXsdToYearMonthDuration.jsonld#ActorFunctionFactoryTermXsdToYearMonthDuration",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cafftxtymd:components/ActorFunctionFactoryTermXsdToYearMonthDuration.jsonld#ActorFunctionFactoryTermXsdToYearMonthDuration_args_name"
+          },
+          "args_bus": {
+            "@id": "cafftxtymd:components/ActorFunctionFactoryTermXsdToYearMonthDuration.jsonld#ActorFunctionFactoryTermXsdToYearMonthDuration_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cafftxtymd:components/ActorFunctionFactoryTermXsdToYearMonthDuration.jsonld#ActorFunctionFactoryTermXsdToYearMonthDuration_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cafftxtymd:components/ActorFunctionFactoryTermXsdToYearMonthDuration.jsonld#ActorFunctionFactoryTermXsdToYearMonthDuration_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cafftxtymd:components/ActorFunctionFactoryTermXsdToYearMonthDuration.jsonld#ActorFunctionFactoryTermXsdToYearMonthDuration_args_name"
+          },
+          "bus": {
+            "@id": "cafftxtymd:components/ActorFunctionFactoryTermXsdToYearMonthDuration.jsonld#ActorFunctionFactoryTermXsdToYearMonthDuration_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cafftxtymd:components/ActorFunctionFactoryTermXsdToYearMonthDuration.jsonld#ActorFunctionFactoryTermXsdToYearMonthDuration_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cafftxtymd:components/ActorFunctionFactoryTermXsdToYearMonthDuration.jsonld#ActorFunctionFactoryTermXsdToYearMonthDuration_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

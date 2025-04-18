@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-optimize-query-operation-prune-empty-source-operations/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-optimize-query-operation-prune-empty-source-operations",
+  "@type": "Module",
+  "requireName": "@comunica/actor-optimize-query-operation-prune-empty-source-operations",
+  "import": [
+    "caoqopeso:components/ActorOptimizeQueryOperationPruneEmptySourceOperations.jsonld"
+  ]
+}

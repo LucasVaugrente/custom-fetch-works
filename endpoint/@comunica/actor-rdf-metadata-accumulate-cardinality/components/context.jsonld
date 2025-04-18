@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "carmac": "npmd:@comunica/actor-rdf-metadata-accumulate-cardinality/^4.0.0/",
+      "ActorRdfMetadataAccumulateCardinality": {
+        "@id": "carmac:components/ActorRdfMetadataAccumulateCardinality.jsonld#ActorRdfMetadataAccumulateCardinality",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "carmac:components/ActorRdfMetadataAccumulateCardinality.jsonld#ActorRdfMetadataAccumulateCardinality_args_name"
+          },
+          "args_bus": {
+            "@id": "carmac:components/ActorRdfMetadataAccumulateCardinality.jsonld#ActorRdfMetadataAccumulateCardinality_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "carmac:components/ActorRdfMetadataAccumulateCardinality.jsonld#ActorRdfMetadataAccumulateCardinality_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "carmac:components/ActorRdfMetadataAccumulateCardinality.jsonld#ActorRdfMetadataAccumulateCardinality_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "carmac:components/ActorRdfMetadataAccumulateCardinality.jsonld#ActorRdfMetadataAccumulateCardinality_args_name"
+          },
+          "bus": {
+            "@id": "carmac:components/ActorRdfMetadataAccumulateCardinality.jsonld#ActorRdfMetadataAccumulateCardinality_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "carmac:components/ActorRdfMetadataAccumulateCardinality.jsonld#ActorRdfMetadataAccumulateCardinality_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "carmac:components/ActorRdfMetadataAccumulateCardinality.jsonld#ActorRdfMetadataAccumulateCardinality_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

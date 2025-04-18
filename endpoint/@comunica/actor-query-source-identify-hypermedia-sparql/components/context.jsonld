@@ -1,0 +1,124 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caqsihs": "npmd:@comunica/actor-query-source-identify-hypermedia-sparql/^4.0.0/",
+      "ActorQuerySourceIdentifyHypermediaSparql": {
+        "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorHttp": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_mediatorHttp"
+          },
+          "args_mediatorMergeBindingsContext": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_mediatorMergeBindingsContext"
+          },
+          "args_checkUrlSuffix": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_checkUrlSuffix"
+          },
+          "args_forceHttpGet": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_forceHttpGet"
+          },
+          "args_cacheSize": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_cacheSize"
+          },
+          "args_bindMethod": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_bindMethod"
+          },
+          "args_countTimeout": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_countTimeout"
+          },
+          "args_name": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_name"
+          },
+          "args_bus": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorHttp": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_mediatorHttp"
+          },
+          "mediatorMergeBindingsContext": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_mediatorMergeBindingsContext"
+          },
+          "checkUrlSuffix": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_checkUrlSuffix"
+          },
+          "forceHttpGet": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_forceHttpGet"
+          },
+          "cacheSize": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_cacheSize"
+          },
+          "bindMethod": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_bindMethod"
+          },
+          "countTimeout": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_countTimeout"
+          },
+          "name": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_name"
+          },
+          "bus": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorQuerySourceIdentifyHypermediaSparqlArgs": {
+        "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#IActorQuerySourceIdentifyHypermediaSparqlArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "QuerySourceSparql": {
+        "@id": "caqsihs:components/QuerySourceSparql.jsonld#QuerySourceSparql",
+        "@prefix": true,
+        "@context": {
+          "url": {
+            "@id": "caqsihs:components/QuerySourceSparql.jsonld#QuerySourceSparql_url"
+          },
+          "algebraFactory": {
+            "@id": "caqsihs:components/QuerySourceSparql.jsonld#QuerySourceSparql_algebraFactory"
+          },
+          "forceHttpGet": {
+            "@id": "caqsihs:components/QuerySourceSparql.jsonld#QuerySourceSparql_forceHttpGet"
+          },
+          "cacheSize": {
+            "@id": "caqsihs:components/QuerySourceSparql.jsonld#QuerySourceSparql_cacheSize"
+          },
+          "countTimeout": {
+            "@id": "caqsihs:components/QuerySourceSparql.jsonld#QuerySourceSparql_countTimeout"
+          },
+          "bindingsFactory": {
+            "@id": "caqsihs:components/QuerySourceSparql.jsonld#QuerySourceSparql_bindingsFactory"
+          },
+          "context": {
+            "@id": "caqsihs:components/QuerySourceSparql.jsonld#QuerySourceSparql_context"
+          },
+          "mediatorHttp": {
+            "@id": "caqsihs:components/QuerySourceSparql.jsonld#QuerySourceSparql_mediatorHttp"
+          },
+          "bindMethod": {
+            "@id": "caqsihs:components/QuerySourceSparql.jsonld#QuerySourceSparql_bindMethod"
+          },
+          "dataFactory": {
+            "@id": "caqsihs:components/QuerySourceSparql.jsonld#QuerySourceSparql_dataFactory"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-source-identify-hypermedia-sparql/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-source-identify-hypermedia-sparql",
+  "@type": "Module",
+  "requireName": "@comunica/actor-query-source-identify-hypermedia-sparql",
+  "import": [
+    "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld",
+    "caqsihs:components/QuerySourceSparql.jsonld"
+  ]
+}

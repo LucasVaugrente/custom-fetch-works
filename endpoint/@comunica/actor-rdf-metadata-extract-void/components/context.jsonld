@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "carmev": "npmd:@comunica/actor-rdf-metadata-extract-void/^4.0.0/",
+      "ActorRdfMetadataExtractVoid": {
+        "@id": "carmev:components/ActorRdfMetadataExtractVoid.jsonld#ActorRdfMetadataExtractVoid",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "carmev:components/ActorRdfMetadataExtractVoid.jsonld#ActorRdfMetadataExtractVoid_args_name"
+          },
+          "args_bus": {
+            "@id": "carmev:components/ActorRdfMetadataExtractVoid.jsonld#ActorRdfMetadataExtractVoid_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "carmev:components/ActorRdfMetadataExtractVoid.jsonld#ActorRdfMetadataExtractVoid_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "carmev:components/ActorRdfMetadataExtractVoid.jsonld#ActorRdfMetadataExtractVoid_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "carmev:components/ActorRdfMetadataExtractVoid.jsonld#ActorRdfMetadataExtractVoid_args_name"
+          },
+          "bus": {
+            "@id": "carmev:components/ActorRdfMetadataExtractVoid.jsonld#ActorRdfMetadataExtractVoid_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "carmev:components/ActorRdfMetadataExtractVoid.jsonld#ActorRdfMetadataExtractVoid_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "carmev:components/ActorRdfMetadataExtractVoid.jsonld#ActorRdfMetadataExtractVoid_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

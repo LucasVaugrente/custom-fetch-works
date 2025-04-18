@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cafftit": "npmd:@comunica/actor-function-factory-term-is-triple/^4.0.0/",
+      "ActorFunctionFactoryTermIsTriple": {
+        "@id": "cafftit:components/ActorFunctionFactoryTermIsTriple.jsonld#ActorFunctionFactoryTermIsTriple",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cafftit:components/ActorFunctionFactoryTermIsTriple.jsonld#ActorFunctionFactoryTermIsTriple_args_name"
+          },
+          "args_bus": {
+            "@id": "cafftit:components/ActorFunctionFactoryTermIsTriple.jsonld#ActorFunctionFactoryTermIsTriple_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cafftit:components/ActorFunctionFactoryTermIsTriple.jsonld#ActorFunctionFactoryTermIsTriple_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cafftit:components/ActorFunctionFactoryTermIsTriple.jsonld#ActorFunctionFactoryTermIsTriple_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cafftit:components/ActorFunctionFactoryTermIsTriple.jsonld#ActorFunctionFactoryTermIsTriple_args_name"
+          },
+          "bus": {
+            "@id": "cafftit:components/ActorFunctionFactoryTermIsTriple.jsonld#ActorFunctionFactoryTermIsTriple_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cafftit:components/ActorFunctionFactoryTermIsTriple.jsonld#ActorFunctionFactoryTermIsTriple_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cafftit:components/ActorFunctionFactoryTermIsTriple.jsonld#ActorFunctionFactoryTermIsTriple_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

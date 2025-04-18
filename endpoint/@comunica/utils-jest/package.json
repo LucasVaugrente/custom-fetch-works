@@ -1,0 +1,53 @@
+{
+  "name": "@comunica/utils-jest",
+  "version": "4.1.0",
+  "description": "Jest utilities for Comunica",
+  "license": "MIT",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/comunica-association"
+  },
+  "homepage": "https://comunica.dev/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/comunica/comunica.git",
+    "directory": "packages/utils-jest"
+  },
+  "bugs": {
+    "url": "https://github.com/comunica/comunica/issues"
+  },
+  "keywords": [
+    "jest",
+    "rdf",
+    "comunica",
+    "testing",
+    "testing",
+    "matchers",
+    "extend"
+  ],
+  "sideEffects": false,
+  "main": "lib/index.js",
+  "typings": "lib/index",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib/**/*.d.ts",
+    "lib/**/*.js",
+    "lib/**/*.js.map"
+  ],
+  "scripts": {
+    "build": "yarn run build:ts",
+    "build:ts": "node \"../../node_modules/typescript/bin/tsc\""
+  },
+  "dependencies": {
+    "@comunica/core": "^4.1.0",
+    "@comunica/types": "^4.1.0",
+    "@comunica/utils-bindings-factory": "^4.1.0",
+    "@jest/expect-utils": "^29.7.0",
+    "@rdfjs/types": "*",
+    "@types/object-inspect": "^1.13.0",
+    "arrayify-stream": "^2.0.1",
+    "object-inspect": "^1.13.2"
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-lesser-than-equal/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-function-factory/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-lesser-than-equal",
+  "components": [
+    {
+      "@id": "cafftlte:components/ActorFunctionFactoryTermLesserThanEqual.jsonld#ActorFunctionFactoryTermLesserThanEqual",
+      "@type": "Class",
+      "requireElement": "ActorFunctionFactoryTermLesserThanEqual",
+      "extends": [
+        "cbff:components/ActorFunctionFactoryDedicated.jsonld#ActorFunctionFactoryDedicated"
+      ],
+      "comment": "A comunica TermFunctionLesserThanEqual Function Factory Actor.",
+      "parameters": [
+        {
+          "@id": "cafftlte:components/ActorFunctionFactoryTermLesserThanEqual.jsonld#ActorFunctionFactoryTermLesserThanEqual_args_mediatorFunctionFactory",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "cafftlte:components/ActorFunctionFactoryTermLesserThanEqual.jsonld#ActorFunctionFactoryTermLesserThanEqual_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "cafftlte:components/ActorFunctionFactoryTermLesserThanEqual.jsonld#ActorFunctionFactoryTermLesserThanEqual_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory_default_bus",
+            "@type": "cbff:components/BusFunctionFactory.jsonld#BusFunctionFactory"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "cafftlte:components/ActorFunctionFactoryTermLesserThanEqual.jsonld#ActorFunctionFactoryTermLesserThanEqual_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "Creation of function evaluator failed: no configured actor was able to evaluate function ${action.functionName}",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "cafftlte:components/ActorFunctionFactoryTermLesserThanEqual.jsonld#ActorFunctionFactoryTermLesserThanEqual_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cafftlte:components/ActorFunctionFactoryTermLesserThanEqual.jsonld#ActorFunctionFactoryTermLesserThanEqual__member_mediatorFunctionFactory",
+          "memberFieldName": "mediatorFunctionFactory"
+        },
+        {
+          "@id": "cafftlte:components/ActorFunctionFactoryTermLesserThanEqual.jsonld#ActorFunctionFactoryTermLesserThanEqual__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cafftlte:components/ActorFunctionFactoryTermLesserThanEqual.jsonld#ActorFunctionFactoryTermLesserThanEqual__member_run",
+          "memberFieldName": "run"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cafftlte:components/ActorFunctionFactoryTermLesserThanEqual.jsonld#ActorFunctionFactoryTermLesserThanEqual_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "mediatorFunctionFactory",
+              "value": {
+                "@id": "cafftlte:components/ActorFunctionFactoryTermLesserThanEqual.jsonld#ActorFunctionFactoryTermLesserThanEqual_args_mediatorFunctionFactory"
+              }
+            },
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "cafftlte:components/ActorFunctionFactoryTermLesserThanEqual.jsonld#ActorFunctionFactoryTermLesserThanEqual_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "cafftlte:components/ActorFunctionFactoryTermLesserThanEqual.jsonld#ActorFunctionFactoryTermLesserThanEqual_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "cafftlte:components/ActorFunctionFactoryTermLesserThanEqual.jsonld#ActorFunctionFactoryTermLesserThanEqual_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "cafftlte:components/ActorFunctionFactoryTermLesserThanEqual.jsonld#ActorFunctionFactoryTermLesserThanEqual_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

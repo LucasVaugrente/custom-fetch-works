@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-sha256/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-sha256",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-sha256",
+  "import": [
+    "caffts:components/ActorFunctionFactoryTermSha256.jsonld"
+  ]
+}

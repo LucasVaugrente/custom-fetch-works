@@ -1,0 +1,85 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-bindings-aggregator-factory-wildcard-count/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/types/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-bindings-aggregator-factory/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-bindings-aggregator-factory-wildcard-count",
+  "components": [
+    {
+      "@id": "cabafwc:components/WildcardCountAggregator.jsonld#WildcardCountAggregator",
+      "@type": "Class",
+      "requireElement": "WildcardCountAggregator",
+      "extends": [
+        "cbbaf:components/ActorBindingsAggregatorFactory.jsonld#IBindingsAggregator"
+      ],
+      "parameters": [
+        {
+          "@id": "cabafwc:components/WildcardCountAggregator.jsonld#WildcardCountAggregator_distinct",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "cabafwc:components/WildcardCountAggregator.jsonld#WildcardCountAggregator_evaluator",
+          "range": "ct:components/ExpressionEvaluator.jsonld#IExpressionEvaluator"
+        },
+        {
+          "@id": "cabafwc:components/WildcardCountAggregator.jsonld#WildcardCountAggregator_throwError",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cabafwc:components/WildcardCountAggregator.jsonld#WildcardCountAggregator__member_bindingValues",
+          "memberFieldName": "bindingValues"
+        },
+        {
+          "@id": "cabafwc:components/WildcardCountAggregator.jsonld#WildcardCountAggregator__member_state",
+          "memberFieldName": "state"
+        },
+        {
+          "@id": "cabafwc:components/WildcardCountAggregator.jsonld#WildcardCountAggregator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cabafwc:components/WildcardCountAggregator.jsonld#WildcardCountAggregator__member_putTerm",
+          "memberFieldName": "putTerm"
+        },
+        {
+          "@id": "cabafwc:components/WildcardCountAggregator.jsonld#WildcardCountAggregator__member_putBindings",
+          "memberFieldName": "putBindings"
+        },
+        {
+          "@id": "cabafwc:components/WildcardCountAggregator.jsonld#WildcardCountAggregator__member_emptyValueTerm",
+          "memberFieldName": "emptyValueTerm"
+        },
+        {
+          "@id": "cabafwc:components/WildcardCountAggregator.jsonld#WildcardCountAggregator__member_termResult",
+          "memberFieldName": "termResult"
+        },
+        {
+          "@id": "cabafwc:components/WildcardCountAggregator.jsonld#WildcardCountAggregator__member_handleDistinct",
+          "memberFieldName": "handleDistinct"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cabafwc:components/WildcardCountAggregator.jsonld#WildcardCountAggregator_evaluator"
+        },
+        {
+          "@id": "cabafwc:components/WildcardCountAggregator.jsonld#WildcardCountAggregator_distinct"
+        },
+        {
+          "@id": "cabafwc:components/WildcardCountAggregator.jsonld#WildcardCountAggregator_throwError"
+        }
+      ]
+    }
+  ]
+}

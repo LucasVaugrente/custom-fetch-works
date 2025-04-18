@@ -1,0 +1,59 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caeefd": "npmd:@comunica/actor-expression-evaluator-factory-default/^4.0.0/",
+      "ActorExpressionEvaluatorFactoryDefault": {
+        "@id": "caeefd:components/ActorExpressionEvaluatorFactoryDefault.jsonld#ActorExpressionEvaluatorFactoryDefault",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorQueryOperation": {
+            "@id": "caeefd:components/ActorExpressionEvaluatorFactoryDefault.jsonld#ActorExpressionEvaluatorFactoryDefault_args_mediatorQueryOperation"
+          },
+          "args_mediatorFunctionFactory": {
+            "@id": "caeefd:components/ActorExpressionEvaluatorFactoryDefault.jsonld#ActorExpressionEvaluatorFactoryDefault_args_mediatorFunctionFactory"
+          },
+          "args_mediatorMergeBindingsContext": {
+            "@id": "caeefd:components/ActorExpressionEvaluatorFactoryDefault.jsonld#ActorExpressionEvaluatorFactoryDefault_args_mediatorMergeBindingsContext"
+          },
+          "args_name": {
+            "@id": "caeefd:components/ActorExpressionEvaluatorFactoryDefault.jsonld#ActorExpressionEvaluatorFactoryDefault_args_name"
+          },
+          "args_bus": {
+            "@id": "caeefd:components/ActorExpressionEvaluatorFactoryDefault.jsonld#ActorExpressionEvaluatorFactoryDefault_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caeefd:components/ActorExpressionEvaluatorFactoryDefault.jsonld#ActorExpressionEvaluatorFactoryDefault_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caeefd:components/ActorExpressionEvaluatorFactoryDefault.jsonld#ActorExpressionEvaluatorFactoryDefault_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorQueryOperation": {
+            "@id": "caeefd:components/ActorExpressionEvaluatorFactoryDefault.jsonld#ActorExpressionEvaluatorFactoryDefault_args_mediatorQueryOperation"
+          },
+          "mediatorFunctionFactory": {
+            "@id": "caeefd:components/ActorExpressionEvaluatorFactoryDefault.jsonld#ActorExpressionEvaluatorFactoryDefault_args_mediatorFunctionFactory"
+          },
+          "mediatorMergeBindingsContext": {
+            "@id": "caeefd:components/ActorExpressionEvaluatorFactoryDefault.jsonld#ActorExpressionEvaluatorFactoryDefault_args_mediatorMergeBindingsContext"
+          },
+          "name": {
+            "@id": "caeefd:components/ActorExpressionEvaluatorFactoryDefault.jsonld#ActorExpressionEvaluatorFactoryDefault_args_name"
+          },
+          "bus": {
+            "@id": "caeefd:components/ActorExpressionEvaluatorFactoryDefault.jsonld#ActorExpressionEvaluatorFactoryDefault_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caeefd:components/ActorExpressionEvaluatorFactoryDefault.jsonld#ActorExpressionEvaluatorFactoryDefault_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caeefd:components/ActorExpressionEvaluatorFactoryDefault.jsonld#ActorExpressionEvaluatorFactoryDefault_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

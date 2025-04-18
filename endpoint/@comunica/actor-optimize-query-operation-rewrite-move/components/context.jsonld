@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caoqorm": "npmd:@comunica/actor-optimize-query-operation-rewrite-move/^4.0.0/",
+      "ActorOptimizeQueryOperationRewriteMove": {
+        "@id": "caoqorm:components/ActorOptimizeQueryOperationRewriteMove.jsonld#ActorOptimizeQueryOperationRewriteMove",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "caoqorm:components/ActorOptimizeQueryOperationRewriteMove.jsonld#ActorOptimizeQueryOperationRewriteMove_args_name"
+          },
+          "args_bus": {
+            "@id": "caoqorm:components/ActorOptimizeQueryOperationRewriteMove.jsonld#ActorOptimizeQueryOperationRewriteMove_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caoqorm:components/ActorOptimizeQueryOperationRewriteMove.jsonld#ActorOptimizeQueryOperationRewriteMove_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caoqorm:components/ActorOptimizeQueryOperationRewriteMove.jsonld#ActorOptimizeQueryOperationRewriteMove_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "caoqorm:components/ActorOptimizeQueryOperationRewriteMove.jsonld#ActorOptimizeQueryOperationRewriteMove_args_name"
+          },
+          "bus": {
+            "@id": "caoqorm:components/ActorOptimizeQueryOperationRewriteMove.jsonld#ActorOptimizeQueryOperationRewriteMove_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caoqorm:components/ActorOptimizeQueryOperationRewriteMove.jsonld#ActorOptimizeQueryOperationRewriteMove_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caoqorm:components/ActorOptimizeQueryOperationRewriteMove.jsonld#ActorOptimizeQueryOperationRewriteMove_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

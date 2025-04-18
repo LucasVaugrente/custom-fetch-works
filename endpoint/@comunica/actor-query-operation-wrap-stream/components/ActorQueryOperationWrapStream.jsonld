@@ -1,0 +1,230 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-operation-wrap-stream/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-query-operation/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-operation-wrap-stream",
+  "components": [
+    {
+      "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#ActorQueryOperationWrapStream",
+      "@type": "Class",
+      "requireElement": "ActorQueryOperationWrapStream",
+      "extends": [
+        "cbqo:components/ActorQueryOperation.jsonld#ActorQueryOperation"
+      ],
+      "comment": "A comunica Wrap Stream Query Operation Actor.",
+      "parameters": [
+        {
+          "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#ActorQueryOperationWrapStream_args_mediatorIteratorTransform",
+          "range": "cc:components/Mediator.jsonld#Mediator",
+          "comment": "Mediator that runs all transforms defined by user over the output stream of the query operation"
+        },
+        {
+          "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#ActorQueryOperationWrapStream_args_mediatorQueryOperation",
+          "range": "cc:components/Mediator.jsonld#Mediator",
+          "comment": "Mediator that runs the next query operation"
+        },
+        {
+          "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#ActorQueryOperationWrapStream_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#ActorQueryOperationWrapStream_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbqo:components/ActorQueryOperation.jsonld#ActorQueryOperation_default_bus",
+            "@type": "cbqo:components/BusQueryOperation.jsonld#BusQueryOperation"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#ActorQueryOperationWrapStream_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "Query operation processing failed: none of the configured actors were able to handle the operation type ${action.operation.type}",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#ActorQueryOperationWrapStream_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#ActorQueryOperationWrapStream__member_mediatorIteratorTransform",
+          "memberFieldName": "mediatorIteratorTransform",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#ActorQueryOperationWrapStream__member_mediatorQueryOperation",
+          "memberFieldName": "mediatorQueryOperation",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#ActorQueryOperationWrapStream__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#ActorQueryOperationWrapStream__member_test",
+          "memberFieldName": "test"
+        },
+        {
+          "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#ActorQueryOperationWrapStream__member_run",
+          "memberFieldName": "run"
+        },
+        {
+          "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#ActorQueryOperationWrapStream__member_setContextWrapped",
+          "memberFieldName": "setContextWrapped"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#ActorQueryOperationWrapStream_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "mediatorIteratorTransform",
+              "value": {
+                "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#ActorQueryOperationWrapStream_args_mediatorIteratorTransform"
+              }
+            },
+            {
+              "keyRaw": "mediatorQueryOperation",
+              "value": {
+                "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#ActorQueryOperationWrapStream_args_mediatorQueryOperation"
+              }
+            },
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#ActorQueryOperationWrapStream_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#ActorQueryOperationWrapStream_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#ActorQueryOperationWrapStream_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#ActorQueryOperationWrapStream_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#IActorQueryOperationWrapStreamArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IActorQueryOperationWrapStreamArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#IActorQueryOperationWrapStreamArgs__member_mediatorIteratorTransform",
+          "memberFieldName": "mediatorIteratorTransform"
+        },
+        {
+          "@id": "caqows:components/ActorQueryOperationWrapStream.jsonld#IActorQueryOperationWrapStreamArgs__member_mediatorQueryOperation",
+          "memberFieldName": "mediatorQueryOperation"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

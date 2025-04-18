@@ -1,0 +1,119 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-source-identify-rdfjs/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-source-identify-rdfjs",
+  "components": [
+    {
+      "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs",
+      "@type": "Class",
+      "requireElement": "QuerySourceRdfJs",
+      "parameters": [
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs_source",
+          "range": "urn:npm:@rdfjs/types:Source"
+        },
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs_bindingsFactory",
+          "range": "urn:npm:@comunica/utils-bindings-factory:BindingsFactory"
+        },
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs_dataFactory",
+          "range": {
+            "@type": "ParameterRangeIntersection",
+            "parameterRangeElements": [
+              "urn:npm:@rdfjs/types:DataFactory",
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs__member_selectorShape",
+          "memberFieldName": "selectorShape",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs__member_referenceValue",
+          "memberFieldName": "referenceValue",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              "urn:npm:@rdfjs/types:Source"
+            ]
+          }
+        },
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs__member_source",
+          "memberFieldName": "source",
+          "range": "caqsir:components/IRdfJsSourceExtended.jsonld#IRdfJsSourceExtended"
+        },
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs__member_dataFactory",
+          "memberFieldName": "dataFactory"
+        },
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs__member_bindingsFactory",
+          "memberFieldName": "bindingsFactory"
+        },
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs__member_nullifyVariables",
+          "memberFieldName": "nullifyVariables"
+        },
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs__member_hasDuplicateVariables",
+          "memberFieldName": "hasDuplicateVariables"
+        },
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs__member_getSelectorShape",
+          "memberFieldName": "getSelectorShape"
+        },
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs__member_queryBindings",
+          "memberFieldName": "queryBindings"
+        },
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs__member_setMetadata",
+          "memberFieldName": "setMetadata"
+        },
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs__member_queryQuads",
+          "memberFieldName": "queryQuads"
+        },
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs__member_queryBoolean",
+          "memberFieldName": "queryBoolean"
+        },
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs__member_queryVoid",
+          "memberFieldName": "queryVoid"
+        },
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs__member_toString",
+          "memberFieldName": "toString"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs_source"
+        },
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs_dataFactory"
+        },
+        {
+          "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs_bindingsFactory"
+        }
+      ]
+    }
+  ]
+}

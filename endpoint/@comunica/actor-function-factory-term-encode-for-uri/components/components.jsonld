@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-encode-for-uri/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-encode-for-uri",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-encode-for-uri",
+  "import": [
+    "cafftefu:components/ActorFunctionFactoryTermEncodeForUri.jsonld"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/types/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/types",
+  "components": [
+    {
+      "@id": "ct:components/statistics/IDiscoverEventData.jsonld#IDiscoverEventData",
+      "@type": "AbstractClass",
+      "requireElement": "IDiscoverEventData",
+      "comment": "Interface for the data emitted by link discovery statistic trackers. The parent node represents the URL where the discovered URL is retrieved from.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/statistics/IDiscoverEventData.jsonld#IDiscoverEventData__member_edge",
+          "memberFieldName": "edge"
+        },
+        {
+          "@id": "ct:components/statistics/IDiscoverEventData.jsonld#IDiscoverEventData__member_metadataChild",
+          "memberFieldName": "metadataChild"
+        },
+        {
+          "@id": "ct:components/statistics/IDiscoverEventData.jsonld#IDiscoverEventData__member_metadataParent",
+          "memberFieldName": "metadataParent"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

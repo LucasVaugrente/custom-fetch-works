@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caqov": "npmd:@comunica/actor-query-operation-values/^4.0.0/",
+      "ActorQueryOperationValues": {
+        "@id": "caqov:components/ActorQueryOperationValues.jsonld#ActorQueryOperationValues",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorMergeBindingsContext": {
+            "@id": "caqov:components/ActorQueryOperationValues.jsonld#ActorQueryOperationValues_args_mediatorMergeBindingsContext"
+          },
+          "args_name": {
+            "@id": "caqov:components/ActorQueryOperationValues.jsonld#ActorQueryOperationValues_args_name"
+          },
+          "args_bus": {
+            "@id": "caqov:components/ActorQueryOperationValues.jsonld#ActorQueryOperationValues_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caqov:components/ActorQueryOperationValues.jsonld#ActorQueryOperationValues_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caqov:components/ActorQueryOperationValues.jsonld#ActorQueryOperationValues_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorMergeBindingsContext": {
+            "@id": "caqov:components/ActorQueryOperationValues.jsonld#ActorQueryOperationValues_args_mediatorMergeBindingsContext"
+          },
+          "name": {
+            "@id": "caqov:components/ActorQueryOperationValues.jsonld#ActorQueryOperationValues_args_name"
+          },
+          "bus": {
+            "@id": "caqov:components/ActorQueryOperationValues.jsonld#ActorQueryOperationValues_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caqov:components/ActorQueryOperationValues.jsonld#ActorQueryOperationValues_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caqov:components/ActorQueryOperationValues.jsonld#ActorQueryOperationValues_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorQueryOperationUpdateDeleteInsertArgs": {
+        "@id": "caqov:components/ActorQueryOperationValues.jsonld#IActorQueryOperationUpdateDeleteInsertArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caffti": "npmd:@comunica/actor-function-factory-term-inequality/^4.0.0/",
+      "ActorFunctionFactoryTermInequality": {
+        "@id": "caffti:components/ActorFunctionFactoryTermInequality.jsonld#ActorFunctionFactoryTermInequality",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorFunctionFactory": {
+            "@id": "caffti:components/ActorFunctionFactoryTermInequality.jsonld#ActorFunctionFactoryTermInequality_args_mediatorFunctionFactory"
+          },
+          "args_name": {
+            "@id": "caffti:components/ActorFunctionFactoryTermInequality.jsonld#ActorFunctionFactoryTermInequality_args_name"
+          },
+          "args_bus": {
+            "@id": "caffti:components/ActorFunctionFactoryTermInequality.jsonld#ActorFunctionFactoryTermInequality_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caffti:components/ActorFunctionFactoryTermInequality.jsonld#ActorFunctionFactoryTermInequality_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caffti:components/ActorFunctionFactoryTermInequality.jsonld#ActorFunctionFactoryTermInequality_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorFunctionFactory": {
+            "@id": "caffti:components/ActorFunctionFactoryTermInequality.jsonld#ActorFunctionFactoryTermInequality_args_mediatorFunctionFactory"
+          },
+          "name": {
+            "@id": "caffti:components/ActorFunctionFactoryTermInequality.jsonld#ActorFunctionFactoryTermInequality_args_name"
+          },
+          "bus": {
+            "@id": "caffti:components/ActorFunctionFactoryTermInequality.jsonld#ActorFunctionFactoryTermInequality_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caffti:components/ActorFunctionFactoryTermInequality.jsonld#ActorFunctionFactoryTermInequality_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caffti:components/ActorFunctionFactoryTermInequality.jsonld#ActorFunctionFactoryTermInequality_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

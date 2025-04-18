@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cafftlt": "npmd:@comunica/actor-function-factory-term-lesser-than/^4.0.0/",
+      "ActorFunctionFactoryTermLesserThan": {
+        "@id": "cafftlt:components/ActorFunctionFactoryTermLesserThan.jsonld#ActorFunctionFactoryTermLesserThan",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorFunctionFactory": {
+            "@id": "cafftlt:components/ActorFunctionFactoryTermLesserThan.jsonld#ActorFunctionFactoryTermLesserThan_args_mediatorFunctionFactory"
+          },
+          "args_name": {
+            "@id": "cafftlt:components/ActorFunctionFactoryTermLesserThan.jsonld#ActorFunctionFactoryTermLesserThan_args_name"
+          },
+          "args_bus": {
+            "@id": "cafftlt:components/ActorFunctionFactoryTermLesserThan.jsonld#ActorFunctionFactoryTermLesserThan_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cafftlt:components/ActorFunctionFactoryTermLesserThan.jsonld#ActorFunctionFactoryTermLesserThan_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cafftlt:components/ActorFunctionFactoryTermLesserThan.jsonld#ActorFunctionFactoryTermLesserThan_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorFunctionFactory": {
+            "@id": "cafftlt:components/ActorFunctionFactoryTermLesserThan.jsonld#ActorFunctionFactoryTermLesserThan_args_mediatorFunctionFactory"
+          },
+          "name": {
+            "@id": "cafftlt:components/ActorFunctionFactoryTermLesserThan.jsonld#ActorFunctionFactoryTermLesserThan_args_name"
+          },
+          "bus": {
+            "@id": "cafftlt:components/ActorFunctionFactoryTermLesserThan.jsonld#ActorFunctionFactoryTermLesserThan_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cafftlt:components/ActorFunctionFactoryTermLesserThan.jsonld#ActorFunctionFactoryTermLesserThan_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cafftlt:components/ActorFunctionFactoryTermLesserThan.jsonld#ActorFunctionFactoryTermLesserThan_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

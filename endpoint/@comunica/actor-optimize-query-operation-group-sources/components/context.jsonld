@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caoqogs": "npmd:@comunica/actor-optimize-query-operation-group-sources/^4.0.0/",
+      "ActorOptimizeQueryOperationGroupSources": {
+        "@id": "caoqogs:components/ActorOptimizeQueryOperationGroupSources.jsonld#ActorOptimizeQueryOperationGroupSources",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "caoqogs:components/ActorOptimizeQueryOperationGroupSources.jsonld#ActorOptimizeQueryOperationGroupSources_args_name"
+          },
+          "args_bus": {
+            "@id": "caoqogs:components/ActorOptimizeQueryOperationGroupSources.jsonld#ActorOptimizeQueryOperationGroupSources_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caoqogs:components/ActorOptimizeQueryOperationGroupSources.jsonld#ActorOptimizeQueryOperationGroupSources_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caoqogs:components/ActorOptimizeQueryOperationGroupSources.jsonld#ActorOptimizeQueryOperationGroupSources_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "caoqogs:components/ActorOptimizeQueryOperationGroupSources.jsonld#ActorOptimizeQueryOperationGroupSources_args_name"
+          },
+          "bus": {
+            "@id": "caoqogs:components/ActorOptimizeQueryOperationGroupSources.jsonld#ActorOptimizeQueryOperationGroupSources_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caoqogs:components/ActorOptimizeQueryOperationGroupSources.jsonld#ActorOptimizeQueryOperationGroupSources_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caoqogs:components/ActorOptimizeQueryOperationGroupSources.jsonld#ActorOptimizeQueryOperationGroupSources_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

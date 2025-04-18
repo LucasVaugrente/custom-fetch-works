@@ -1,0 +1,239 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-merge-bindings-context/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-merge-bindings-context",
+  "components": [
+    {
+      "@id": "cbmbc:components/ActorMergeBindingsContext.jsonld#ActorMergeBindingsContext",
+      "@type": "AbstractClass",
+      "requireElement": "ActorMergeBindingsContext",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "cc:components/Actor.jsonld#Actor",
+          "genericTypeInstances": [
+            "cbmbc:components/ActorMergeBindingsContext.jsonld#IActionMergeBindingsContext",
+            "cc:components/Actor.jsonld#IActorTest",
+            "cbmbc:components/ActorMergeBindingsContext.jsonld#IActorMergeBindingsContextOutput",
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "cbmbc:components/ActorMergeBindingsContext.jsonld#ActorMergeBindingsContext__generic_TS"
+            }
+          ]
+        }
+      ],
+      "comment": "A comunica actor for the creation of merge handlers for binding context keys.  Actor types: * Input:  IActionMergeBindingFactory: The query actionContext * Test:   <none> * Output: IActorMergeBindingFactoryOutput: Returns a function that merges context entries. the function only runs on contextKeys equal to the key of the returned record.",
+      "genericTypeParameters": [
+        {
+          "@id": "cbmbc:components/ActorMergeBindingsContext.jsonld#ActorMergeBindingsContext__generic_TS",
+          "default": {
+            "@type": "ParameterRangeUndefined"
+          }
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "cbmbc:components/ActorMergeBindingsContext.jsonld#ActorMergeBindingsContext_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "cbmbc:components/ActorMergeBindingsContext.jsonld#ActorMergeBindingsContext_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbmbc:components/ActorMergeBindingsContext.jsonld#ActorMergeBindingsContext_default_bus",
+            "@type": "cc:components/Bus.jsonld#Bus"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "cbmbc:components/ActorMergeBindingsContext.jsonld#ActorMergeBindingsContext_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "Merging of bindings contexts failed: none of the configured actors were able to handle the merging",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "cbmbc:components/ActorMergeBindingsContext.jsonld#ActorMergeBindingsContext_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cbmbc:components/ActorMergeBindingsContext.jsonld#ActorMergeBindingsContext__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cbmbc:components/ActorMergeBindingsContext.jsonld#ActorMergeBindingsContext_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "cbmbc:components/ActorMergeBindingsContext.jsonld#ActorMergeBindingsContext_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "cbmbc:components/ActorMergeBindingsContext.jsonld#ActorMergeBindingsContext_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "cbmbc:components/ActorMergeBindingsContext.jsonld#ActorMergeBindingsContext_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "cbmbc:components/ActorMergeBindingsContext.jsonld#ActorMergeBindingsContext_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "cbmbc:components/ActorMergeBindingsContext.jsonld#IActionMergeBindingsContext",
+      "@type": "AbstractClass",
+      "requireElement": "IActionMergeBindingsContext",
+      "extends": [
+        "cc:components/Actor.jsonld#IAction"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbmbc:components/ActorMergeBindingsContext.jsonld#IActionMergeBindingsContext__member_context",
+          "memberFieldName": "context"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbmbc:components/ActorMergeBindingsContext.jsonld#IActorMergeBindingsContextOutput",
+      "@type": "AbstractClass",
+      "requireElement": "IActorMergeBindingsContextOutput",
+      "extends": [
+        "cc:components/Actor.jsonld#IActorOutput"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbmbc:components/ActorMergeBindingsContext.jsonld#IActorMergeBindingsContextOutput__member_mergeHandlers",
+          "memberFieldName": "mergeHandlers"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbmbc:components/ActorMergeBindingsContext.jsonld#IBindingsContextMergeHandler",
+      "@type": "AbstractClass",
+      "requireElement": "IBindingsContextMergeHandler",
+      "comment": "The interface for a binding context merge handler. A merge handler is a function that accepts context entries (from different binding contexts) associated with the same key and merges these values. The merging strategy is dependent on the implementation of the interface.",
+      "genericTypeParameters": [
+        {
+          "@id": "cbmbc:components/ActorMergeBindingsContext.jsonld#IBindingsContextMergeHandler__generic_V"
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbmbc:components/ActorMergeBindingsContext.jsonld#IBindingsContextMergeHandler__member_run",
+          "memberFieldName": "run"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

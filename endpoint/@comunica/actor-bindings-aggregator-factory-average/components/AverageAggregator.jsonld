@@ -1,0 +1,115 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-bindings-aggregator-factory-average/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/types/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-function-factory/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-bindings-aggregator-factory/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-bindings-aggregator-factory-average",
+  "components": [
+    {
+      "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator",
+      "@type": "Class",
+      "requireElement": "AverageAggregator",
+      "extends": [
+        "cbbaf:components/ActorBindingsAggregatorFactory.jsonld#IBindingsAggregator"
+      ],
+      "parameters": [
+        {
+          "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator_distinct",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator_evaluator",
+          "range": "ct:components/ExpressionEvaluator.jsonld#IExpressionEvaluator"
+        },
+        {
+          "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator_additionFunction",
+          "range": "cbff:components/ActorFunctionFactory.jsonld#ITermFunction"
+        },
+        {
+          "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator_divisionFunction",
+          "range": "cbff:components/ActorFunctionFactory.jsonld#ITermFunction"
+        },
+        {
+          "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator_throwError",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator_dataFactory",
+          "range": {
+            "@type": "ParameterRangeIntersection",
+            "parameterRangeElements": [
+              "urn:npm:@rdfjs/types:DataFactory",
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator__member_dataFactory",
+          "memberFieldName": "dataFactory"
+        },
+        {
+          "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator__member_additionFunction",
+          "memberFieldName": "additionFunction"
+        },
+        {
+          "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator__member_divisionFunction",
+          "memberFieldName": "divisionFunction"
+        },
+        {
+          "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator__member_state",
+          "memberFieldName": "state"
+        },
+        {
+          "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator__member_emptyValueTerm",
+          "memberFieldName": "emptyValueTerm"
+        },
+        {
+          "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator__member_putTerm",
+          "memberFieldName": "putTerm"
+        },
+        {
+          "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator__member_termResult",
+          "memberFieldName": "termResult"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator_evaluator"
+        },
+        {
+          "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator_distinct"
+        },
+        {
+          "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator_dataFactory"
+        },
+        {
+          "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator_additionFunction"
+        },
+        {
+          "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator_divisionFunction"
+        },
+        {
+          "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator_throwError"
+        }
+      ]
+    }
+  ]
+}

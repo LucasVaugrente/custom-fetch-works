@@ -1,0 +1,205 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-process-explain-physical/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-query-process/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-process-explain-physical",
+  "components": [
+    {
+      "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical",
+      "@type": "Class",
+      "requireElement": "ActorQueryProcessExplainPhysical",
+      "extends": [
+        "cbqp:components/ActorQueryProcess.jsonld#ActorQueryProcess"
+      ],
+      "comment": "A comunica Explain Physical Query Process Actor.",
+      "parameters": [
+        {
+          "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args_queryProcessor",
+          "range": "cbqp:components/ActorQueryProcess.jsonld#IQueryProcessSequential"
+        },
+        {
+          "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbqp:components/ActorQueryProcess.jsonld#ActorQueryProcess_default_bus",
+            "@type": "cc:components/Bus.jsonld#Bus"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "Query processing failed: none of the configured actor were process to the query \"${action.query}\"",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical__member_queryProcessor",
+          "memberFieldName": "queryProcessor",
+          "range": "cbqp:components/ActorQueryProcess.jsonld#IQueryProcessSequential"
+        },
+        {
+          "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical__member_test",
+          "memberFieldName": "test"
+        },
+        {
+          "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical__member_run",
+          "memberFieldName": "run"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "queryProcessor",
+              "value": {
+                "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args_queryProcessor"
+              }
+            },
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#IActorQueryProcessExplainPhysicalArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IActorQueryProcessExplainPhysicalArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#IActorQueryProcessExplainPhysicalArgs__member_queryProcessor",
+          "memberFieldName": "queryProcessor"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

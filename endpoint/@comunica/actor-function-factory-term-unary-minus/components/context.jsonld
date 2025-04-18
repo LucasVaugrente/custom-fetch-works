@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cafftum": "npmd:@comunica/actor-function-factory-term-unary-minus/^4.0.0/",
+      "ActorFunctionFactoryTermUnaryMinus": {
+        "@id": "cafftum:components/ActorFunctionFactoryTermUnaryMinus.jsonld#ActorFunctionFactoryTermUnaryMinus",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cafftum:components/ActorFunctionFactoryTermUnaryMinus.jsonld#ActorFunctionFactoryTermUnaryMinus_args_name"
+          },
+          "args_bus": {
+            "@id": "cafftum:components/ActorFunctionFactoryTermUnaryMinus.jsonld#ActorFunctionFactoryTermUnaryMinus_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cafftum:components/ActorFunctionFactoryTermUnaryMinus.jsonld#ActorFunctionFactoryTermUnaryMinus_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cafftum:components/ActorFunctionFactoryTermUnaryMinus.jsonld#ActorFunctionFactoryTermUnaryMinus_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cafftum:components/ActorFunctionFactoryTermUnaryMinus.jsonld#ActorFunctionFactoryTermUnaryMinus_args_name"
+          },
+          "bus": {
+            "@id": "cafftum:components/ActorFunctionFactoryTermUnaryMinus.jsonld#ActorFunctionFactoryTermUnaryMinus_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cafftum:components/ActorFunctionFactoryTermUnaryMinus.jsonld#ActorFunctionFactoryTermUnaryMinus_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cafftum:components/ActorFunctionFactoryTermUnaryMinus.jsonld#ActorFunctionFactoryTermUnaryMinus_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-bindings-aggregator-factory-sample/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-bindings-aggregator-factory-sample",
+  "@type": "Module",
+  "requireName": "@comunica/actor-bindings-aggregator-factory-sample",
+  "import": [
+    "cabafs:components/ActorBindingsAggregatorFactorySample.jsonld",
+    "cabafs:components/SampleAggregator.jsonld"
+  ]
+}

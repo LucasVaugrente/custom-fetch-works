@@ -1,0 +1,43 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/types/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/types",
+  "components": [
+    {
+      "@id": "ct:components/statistics/IStatisticBase.jsonld#IStatisticBase",
+      "@type": "AbstractClass",
+      "requireElement": "IStatisticBase",
+      "comment": "Statistics are able to track specific types of information during query execution. It is possible to listen to events that are produced by each specific statistic.",
+      "genericTypeParameters": [
+        {
+          "@id": "ct:components/statistics/IStatisticBase.jsonld#IStatisticBase__generic_T"
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/statistics/IStatisticBase.jsonld#IStatisticBase__member_on",
+          "memberFieldName": "on"
+        },
+        {
+          "@id": "ct:components/statistics/IStatisticBase.jsonld#IStatisticBase__member_removeListener",
+          "memberFieldName": "removeListener"
+        },
+        {
+          "@id": "ct:components/statistics/IStatisticBase.jsonld#IStatisticBase__member_emit",
+          "memberFieldName": "emit"
+        },
+        {
+          "@id": "ct:components/statistics/IStatisticBase.jsonld#IStatisticBase__member_getListeners",
+          "memberFieldName": "getListeners"
+        },
+        {
+          "@id": "ct:components/statistics/IStatisticBase.jsonld#IStatisticBase__member_updateStatistic",
+          "memberFieldName": "updateStatistic"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

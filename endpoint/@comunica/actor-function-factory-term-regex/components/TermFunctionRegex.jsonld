@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-regex/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-regex",
+  "components": [
+    {
+      "@id": "cafftr:components/TermFunctionRegex.jsonld#TermFunctionRegex",
+      "@type": "Class",
+      "requireElement": "TermFunctionRegex",
+      "comment": "https://www.w3.org/TR/sparql11-query/#func-regex",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cafftr:components/TermFunctionRegex.jsonld#TermFunctionRegex__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cafftr:components/TermFunctionRegex.jsonld#TermFunctionRegex__member_regex2",
+          "memberFieldName": "regex2"
+        },
+        {
+          "@id": "cafftr:components/TermFunctionRegex.jsonld#TermFunctionRegex__member_regex3",
+          "memberFieldName": "regex3"
+        },
+        {
+          "@id": "cafftr:components/TermFunctionRegex.jsonld#TermFunctionRegex__member_matches",
+          "memberFieldName": "matches"
+        },
+        {
+          "@id": "cafftr:components/TermFunctionRegex.jsonld#TermFunctionRegex__member_cleanFlags",
+          "memberFieldName": "cleanFlags"
+        },
+        {
+          "@id": "cafftr:components/TermFunctionRegex.jsonld#TermFunctionRegex__member_flagX",
+          "memberFieldName": "flagX"
+        },
+        {
+          "@id": "cafftr:components/TermFunctionRegex.jsonld#TermFunctionRegex__member_flagQ",
+          "memberFieldName": "flagQ"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

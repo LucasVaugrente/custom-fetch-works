@@ -1,0 +1,58 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caqopzom": "npmd:@comunica/actor-query-operation-path-zero-or-more/^4.0.0/",
+      "ActorQueryOperationPathZeroOrMore": {
+        "@id": "caqopzom:components/ActorQueryOperationPathZeroOrMore.jsonld#ActorQueryOperationPathZeroOrMore",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorMergeBindingsContext": {
+            "@id": "caqopzom:components/ActorQueryOperationPathZeroOrMore.jsonld#ActorQueryOperationPathZeroOrMore_args_mediatorMergeBindingsContext"
+          },
+          "args_mediatorQueryOperation": {
+            "@id": "caqopzom:components/ActorQueryOperationPathZeroOrMore.jsonld#ActorQueryOperationPathZeroOrMore_args_mediatorQueryOperation"
+          },
+          "args_name": {
+            "@id": "caqopzom:components/ActorQueryOperationPathZeroOrMore.jsonld#ActorQueryOperationPathZeroOrMore_args_name"
+          },
+          "args_bus": {
+            "@id": "caqopzom:components/ActorQueryOperationPathZeroOrMore.jsonld#ActorQueryOperationPathZeroOrMore_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caqopzom:components/ActorQueryOperationPathZeroOrMore.jsonld#ActorQueryOperationPathZeroOrMore_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caqopzom:components/ActorQueryOperationPathZeroOrMore.jsonld#ActorQueryOperationPathZeroOrMore_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorMergeBindingsContext": {
+            "@id": "caqopzom:components/ActorQueryOperationPathZeroOrMore.jsonld#ActorQueryOperationPathZeroOrMore_args_mediatorMergeBindingsContext"
+          },
+          "mediatorQueryOperation": {
+            "@id": "caqopzom:components/ActorQueryOperationPathZeroOrMore.jsonld#ActorQueryOperationPathZeroOrMore_args_mediatorQueryOperation"
+          },
+          "name": {
+            "@id": "caqopzom:components/ActorQueryOperationPathZeroOrMore.jsonld#ActorQueryOperationPathZeroOrMore_args_name"
+          },
+          "bus": {
+            "@id": "caqopzom:components/ActorQueryOperationPathZeroOrMore.jsonld#ActorQueryOperationPathZeroOrMore_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caqopzom:components/ActorQueryOperationPathZeroOrMore.jsonld#ActorQueryOperationPathZeroOrMore_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caqopzom:components/ActorQueryOperationPathZeroOrMore.jsonld#ActorQueryOperationPathZeroOrMore_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorQueryOperationPathZeroOrMoreArgs": {
+        "@id": "caqopzom:components/ActorQueryOperationPathZeroOrMore.jsonld#IActorQueryOperationPathZeroOrMoreArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

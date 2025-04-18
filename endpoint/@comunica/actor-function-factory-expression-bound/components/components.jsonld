@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-expression-bound/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-expression-bound",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-expression-bound",
+  "import": [
+    "caffeb:components/ActorFunctionFactoryExpressionBound.jsonld"
+  ]
+}

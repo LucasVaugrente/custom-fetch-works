@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caffest": "npmd:@comunica/actor-function-factory-expression-same-term/^4.0.0/",
+      "ActorFunctionFactoryExpressionSameTerm": {
+        "@id": "caffest:components/ActorFunctionFactoryExpressionSameTerm.jsonld#ActorFunctionFactoryExpressionSameTerm",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "caffest:components/ActorFunctionFactoryExpressionSameTerm.jsonld#ActorFunctionFactoryExpressionSameTerm_args_name"
+          },
+          "args_bus": {
+            "@id": "caffest:components/ActorFunctionFactoryExpressionSameTerm.jsonld#ActorFunctionFactoryExpressionSameTerm_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caffest:components/ActorFunctionFactoryExpressionSameTerm.jsonld#ActorFunctionFactoryExpressionSameTerm_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caffest:components/ActorFunctionFactoryExpressionSameTerm.jsonld#ActorFunctionFactoryExpressionSameTerm_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "caffest:components/ActorFunctionFactoryExpressionSameTerm.jsonld#ActorFunctionFactoryExpressionSameTerm_args_name"
+          },
+          "bus": {
+            "@id": "caffest:components/ActorFunctionFactoryExpressionSameTerm.jsonld#ActorFunctionFactoryExpressionSameTerm_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caffest:components/ActorFunctionFactoryExpressionSameTerm.jsonld#ActorFunctionFactoryExpressionSameTerm_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caffest:components/ActorFunctionFactoryExpressionSameTerm.jsonld#ActorFunctionFactoryExpressionSameTerm_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

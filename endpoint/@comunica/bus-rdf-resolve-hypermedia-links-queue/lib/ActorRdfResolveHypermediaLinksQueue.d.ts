@@ -1,0 +1,30 @@
+import type { IAction, IActorArgs, IActorOutput, IActorTest, Mediate } from '@comunica/core';
+import { Actor } from '@comunica/core';
+import type { ILinkQueue } from './ILinkQueue';
+/**
+ * A comunica actor for rdf-resolve-hypermedia-links-queue events.
+ *
+ * Actor types:
+ * * Input:  IActionRdfResolveHypermediaLinksQueue:      Creates a new {@link ILinkQueue} for the given seed URL.
+ * * Test:   <none>
+ * * Output: IActorRdfResolveHypermediaLinksQueueOutput: The created {@link ILinkQueue}.
+ *
+ * @see IActionRdfResolveHypermediaLinksQueue
+ * @see IActorRdfResolveHypermediaLinksQueueOutput
+ */
+export declare abstract class ActorRdfResolveHypermediaLinksQueue<TS = undefined> extends Actor<IActionRdfResolveHypermediaLinksQueue, IActorTest, IActorRdfResolveHypermediaLinksQueueOutput, TS> {
+    /**
+     * @param args -
+     *   \ @defaultNested {<default_bus> a <cc:components/Bus.jsonld#Bus>} bus
+     *   \ @defaultNested {Link queue creation failed: none of the configured actors were able to create a link queue starting from ${action.firstUrl}} busFailMessage
+     */
+    constructor(args: IActorRdfResolveHypermediaLinksQueueArgs<TS>);
+}
+export interface IActionRdfResolveHypermediaLinksQueue extends IAction {
+    firstUrl: string;
+}
+export interface IActorRdfResolveHypermediaLinksQueueOutput extends IActorOutput {
+    linkQueue: ILinkQueue;
+}
+export type IActorRdfResolveHypermediaLinksQueueArgs<TS = undefined> = IActorArgs<IActionRdfResolveHypermediaLinksQueue, IActorTest, IActorRdfResolveHypermediaLinksQueueOutput, TS>;
+export type MediatorRdfResolveHypermediaLinksQueue = Mediate<IActionRdfResolveHypermediaLinksQueue, IActorRdfResolveHypermediaLinksQueueOutput>;

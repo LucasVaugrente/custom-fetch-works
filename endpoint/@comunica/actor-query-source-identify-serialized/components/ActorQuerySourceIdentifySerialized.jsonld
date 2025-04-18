@@ -1,0 +1,239 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-source-identify-serialized/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-query-source-identify/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-source-identify-serialized",
+  "components": [
+    {
+      "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized",
+      "@type": "Class",
+      "requireElement": "ActorQuerySourceIdentifySerialized",
+      "extends": [
+        "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify"
+      ],
+      "comment": "A comunica Serialized Query Source Identify Actor.",
+      "parameters": [
+        {
+          "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_mediatorRdfParse",
+          "range": "cc:components/Mediator.jsonld#Mediator",
+          "comment": "The quad pattern parser mediator."
+        },
+        {
+          "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_mediatorQuerySourceIdentify",
+          "range": "cc:components/Mediator.jsonld#Mediator",
+          "comment": "The query source identify mediator."
+        },
+        {
+          "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify_default_bus",
+            "@type": "cc:components/Bus.jsonld#Bus"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "Query source identification failed: none of the configured actors were able to identify ${action.querySourceUnidentified.value}",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized__member_cacheSize",
+          "memberFieldName": "cacheSize",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized__member_mediatorRdfParse",
+          "memberFieldName": "mediatorRdfParse",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized__member_mediatorQuerySourceIdentify",
+          "memberFieldName": "mediatorQuerySourceIdentify",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized__member_test",
+          "memberFieldName": "test"
+        },
+        {
+          "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized__member_run",
+          "memberFieldName": "run"
+        },
+        {
+          "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized__member_getRdfSource",
+          "memberFieldName": "getRdfSource"
+        },
+        {
+          "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized__member_isStringSource",
+          "memberFieldName": "isStringSource"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "mediatorRdfParse",
+              "value": {
+                "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_mediatorRdfParse"
+              }
+            },
+            {
+              "keyRaw": "mediatorQuerySourceIdentify",
+              "value": {
+                "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_mediatorQuerySourceIdentify"
+              }
+            },
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#ActorQuerySourceIdentifySerialized_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#IActorQuerySourceIdentifySerializedArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IActorQuerySourceIdentifySerializedArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#IActorQuerySourceIdentifySerializedArgs__member_mediatorRdfParse",
+          "memberFieldName": "mediatorRdfParse"
+        },
+        {
+          "@id": "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld#IActorQuerySourceIdentifySerializedArgs__member_mediatorQuerySourceIdentify",
+          "memberFieldName": "mediatorQuerySourceIdentify"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"IPartialResult.js","sourceRoot":"","sources":["IPartialResult.ts"],"names":[],"mappings":"","sourcesContent":["import type * as RDF from '@rdfjs/types';\n\nexport type PartialResult = {\n  type: 'bindings';\n  data: RDF.Bindings;\n  metadata: Record<string, any>;\n} | {\n  type: 'quads';\n  data: RDF.Quad;\n  metadata: Record<string, any>;\n};\n"]}

@@ -1,0 +1,24 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/types/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/types",
+  "@type": "Module",
+  "requireName": "@comunica/types",
+  "import": [
+    "ct:components/IActionContext.jsonld",
+    "ct:components/IAggregatedStore.jsonld",
+    "ct:components/ICliArgsHandler.jsonld",
+    "ct:components/IJoinEntry.jsonld",
+    "ct:components/IMetadata.jsonld",
+    "ct:components/IPhysicalQueryPlanLogger.jsonld",
+    "ct:components/IProxyHandler.jsonld",
+    "ct:components/IQueryContext.jsonld",
+    "ct:components/IQueryOperationResult.jsonld",
+    "ct:components/IQuerySource.jsonld",
+    "ct:components/statistics/IStatisticBase.jsonld",
+    "ct:components/statistics/IDiscoverEventData.jsonld",
+    "ct:components/Logger.jsonld",
+    "ct:components/ExpressionEvaluator.jsonld"
+  ]
+}

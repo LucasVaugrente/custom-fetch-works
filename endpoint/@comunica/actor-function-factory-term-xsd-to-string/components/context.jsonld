@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cafftxts": "npmd:@comunica/actor-function-factory-term-xsd-to-string/^4.0.0/",
+      "ActorFunctionFactoryTermXsdToString": {
+        "@id": "cafftxts:components/ActorFunctionFactoryTermXsdToString.jsonld#ActorFunctionFactoryTermXsdToString",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cafftxts:components/ActorFunctionFactoryTermXsdToString.jsonld#ActorFunctionFactoryTermXsdToString_args_name"
+          },
+          "args_bus": {
+            "@id": "cafftxts:components/ActorFunctionFactoryTermXsdToString.jsonld#ActorFunctionFactoryTermXsdToString_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cafftxts:components/ActorFunctionFactoryTermXsdToString.jsonld#ActorFunctionFactoryTermXsdToString_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cafftxts:components/ActorFunctionFactoryTermXsdToString.jsonld#ActorFunctionFactoryTermXsdToString_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cafftxts:components/ActorFunctionFactoryTermXsdToString.jsonld#ActorFunctionFactoryTermXsdToString_args_name"
+          },
+          "bus": {
+            "@id": "cafftxts:components/ActorFunctionFactoryTermXsdToString.jsonld#ActorFunctionFactoryTermXsdToString_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cafftxts:components/ActorFunctionFactoryTermXsdToString.jsonld#ActorFunctionFactoryTermXsdToString_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cafftxts:components/ActorFunctionFactoryTermXsdToString.jsonld#ActorFunctionFactoryTermXsdToString_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

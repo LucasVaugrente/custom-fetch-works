@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-query-source-identify-hypermedia/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-query-source-identify-hypermedia",
+  "@type": "Module",
+  "requireName": "@comunica/bus-query-source-identify-hypermedia",
+  "import": [
+    "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld"
+  ]
+}

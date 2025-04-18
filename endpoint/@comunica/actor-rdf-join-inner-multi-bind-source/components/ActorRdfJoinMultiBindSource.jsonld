@@ -1,0 +1,301 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-rdf-join-inner-multi-bind-source/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-rdf-join/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-rdf-join-inner-multi-bind-source",
+  "components": [
+    {
+      "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource",
+      "@type": "Class",
+      "requireElement": "ActorRdfJoinMultiBindSource",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "cbrj:components/ActorRdfJoin.jsonld#ActorRdfJoin",
+          "genericTypeInstances": [
+            "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#IActorRdfJoinMultiBindSourceTestSideData"
+          ]
+        }
+      ],
+      "comment": "A comunica Inner Multi Bind Source RDF Join Actor.",
+      "parameters": [
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_selectivityModifier",
+          "range": "xsd:double",
+          "default": "0.0001",
+          "comment": "Multiplier for selectivity values"
+        },
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_blockSize",
+          "range": "xsd:number",
+          "default": "16",
+          "comment": "The maximum amount of bindings to send to the source per block."
+        },
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_mediatorJoinEntriesSort",
+          "range": "cc:components/Mediator.jsonld#Mediator",
+          "comment": "The join entries sort mediator"
+        },
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_mediatorJoinSelectivity",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbrj:components/ActorRdfJoin.jsonld#ActorRdfJoin_default_bus",
+            "@type": "cc:components/Bus.jsonld#Bus"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "RDF joining failed: none of the configured actors were able to handle the join type ${action.type}",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource__member_selectivityModifier",
+          "memberFieldName": "selectivityModifier",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource__member_blockSize",
+          "memberFieldName": "blockSize",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource__member_mediatorJoinEntriesSort",
+          "memberFieldName": "mediatorJoinEntriesSort",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource__member_getOutput",
+          "memberFieldName": "getOutput"
+        },
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource__member_sortJoinEntries",
+          "memberFieldName": "sortJoinEntries"
+        },
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource__member_getJoinCoefficients",
+          "memberFieldName": "getJoinCoefficients"
+        },
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource__member_createOperationFromEntries",
+          "memberFieldName": "createOperationFromEntries"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "selectivityModifier",
+              "value": {
+                "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_selectivityModifier"
+              }
+            },
+            {
+              "keyRaw": "blockSize",
+              "value": {
+                "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_blockSize"
+              }
+            },
+            {
+              "keyRaw": "mediatorJoinEntriesSort",
+              "value": {
+                "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_mediatorJoinEntriesSort"
+              }
+            },
+            {
+              "keyRaw": "mediatorJoinSelectivity",
+              "value": {
+                "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_mediatorJoinSelectivity"
+              }
+            },
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#IActorRdfJoinInnerMultiBindSourceArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IActorRdfJoinInnerMultiBindSourceArgs",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "cbrj:components/ActorRdfJoin.jsonld#IActorRdfJoinArgs",
+          "genericTypeInstances": [
+            "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#IActorRdfJoinMultiBindSourceTestSideData"
+          ]
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#IActorRdfJoinInnerMultiBindSourceArgs__member_selectivityModifier",
+          "memberFieldName": "selectivityModifier"
+        },
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#IActorRdfJoinInnerMultiBindSourceArgs__member_blockSize",
+          "memberFieldName": "blockSize"
+        },
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#IActorRdfJoinInnerMultiBindSourceArgs__member_mediatorJoinEntriesSort",
+          "memberFieldName": "mediatorJoinEntriesSort"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#IActorRdfJoinMultiBindSourceTestSideData",
+      "@type": "AbstractClass",
+      "requireElement": "IActorRdfJoinMultiBindSourceTestSideData",
+      "extends": [
+        "cbrj:components/ActorRdfJoin.jsonld#IActorRdfJoinTestSideData"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#IActorRdfJoinMultiBindSourceTestSideData__member_entriesUnsorted",
+          "memberFieldName": "entriesUnsorted"
+        },
+        {
+          "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#IActorRdfJoinMultiBindSourceTestSideData__member_entriesSorted",
+          "memberFieldName": "entriesSorted"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

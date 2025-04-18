@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-rand/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-rand",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-rand",
+  "import": [
+    "cafftr:components/ActorFunctionFactoryTermRand.jsonld"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-process-explain-physical/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-process-explain-physical",
+  "@type": "Module",
+  "requireName": "@comunica/actor-query-process-explain-physical",
+  "import": [
+    "caqpep:components/ActorQueryProcessExplainPhysical.jsonld",
+    "caqpep:components/MemoryPhysicalQueryPlanLogger.jsonld"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caqps": "npmd:@comunica/actor-query-process-sequential/^4.0.0/",
+      "ActorQueryProcessSequential": {
+        "@id": "caqps:components/ActorQueryProcessSequential.jsonld#ActorQueryProcessSequential",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorContextPreprocess": {
+            "@id": "caqps:components/ActorQueryProcessSequential.jsonld#ActorQueryProcessSequential_args_mediatorContextPreprocess"
+          },
+          "args_mediatorQueryParse": {
+            "@id": "caqps:components/ActorQueryProcessSequential.jsonld#ActorQueryProcessSequential_args_mediatorQueryParse"
+          },
+          "args_mediatorOptimizeQueryOperation": {
+            "@id": "caqps:components/ActorQueryProcessSequential.jsonld#ActorQueryProcessSequential_args_mediatorOptimizeQueryOperation"
+          },
+          "args_mediatorQueryOperation": {
+            "@id": "caqps:components/ActorQueryProcessSequential.jsonld#ActorQueryProcessSequential_args_mediatorQueryOperation"
+          },
+          "args_mediatorMergeBindingsContext": {
+            "@id": "caqps:components/ActorQueryProcessSequential.jsonld#ActorQueryProcessSequential_args_mediatorMergeBindingsContext"
+          },
+          "args_name": {
+            "@id": "caqps:components/ActorQueryProcessSequential.jsonld#ActorQueryProcessSequential_args_name"
+          },
+          "args_bus": {
+            "@id": "caqps:components/ActorQueryProcessSequential.jsonld#ActorQueryProcessSequential_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caqps:components/ActorQueryProcessSequential.jsonld#ActorQueryProcessSequential_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caqps:components/ActorQueryProcessSequential.jsonld#ActorQueryProcessSequential_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorContextPreprocess": {
+            "@id": "caqps:components/ActorQueryProcessSequential.jsonld#ActorQueryProcessSequential_args_mediatorContextPreprocess"
+          },
+          "mediatorQueryParse": {
+            "@id": "caqps:components/ActorQueryProcessSequential.jsonld#ActorQueryProcessSequential_args_mediatorQueryParse"
+          },
+          "mediatorOptimizeQueryOperation": {
+            "@id": "caqps:components/ActorQueryProcessSequential.jsonld#ActorQueryProcessSequential_args_mediatorOptimizeQueryOperation"
+          },
+          "mediatorQueryOperation": {
+            "@id": "caqps:components/ActorQueryProcessSequential.jsonld#ActorQueryProcessSequential_args_mediatorQueryOperation"
+          },
+          "mediatorMergeBindingsContext": {
+            "@id": "caqps:components/ActorQueryProcessSequential.jsonld#ActorQueryProcessSequential_args_mediatorMergeBindingsContext"
+          },
+          "name": {
+            "@id": "caqps:components/ActorQueryProcessSequential.jsonld#ActorQueryProcessSequential_args_name"
+          },
+          "bus": {
+            "@id": "caqps:components/ActorQueryProcessSequential.jsonld#ActorQueryProcessSequential_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caqps:components/ActorQueryProcessSequential.jsonld#ActorQueryProcessSequential_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caqps:components/ActorQueryProcessSequential.jsonld#ActorQueryProcessSequential_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorQueryProcessSequentialArgs": {
+        "@id": "caqps:components/ActorQueryProcessSequential.jsonld#IActorQueryProcessSequentialArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

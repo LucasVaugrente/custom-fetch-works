@@ -1,0 +1,12 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-source-identify-hypermedia-qpf/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-source-identify-hypermedia-qpf",
+  "@type": "Module",
+  "requireName": "@comunica/actor-query-source-identify-hypermedia-qpf",
+  "import": [
+    "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld",
+    "caqsihq:components/QuerySourceQpf.jsonld"
+  ]
+}

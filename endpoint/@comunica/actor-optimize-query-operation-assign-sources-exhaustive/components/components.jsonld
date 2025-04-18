@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-optimize-query-operation-assign-sources-exhaustive/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-optimize-query-operation-assign-sources-exhaustive",
+  "@type": "Module",
+  "requireName": "@comunica/actor-optimize-query-operation-assign-sources-exhaustive",
+  "import": [
+    "caoqoase:components/ActorOptimizeQueryOperationAssignSourcesExhaustive.jsonld"
+  ]
+}

@@ -1,0 +1,25 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VOID_CLASS_PARTITION = exports.VOID_PROPERTY_PARTITION = exports.VOID_DISTINCT_SUBJECTS = exports.VOID_DISTINCT_OBJECTS = exports.VOID_URI_REGEX_PATTERN = exports.VOID_URI_SPACE = exports.VOID_VOCABULARY = exports.VOID_PROPERTY = exports.VOID_CLASS = exports.VOID_ENTITIES = exports.VOID_TRIPLES = exports.VOID_CLASSES = exports.VOID_DATASET = exports.VOID = exports.SD_GRAPH = exports.SD_FEATURE = exports.SD_UNION_DEFAULT_GRAPH = exports.SD_DEFAULT_GRAPH = exports.SD_DEFAULT_DATASET = exports.SD = exports.RDF_TYPE = void 0;
+exports.RDF_TYPE = 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type';
+exports.SD = 'http://www.w3.org/ns/sparql-service-description#';
+exports.SD_DEFAULT_DATASET = `${exports.SD}defaultDataset`;
+exports.SD_DEFAULT_GRAPH = `${exports.SD}defaultGraph`;
+exports.SD_UNION_DEFAULT_GRAPH = `${exports.SD}UnionDefaultGraph`;
+exports.SD_FEATURE = `${exports.SD}feature`;
+exports.SD_GRAPH = `${exports.SD}Graph`;
+exports.VOID = 'http://rdfs.org/ns/void#';
+exports.VOID_DATASET = `${exports.VOID}Dataset`;
+exports.VOID_CLASSES = `${exports.VOID}classes`;
+exports.VOID_TRIPLES = `${exports.VOID}triples`;
+exports.VOID_ENTITIES = `${exports.VOID}entities`;
+exports.VOID_CLASS = `${exports.VOID}class`;
+exports.VOID_PROPERTY = `${exports.VOID}property`;
+exports.VOID_VOCABULARY = `${exports.VOID}vocabulary`;
+exports.VOID_URI_SPACE = `${exports.VOID}uriSpace`;
+exports.VOID_URI_REGEX_PATTERN = `${exports.VOID}uriRegexPattern`;
+exports.VOID_DISTINCT_OBJECTS = `${exports.VOID}distinctSubjects`;
+exports.VOID_DISTINCT_SUBJECTS = `${exports.VOID}distinctObjects`;
+exports.VOID_PROPERTY_PARTITION = `${exports.VOID}propertyPartition`;
+exports.VOID_CLASS_PARTITION = `${exports.VOID}classPartition`;
+//# sourceMappingURL=Definitions.js.map

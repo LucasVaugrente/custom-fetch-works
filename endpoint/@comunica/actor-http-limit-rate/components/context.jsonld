@@ -1,0 +1,82 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cahlr": "npmd:@comunica/actor-http-limit-rate/^4.0.0/",
+      "ActorHttpLimitRate": {
+        "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorHttp": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_mediatorHttp"
+          },
+          "args_httpInvalidator": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_httpInvalidator"
+          },
+          "args_correctionMultiplier": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_correctionMultiplier"
+          },
+          "args_failureMultiplier": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_failureMultiplier"
+          },
+          "args_limitByDefault": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_limitByDefault"
+          },
+          "args_allowOverlap": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_allowOverlap"
+          },
+          "args_name": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_name"
+          },
+          "args_bus": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorHttp": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_mediatorHttp"
+          },
+          "httpInvalidator": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_httpInvalidator"
+          },
+          "correctionMultiplier": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_correctionMultiplier"
+          },
+          "failureMultiplier": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_failureMultiplier"
+          },
+          "limitByDefault": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_limitByDefault"
+          },
+          "allowOverlap": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_allowOverlap"
+          },
+          "name": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_name"
+          },
+          "bus": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorHttpLimitRateArgs": {
+        "@id": "cahlr:components/ActorHttpLimitRate.jsonld#IActorHttpLimitRateArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

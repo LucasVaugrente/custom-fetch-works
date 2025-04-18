@@ -1,0 +1,313 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-term-comparator-factory/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-function-factory/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-term-comparator-factory",
+  "components": [
+    {
+      "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory",
+      "@type": "AbstractClass",
+      "requireElement": "ActorTermComparatorFactory",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "cc:components/Actor.jsonld#Actor",
+          "genericTypeInstances": [
+            "cbtcf:components/ActorTermComparatorFactory.jsonld#IActionTermComparatorFactory",
+            "cc:components/Actor.jsonld#IActorTest",
+            "cbtcf:components/ActorTermComparatorFactory.jsonld#IActorTermComparatorFactoryOutput",
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory__generic_TS"
+            }
+          ]
+        }
+      ],
+      "comment": "A comunica actor for term-comparator-factory events.  Actor types: * Input:  IActionTermComparatorFactory: the Query Operation Mediator and Function Factory Mediator. * Test:   <none> * Output: IActorTermComparatorFactoryOutput: An object that can order RDF terms.",
+      "genericTypeParameters": [
+        {
+          "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory__generic_TS",
+          "default": {
+            "@type": "ParameterRangeUndefined"
+          }
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_mediatorQueryOperation",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_mediatorFunctionFactory",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_mediatorMergeBindingsContext",
+          "range": "cc:components/Mediator.jsonld#Mediator",
+          "comment": "A mediator for creating binding context merge handlers"
+        },
+        {
+          "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_default_bus",
+            "@type": "cc:components/Bus.jsonld#Bus"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "Creation of term comparator failed",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory__member_mediatorQueryOperation",
+          "memberFieldName": "mediatorQueryOperation",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory__member_mediatorFunctionFactory",
+          "memberFieldName": "mediatorFunctionFactory",
+          "range": "cbff:components/ActorFunctionFactory.jsonld#MediatorFunctionFactory"
+        },
+        {
+          "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory__member_mediatorMergeBindingsContext",
+          "memberFieldName": "mediatorMergeBindingsContext",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "mediatorQueryOperation",
+              "value": {
+                "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_mediatorQueryOperation"
+              }
+            },
+            {
+              "keyRaw": "mediatorFunctionFactory",
+              "value": {
+                "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_mediatorFunctionFactory"
+              }
+            },
+            {
+              "keyRaw": "mediatorMergeBindingsContext",
+              "value": {
+                "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_mediatorMergeBindingsContext"
+              }
+            },
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ActorTermComparatorFactory_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#IActionTermComparatorFactory",
+      "@type": "AbstractClass",
+      "requireElement": "IActionTermComparatorFactory",
+      "extends": [
+        "cc:components/Actor.jsonld#IAction"
+      ],
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ITermComparator",
+      "@type": "AbstractClass",
+      "requireElement": "ITermComparator",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#ITermComparator__member_orderTypes",
+          "memberFieldName": "orderTypes"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#IActorTermComparatorFactoryOutput",
+      "@type": "AbstractClass",
+      "requireElement": "IActorTermComparatorFactoryOutput",
+      "extends": [
+        "cc:components/Actor.jsonld#IActorOutput",
+        "cbtcf:components/ActorTermComparatorFactory.jsonld#ITermComparator"
+      ],
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#IActorTermComparatorFactoryArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IActorTermComparatorFactoryArgs",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "cc:components/Actor.jsonld#IActorArgs",
+          "genericTypeInstances": [
+            "cbtcf:components/ActorTermComparatorFactory.jsonld#IActionTermComparatorFactory",
+            "cc:components/Actor.jsonld#IActorTest",
+            "cbtcf:components/ActorTermComparatorFactory.jsonld#IActorTermComparatorFactoryOutput",
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "cbtcf:components/ActorTermComparatorFactory.jsonld#IActorTermComparatorFactoryArgs__generic_TS"
+            }
+          ]
+        }
+      ],
+      "genericTypeParameters": [
+        {
+          "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#IActorTermComparatorFactoryArgs__generic_TS",
+          "default": {
+            "@type": "ParameterRangeUndefined"
+          }
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#IActorTermComparatorFactoryArgs__member_mediatorQueryOperation",
+          "memberFieldName": "mediatorQueryOperation"
+        },
+        {
+          "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#IActorTermComparatorFactoryArgs__member_mediatorFunctionFactory",
+          "memberFieldName": "mediatorFunctionFactory"
+        },
+        {
+          "@id": "cbtcf:components/ActorTermComparatorFactory.jsonld#IActorTermComparatorFactoryArgs__member_mediatorMergeBindingsContext",
+          "memberFieldName": "mediatorMergeBindingsContext"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

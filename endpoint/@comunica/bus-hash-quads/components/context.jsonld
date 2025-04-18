@@ -1,0 +1,51 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cbhq": "npmd:@comunica/bus-hash-quads/^4.0.0/",
+      "ActorHashQuads": {
+        "@id": "cbhq:components/ActorHashQuads.jsonld#ActorHashQuads",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cbhq:components/ActorHashQuads.jsonld#ActorHashQuads_args_name"
+          },
+          "args_bus": {
+            "@id": "cbhq:components/ActorHashQuads.jsonld#ActorHashQuads_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cbhq:components/ActorHashQuads.jsonld#ActorHashQuads_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cbhq:components/ActorHashQuads.jsonld#ActorHashQuads_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cbhq:components/ActorHashQuads.jsonld#ActorHashQuads_args_name"
+          },
+          "bus": {
+            "@id": "cbhq:components/ActorHashQuads.jsonld#ActorHashQuads_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cbhq:components/ActorHashQuads.jsonld#ActorHashQuads_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cbhq:components/ActorHashQuads.jsonld#ActorHashQuads_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActionHashQuads": {
+        "@id": "cbhq:components/ActorHashQuads.jsonld#IActionHashQuads",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IActorHashQuadsOutput": {
+        "@id": "cbhq:components/ActorHashQuads.jsonld#IActorHashQuadsOutput",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

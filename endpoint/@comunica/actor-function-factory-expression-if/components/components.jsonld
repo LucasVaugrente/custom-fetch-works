@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-expression-if/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-expression-if",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-expression-if",
+  "import": [
+    "caffei:components/ActorFunctionFactoryExpressionIf.jsonld"
+  ]
+}

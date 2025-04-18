@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-optimize-query-operation-group-sources/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-optimize-query-operation-group-sources",
+  "@type": "Module",
+  "requireName": "@comunica/actor-optimize-query-operation-group-sources",
+  "import": [
+    "caoqogs:components/ActorOptimizeQueryOperationGroupSources.jsonld"
+  ]
+}

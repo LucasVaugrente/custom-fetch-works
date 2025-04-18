@@ -1,0 +1,12 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-bindings-aggregator-factory-wildcard-count/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-bindings-aggregator-factory-wildcard-count",
+  "@type": "Module",
+  "requireName": "@comunica/actor-bindings-aggregator-factory-wildcard-count",
+  "import": [
+    "cabafwc:components/ActorBindingsAggregatorFactoryWildcardCount.jsonld",
+    "cabafwc:components/WildcardCountAggregator.jsonld"
+  ]
+}

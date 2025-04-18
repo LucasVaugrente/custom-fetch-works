@@ -1,0 +1,72 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-rdf-resolve-hypermedia-links-queue/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-rdf-resolve-hypermedia-links-queue",
+  "components": [
+    {
+      "@id": "cbrrhlq:components/LinkQueueWrapper.jsonld#LinkQueueWrapper",
+      "@type": "Class",
+      "requireElement": "LinkQueueWrapper",
+      "extends": [
+        "cbrrhlq:components/ILinkQueue.jsonld#ILinkQueue"
+      ],
+      "comment": "A link queue that wraps a given link queue.",
+      "genericTypeParameters": [
+        {
+          "@id": "cbrrhlq:components/LinkQueueWrapper.jsonld#LinkQueueWrapper__generic_T",
+          "range": "cbrrhlq:components/ILinkQueue.jsonld#ILinkQueue",
+          "default": "cbrrhlq:components/ILinkQueue.jsonld#ILinkQueue"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "cbrrhlq:components/LinkQueueWrapper.jsonld#LinkQueueWrapper_linkQueue",
+          "range": {
+            "@type": "ParameterRangeGenericTypeReference",
+            "parameterRangeGenericType": "cbrrhlq:components/LinkQueueWrapper.jsonld#LinkQueueWrapper__generic_T"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cbrrhlq:components/LinkQueueWrapper.jsonld#LinkQueueWrapper__member_linkQueue",
+          "memberFieldName": "linkQueue",
+          "range": {
+            "@type": "ParameterRangeGenericTypeReference",
+            "parameterRangeGenericType": "cbrrhlq:components/LinkQueueWrapper.jsonld#LinkQueueWrapper__generic_T"
+          }
+        },
+        {
+          "@id": "cbrrhlq:components/LinkQueueWrapper.jsonld#LinkQueueWrapper__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cbrrhlq:components/LinkQueueWrapper.jsonld#LinkQueueWrapper__member_push",
+          "memberFieldName": "push"
+        },
+        {
+          "@id": "cbrrhlq:components/LinkQueueWrapper.jsonld#LinkQueueWrapper__member_getSize",
+          "memberFieldName": "getSize"
+        },
+        {
+          "@id": "cbrrhlq:components/LinkQueueWrapper.jsonld#LinkQueueWrapper__member_isEmpty",
+          "memberFieldName": "isEmpty"
+        },
+        {
+          "@id": "cbrrhlq:components/LinkQueueWrapper.jsonld#LinkQueueWrapper__member_pop",
+          "memberFieldName": "pop"
+        },
+        {
+          "@id": "cbrrhlq:components/LinkQueueWrapper.jsonld#LinkQueueWrapper__member_peek",
+          "memberFieldName": "peek"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cbrrhlq:components/LinkQueueWrapper.jsonld#LinkQueueWrapper_linkQueue"
+        }
+      ]
+    }
+  ]
+}

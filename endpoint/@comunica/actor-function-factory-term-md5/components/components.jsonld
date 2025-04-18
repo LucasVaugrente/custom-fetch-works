@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-md5/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-md5",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-md5",
+  "import": [
+    "cafftm:components/ActorFunctionFactoryTermMd5.jsonld"
+  ]
+}

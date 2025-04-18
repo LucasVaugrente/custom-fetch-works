@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-query-process/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-query-process",
+  "@type": "Module",
+  "requireName": "@comunica/bus-query-process",
+  "import": [
+    "cbqp:components/ActorQueryProcess.jsonld"
+  ]
+}

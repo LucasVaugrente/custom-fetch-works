@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-expression-evaluator-factory/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-expression-evaluator-factory",
+  "@type": "Module",
+  "requireName": "@comunica/bus-expression-evaluator-factory",
+  "import": [
+    "cbeef:components/ActorExpressionEvaluatorFactory.jsonld"
+  ]
+}

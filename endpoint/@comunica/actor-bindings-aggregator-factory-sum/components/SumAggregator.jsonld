@@ -1,0 +1,100 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-bindings-aggregator-factory-sum/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/types/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-function-factory/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-bindings-aggregator-factory-sum",
+  "components": [
+    {
+      "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator",
+      "@type": "Class",
+      "requireElement": "SumAggregator",
+      "parameters": [
+        {
+          "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator_distinct",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator_evaluator",
+          "range": "ct:components/ExpressionEvaluator.jsonld#IExpressionEvaluator"
+        },
+        {
+          "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator_additionFunction",
+          "range": "cbff:components/ActorFunctionFactory.jsonld#ITermFunction"
+        },
+        {
+          "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator_throwError",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator_dataFactory",
+          "range": {
+            "@type": "ParameterRangeIntersection",
+            "parameterRangeElements": [
+              "urn:npm:@rdfjs/types:DataFactory",
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator__member_dataFactory",
+          "memberFieldName": "dataFactory"
+        },
+        {
+          "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator__member_additionFunction",
+          "memberFieldName": "additionFunction"
+        },
+        {
+          "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator__member_state",
+          "memberFieldName": "state"
+        },
+        {
+          "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator__member_emptyValueTerm",
+          "memberFieldName": "emptyValueTerm"
+        },
+        {
+          "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator__member_putTerm",
+          "memberFieldName": "putTerm"
+        },
+        {
+          "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator__member_termResult",
+          "memberFieldName": "termResult"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator_evaluator"
+        },
+        {
+          "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator_distinct"
+        },
+        {
+          "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator_dataFactory"
+        },
+        {
+          "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator_additionFunction"
+        },
+        {
+          "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator_throwError"
+        }
+      ]
+    }
+  ]
+}

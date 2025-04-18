@@ -1,0 +1,70 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caqoo": "npmd:@comunica/actor-query-operation-orderby/^4.0.0/",
+      "ActorQueryOperationOrderBy": {
+        "@id": "caqoo:components/ActorQueryOperationOrderBy.jsonld#ActorQueryOperationOrderBy",
+        "@prefix": true,
+        "@context": {
+          "args_window": {
+            "@id": "caqoo:components/ActorQueryOperationOrderBy.jsonld#ActorQueryOperationOrderBy_args_window"
+          },
+          "args_mediatorExpressionEvaluatorFactory": {
+            "@id": "caqoo:components/ActorQueryOperationOrderBy.jsonld#ActorQueryOperationOrderBy_args_mediatorExpressionEvaluatorFactory"
+          },
+          "args_mediatorTermComparatorFactory": {
+            "@id": "caqoo:components/ActorQueryOperationOrderBy.jsonld#ActorQueryOperationOrderBy_args_mediatorTermComparatorFactory"
+          },
+          "args_mediatorQueryOperation": {
+            "@id": "caqoo:components/ActorQueryOperationOrderBy.jsonld#ActorQueryOperationOrderBy_args_mediatorQueryOperation"
+          },
+          "args_name": {
+            "@id": "caqoo:components/ActorQueryOperationOrderBy.jsonld#ActorQueryOperationOrderBy_args_name"
+          },
+          "args_bus": {
+            "@id": "caqoo:components/ActorQueryOperationOrderBy.jsonld#ActorQueryOperationOrderBy_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caqoo:components/ActorQueryOperationOrderBy.jsonld#ActorQueryOperationOrderBy_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caqoo:components/ActorQueryOperationOrderBy.jsonld#ActorQueryOperationOrderBy_args_beforeActors",
+            "@container": "@list"
+          },
+          "window": {
+            "@id": "caqoo:components/ActorQueryOperationOrderBy.jsonld#ActorQueryOperationOrderBy_args_window"
+          },
+          "mediatorExpressionEvaluatorFactory": {
+            "@id": "caqoo:components/ActorQueryOperationOrderBy.jsonld#ActorQueryOperationOrderBy_args_mediatorExpressionEvaluatorFactory"
+          },
+          "mediatorTermComparatorFactory": {
+            "@id": "caqoo:components/ActorQueryOperationOrderBy.jsonld#ActorQueryOperationOrderBy_args_mediatorTermComparatorFactory"
+          },
+          "mediatorQueryOperation": {
+            "@id": "caqoo:components/ActorQueryOperationOrderBy.jsonld#ActorQueryOperationOrderBy_args_mediatorQueryOperation"
+          },
+          "name": {
+            "@id": "caqoo:components/ActorQueryOperationOrderBy.jsonld#ActorQueryOperationOrderBy_args_name"
+          },
+          "bus": {
+            "@id": "caqoo:components/ActorQueryOperationOrderBy.jsonld#ActorQueryOperationOrderBy_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caqoo:components/ActorQueryOperationOrderBy.jsonld#ActorQueryOperationOrderBy_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caqoo:components/ActorQueryOperationOrderBy.jsonld#ActorQueryOperationOrderBy_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorQueryOperationOrderBySparqleeArgs": {
+        "@id": "caqoo:components/ActorQueryOperationOrderBy.jsonld#IActorQueryOperationOrderBySparqleeArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-bindings-aggregator-factory-count/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/types/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-bindings-aggregator-factory/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-bindings-aggregator-factory-count",
+  "components": [
+    {
+      "@id": "cabafc:components/CountAggregator.jsonld#CountAggregator",
+      "@type": "Class",
+      "requireElement": "CountAggregator",
+      "extends": [
+        "cbbaf:components/ActorBindingsAggregatorFactory.jsonld#IBindingsAggregator"
+      ],
+      "parameters": [
+        {
+          "@id": "cabafc:components/CountAggregator.jsonld#CountAggregator_distinct",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "cabafc:components/CountAggregator.jsonld#CountAggregator_evaluator",
+          "range": "ct:components/ExpressionEvaluator.jsonld#IExpressionEvaluator"
+        },
+        {
+          "@id": "cabafc:components/CountAggregator.jsonld#CountAggregator_throwError",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cabafc:components/CountAggregator.jsonld#CountAggregator__member_state",
+          "memberFieldName": "state"
+        },
+        {
+          "@id": "cabafc:components/CountAggregator.jsonld#CountAggregator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cabafc:components/CountAggregator.jsonld#CountAggregator__member_emptyValueTerm",
+          "memberFieldName": "emptyValueTerm"
+        },
+        {
+          "@id": "cabafc:components/CountAggregator.jsonld#CountAggregator__member_putTerm",
+          "memberFieldName": "putTerm"
+        },
+        {
+          "@id": "cabafc:components/CountAggregator.jsonld#CountAggregator__member_termResult",
+          "memberFieldName": "termResult"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cabafc:components/CountAggregator.jsonld#CountAggregator_evaluator"
+        },
+        {
+          "@id": "cabafc:components/CountAggregator.jsonld#CountAggregator_distinct"
+        },
+        {
+          "@id": "cabafc:components/CountAggregator.jsonld#CountAggregator_throwError"
+        }
+      ]
+    }
+  ]
+}

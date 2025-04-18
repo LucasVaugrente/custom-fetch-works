@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-rdf-join-wrap-stream/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-rdf-join-wrap-stream",
+  "@type": "Module",
+  "requireName": "@comunica/actor-rdf-join-wrap-stream",
+  "import": [
+    "carjws:components/ActorRdfJoinWrapStream.jsonld"
+  ]
+}

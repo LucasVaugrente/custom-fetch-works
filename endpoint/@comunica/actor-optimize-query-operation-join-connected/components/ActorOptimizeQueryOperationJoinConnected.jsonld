@@ -1,0 +1,203 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-optimize-query-operation-join-connected/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-optimize-query-operation/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-optimize-query-operation-join-connected",
+  "components": [
+    {
+      "@id": "caoqojc:components/ActorOptimizeQueryOperationJoinConnected.jsonld#ActorOptimizeQueryOperationJoinConnected",
+      "@type": "Class",
+      "requireElement": "ActorOptimizeQueryOperationJoinConnected",
+      "extends": [
+        "cboqo:components/ActorOptimizeQueryOperation.jsonld#ActorOptimizeQueryOperation"
+      ],
+      "comment": "A comunica Join Connected Optimize Query Operation Actor.",
+      "parameters": [
+        {
+          "@id": "caoqojc:components/ActorOptimizeQueryOperationJoinConnected.jsonld#ActorOptimizeQueryOperationJoinConnected_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "caoqojc:components/ActorOptimizeQueryOperationJoinConnected.jsonld#ActorOptimizeQueryOperationJoinConnected_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cboqo:components/ActorOptimizeQueryOperation.jsonld#ActorOptimizeQueryOperation_default_bus",
+            "@type": "cc:components/Bus.jsonld#Bus"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "caoqojc:components/ActorOptimizeQueryOperationJoinConnected.jsonld#ActorOptimizeQueryOperationJoinConnected_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "Query optimization failed: none of the configured actors were able to optimize",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "caoqojc:components/ActorOptimizeQueryOperationJoinConnected.jsonld#ActorOptimizeQueryOperationJoinConnected_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "caoqojc:components/ActorOptimizeQueryOperationJoinConnected.jsonld#ActorOptimizeQueryOperationJoinConnected__member_test",
+          "memberFieldName": "test"
+        },
+        {
+          "@id": "caoqojc:components/ActorOptimizeQueryOperationJoinConnected.jsonld#ActorOptimizeQueryOperationJoinConnected__member_run",
+          "memberFieldName": "run"
+        },
+        {
+          "@id": "caoqojc:components/ActorOptimizeQueryOperationJoinConnected.jsonld#ActorOptimizeQueryOperationJoinConnected__member_cluster",
+          "memberFieldName": "cluster"
+        },
+        {
+          "@id": "caoqojc:components/ActorOptimizeQueryOperationJoinConnected.jsonld#ActorOptimizeQueryOperationJoinConnected__member_clusterIteration",
+          "memberFieldName": "clusterIteration"
+        },
+        {
+          "@id": "caoqojc:components/ActorOptimizeQueryOperationJoinConnected.jsonld#ActorOptimizeQueryOperationJoinConnected__member_haveOverlappingVariables",
+          "memberFieldName": "haveOverlappingVariables"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "caoqojc:components/ActorOptimizeQueryOperationJoinConnected.jsonld#ActorOptimizeQueryOperationJoinConnected_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "caoqojc:components/ActorOptimizeQueryOperationJoinConnected.jsonld#ActorOptimizeQueryOperationJoinConnected_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "caoqojc:components/ActorOptimizeQueryOperationJoinConnected.jsonld#ActorOptimizeQueryOperationJoinConnected_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "caoqojc:components/ActorOptimizeQueryOperationJoinConnected.jsonld#ActorOptimizeQueryOperationJoinConnected_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "caoqojc:components/ActorOptimizeQueryOperationJoinConnected.jsonld#ActorOptimizeQueryOperationJoinConnected_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "caoqojc:components/ActorOptimizeQueryOperationJoinConnected.jsonld#IJoinCluster",
+      "@type": "AbstractClass",
+      "requireElement": "IJoinCluster",
+      "comment": "A cluster of join entries.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "caoqojc:components/ActorOptimizeQueryOperationJoinConnected.jsonld#IJoinCluster__member_inScopeVariables",
+          "memberFieldName": "inScopeVariables"
+        },
+        {
+          "@id": "caoqojc:components/ActorOptimizeQueryOperationJoinConnected.jsonld#IJoinCluster__member_entries",
+          "memberFieldName": "entries"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

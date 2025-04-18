@@ -1,0 +1,64 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caqodh": "npmd:@comunica/actor-query-operation-distinct-hash/^4.0.0/",
+      "ActorQueryOperationDistinctHash": {
+        "@id": "caqodh:components/ActorQueryOperationDistinctHash.jsonld#ActorQueryOperationDistinctHash",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorHashBindings": {
+            "@id": "caqodh:components/ActorQueryOperationDistinctHash.jsonld#ActorQueryOperationDistinctHash_args_mediatorHashBindings"
+          },
+          "args_mediatorHashQuads": {
+            "@id": "caqodh:components/ActorQueryOperationDistinctHash.jsonld#ActorQueryOperationDistinctHash_args_mediatorHashQuads"
+          },
+          "args_mediatorQueryOperation": {
+            "@id": "caqodh:components/ActorQueryOperationDistinctHash.jsonld#ActorQueryOperationDistinctHash_args_mediatorQueryOperation"
+          },
+          "args_name": {
+            "@id": "caqodh:components/ActorQueryOperationDistinctHash.jsonld#ActorQueryOperationDistinctHash_args_name"
+          },
+          "args_bus": {
+            "@id": "caqodh:components/ActorQueryOperationDistinctHash.jsonld#ActorQueryOperationDistinctHash_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caqodh:components/ActorQueryOperationDistinctHash.jsonld#ActorQueryOperationDistinctHash_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caqodh:components/ActorQueryOperationDistinctHash.jsonld#ActorQueryOperationDistinctHash_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorHashBindings": {
+            "@id": "caqodh:components/ActorQueryOperationDistinctHash.jsonld#ActorQueryOperationDistinctHash_args_mediatorHashBindings"
+          },
+          "mediatorHashQuads": {
+            "@id": "caqodh:components/ActorQueryOperationDistinctHash.jsonld#ActorQueryOperationDistinctHash_args_mediatorHashQuads"
+          },
+          "mediatorQueryOperation": {
+            "@id": "caqodh:components/ActorQueryOperationDistinctHash.jsonld#ActorQueryOperationDistinctHash_args_mediatorQueryOperation"
+          },
+          "name": {
+            "@id": "caqodh:components/ActorQueryOperationDistinctHash.jsonld#ActorQueryOperationDistinctHash_args_name"
+          },
+          "bus": {
+            "@id": "caqodh:components/ActorQueryOperationDistinctHash.jsonld#ActorQueryOperationDistinctHash_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caqodh:components/ActorQueryOperationDistinctHash.jsonld#ActorQueryOperationDistinctHash_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caqodh:components/ActorQueryOperationDistinctHash.jsonld#ActorQueryOperationDistinctHash_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorQueryOperationDistinctHashArgs": {
+        "@id": "caqodh:components/ActorQueryOperationDistinctHash.jsonld#IActorQueryOperationDistinctHashArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

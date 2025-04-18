@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "carjesc": "npmd:@comunica/actor-rdf-join-entries-sort-cardinality/^4.0.0/",
+      "ActorRdfJoinEntriesSortCardinality": {
+        "@id": "carjesc:components/ActorRdfJoinEntriesSortCardinality.jsonld#ActorRdfJoinEntriesSortCardinality",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "carjesc:components/ActorRdfJoinEntriesSortCardinality.jsonld#ActorRdfJoinEntriesSortCardinality_args_name"
+          },
+          "args_bus": {
+            "@id": "carjesc:components/ActorRdfJoinEntriesSortCardinality.jsonld#ActorRdfJoinEntriesSortCardinality_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "carjesc:components/ActorRdfJoinEntriesSortCardinality.jsonld#ActorRdfJoinEntriesSortCardinality_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "carjesc:components/ActorRdfJoinEntriesSortCardinality.jsonld#ActorRdfJoinEntriesSortCardinality_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "carjesc:components/ActorRdfJoinEntriesSortCardinality.jsonld#ActorRdfJoinEntriesSortCardinality_args_name"
+          },
+          "bus": {
+            "@id": "carjesc:components/ActorRdfJoinEntriesSortCardinality.jsonld#ActorRdfJoinEntriesSortCardinality_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "carjesc:components/ActorRdfJoinEntriesSortCardinality.jsonld#ActorRdfJoinEntriesSortCardinality_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "carjesc:components/ActorRdfJoinEntriesSortCardinality.jsonld#ActorRdfJoinEntriesSortCardinality_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

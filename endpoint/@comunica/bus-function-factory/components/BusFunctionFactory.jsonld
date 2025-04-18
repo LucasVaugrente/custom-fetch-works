@@ -1,0 +1,56 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-function-factory/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-function-factory",
+  "components": [
+    {
+      "@id": "cbff:components/BusFunctionFactory.jsonld#BusFunctionFactory",
+      "@type": "Class",
+      "requireElement": "BusFunctionFactory",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "cc:components/BusIndexed.jsonld#BusIndexed",
+          "genericTypeInstances": [
+            "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory",
+            "cbff:components/ActorFunctionFactory.jsonld#IActionFunctionFactory",
+            "cc:components/Actor.jsonld#IActorTest",
+            "cbff:components/ActorFunctionFactory.jsonld#IActorFunctionFactoryOutput"
+          ]
+        }
+      ],
+      "comment": "Bus inspired by BusIndexed but specific for function factory.  The implementation differs. In BusIndexed, each actor is indexed only once. Here, a single actor can be indexed multiple times (max 2).",
+      "parameters": [
+        {
+          "@id": "cbff:components/BusFunctionFactory.jsonld#BusFunctionFactory_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this bus."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cbff:components/BusFunctionFactory.jsonld#BusFunctionFactory__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cbff:components/BusFunctionFactory.jsonld#BusFunctionFactory_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "cbff:components/BusFunctionFactory.jsonld#BusFunctionFactory_args_name"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

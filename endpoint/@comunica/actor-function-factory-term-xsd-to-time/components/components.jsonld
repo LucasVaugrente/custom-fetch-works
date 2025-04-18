@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-xsd-to-time/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-xsd-to-time",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-xsd-to-time",
+  "import": [
+    "cafftxtt:components/ActorFunctionFactoryTermXsdToTime.jsonld"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-merge-bindings-context-union/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-merge-bindings-context/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-merge-bindings-context-union",
+  "components": [
+    {
+      "@id": "cambcu:components/SetUnionBindingsContextMergeHandler.jsonld#SetUnionBindingsContextMergeHandler",
+      "@type": "Class",
+      "requireElement": "SetUnionBindingsContextMergeHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "cbmbc:components/ActorMergeBindingsContext.jsonld#IBindingsContextMergeHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cambcu:components/SetUnionBindingsContextMergeHandler.jsonld#SetUnionBindingsContextMergeHandler__member_run",
+          "memberFieldName": "run"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

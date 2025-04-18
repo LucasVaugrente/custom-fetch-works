@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-equality/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-equality",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-equality",
+  "import": [
+    "caffte:components/ActorFunctionFactoryTermEquality.jsonld"
+  ]
+}

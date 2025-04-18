@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caqpep": "npmd:@comunica/actor-query-process-explain-physical/^4.0.0/",
+      "ActorQueryProcessExplainPhysical": {
+        "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical",
+        "@prefix": true,
+        "@context": {
+          "args_queryProcessor": {
+            "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args_queryProcessor"
+          },
+          "args_name": {
+            "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args_name"
+          },
+          "args_bus": {
+            "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args_beforeActors",
+            "@container": "@list"
+          },
+          "queryProcessor": {
+            "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args_queryProcessor"
+          },
+          "name": {
+            "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args_name"
+          },
+          "bus": {
+            "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#ActorQueryProcessExplainPhysical_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorQueryProcessExplainPhysicalArgs": {
+        "@id": "caqpep:components/ActorQueryProcessExplainPhysical.jsonld#IActorQueryProcessExplainPhysicalArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "MemoryPhysicalQueryPlanLogger": {
+        "@id": "caqpep:components/MemoryPhysicalQueryPlanLogger.jsonld#MemoryPhysicalQueryPlanLogger",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

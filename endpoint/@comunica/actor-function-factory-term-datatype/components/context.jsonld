@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cafftd": "npmd:@comunica/actor-function-factory-term-datatype/^4.0.0/",
+      "ActorFunctionFactoryTermDatatype": {
+        "@id": "cafftd:components/ActorFunctionFactoryTermDatatype.jsonld#ActorFunctionFactoryTermDatatype",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cafftd:components/ActorFunctionFactoryTermDatatype.jsonld#ActorFunctionFactoryTermDatatype_args_name"
+          },
+          "args_bus": {
+            "@id": "cafftd:components/ActorFunctionFactoryTermDatatype.jsonld#ActorFunctionFactoryTermDatatype_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cafftd:components/ActorFunctionFactoryTermDatatype.jsonld#ActorFunctionFactoryTermDatatype_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cafftd:components/ActorFunctionFactoryTermDatatype.jsonld#ActorFunctionFactoryTermDatatype_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cafftd:components/ActorFunctionFactoryTermDatatype.jsonld#ActorFunctionFactoryTermDatatype_args_name"
+          },
+          "bus": {
+            "@id": "cafftd:components/ActorFunctionFactoryTermDatatype.jsonld#ActorFunctionFactoryTermDatatype_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cafftd:components/ActorFunctionFactoryTermDatatype.jsonld#ActorFunctionFactoryTermDatatype_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cafftd:components/ActorFunctionFactoryTermDatatype.jsonld#ActorFunctionFactoryTermDatatype_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

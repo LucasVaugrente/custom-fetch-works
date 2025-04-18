@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-optimize-query-operation-rewrite-add/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-optimize-query-operation-rewrite-add",
+  "@type": "Module",
+  "requireName": "@comunica/actor-optimize-query-operation-rewrite-add",
+  "import": [
+    "caoqora:components/ActorOptimizeQueryOperationRewriteAdd.jsonld"
+  ]
+}

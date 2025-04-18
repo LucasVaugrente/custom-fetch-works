@@ -1,0 +1,219 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/types/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/types",
+  "components": [
+    {
+      "@id": "ct:components/ExpressionEvaluator.jsonld#ITimeZoneRepresentation",
+      "@type": "AbstractClass",
+      "requireElement": "ITimeZoneRepresentation",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#ITimeZoneRepresentation__member_zoneHours",
+          "memberFieldName": "zoneHours"
+        },
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#ITimeZoneRepresentation__member_zoneMinutes",
+          "memberFieldName": "zoneMinutes"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "ct:components/ExpressionEvaluator.jsonld#IDateRepresentation",
+      "@type": "AbstractClass",
+      "requireElement": "IDateRepresentation",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#IDateRepresentation__member_year",
+          "memberFieldName": "year"
+        },
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#IDateRepresentation__member_month",
+          "memberFieldName": "month"
+        },
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#IDateRepresentation__member_day",
+          "memberFieldName": "day"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "ct:components/ExpressionEvaluator.jsonld#ITimeRepresentation",
+      "@type": "AbstractClass",
+      "requireElement": "ITimeRepresentation",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#ITimeRepresentation__member_hours",
+          "memberFieldName": "hours"
+        },
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#ITimeRepresentation__member_minutes",
+          "memberFieldName": "minutes"
+        },
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#ITimeRepresentation__member_seconds",
+          "memberFieldName": "seconds"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "ct:components/ExpressionEvaluator.jsonld#IDayTimeDurationRepresentation",
+      "@type": "AbstractClass",
+      "requireElement": "IDayTimeDurationRepresentation",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#IDayTimeDurationRepresentation__member_hours",
+          "memberFieldName": "hours"
+        },
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#IDayTimeDurationRepresentation__member_minutes",
+          "memberFieldName": "minutes"
+        },
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#IDayTimeDurationRepresentation__member_seconds",
+          "memberFieldName": "seconds"
+        },
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#IDayTimeDurationRepresentation__member_day",
+          "memberFieldName": "day"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "ct:components/ExpressionEvaluator.jsonld#IYearMonthDurationRepresentation",
+      "@type": "AbstractClass",
+      "requireElement": "IYearMonthDurationRepresentation",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#IYearMonthDurationRepresentation__member_year",
+          "memberFieldName": "year"
+        },
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#IYearMonthDurationRepresentation__member_month",
+          "memberFieldName": "month"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "ct:components/ExpressionEvaluator.jsonld#ISuperTypeProvider",
+      "@type": "AbstractClass",
+      "requireElement": "ISuperTypeProvider",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#ISuperTypeProvider__member_cache",
+          "memberFieldName": "cache"
+        },
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#ISuperTypeProvider__member_discoverer",
+          "memberFieldName": "discoverer"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "ct:components/ExpressionEvaluator.jsonld#IExpressionEvaluator",
+      "@type": "AbstractClass",
+      "requireElement": "IExpressionEvaluator",
+      "extends": [
+        "ct:components/ExpressionEvaluator.jsonld#IInternalEvaluator"
+      ],
+      "comment": "An evaluator for RDF expressions.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#IExpressionEvaluator__member_evaluate",
+          "memberFieldName": "evaluate"
+        },
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#IExpressionEvaluator__member_evaluateAsEBV",
+          "memberFieldName": "evaluateAsEBV"
+        },
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#IExpressionEvaluator__member_evaluateAsEvaluatorExpression",
+          "memberFieldName": "evaluateAsEvaluatorExpression"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "ct:components/ExpressionEvaluator.jsonld#IInternalEvaluator",
+      "@type": "AbstractClass",
+      "requireElement": "IInternalEvaluator",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#IInternalEvaluator__member_evaluatorExpressionEvaluation",
+          "memberFieldName": "evaluatorExpressionEvaluation"
+        },
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#IInternalEvaluator__member_context",
+          "memberFieldName": "context"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "ct:components/ExpressionEvaluator.jsonld#IExpressionProps",
+      "@type": "AbstractClass",
+      "requireElement": "IExpressionProps",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#IExpressionProps__member_expressionType",
+          "memberFieldName": "expressionType"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "ct:components/ExpressionEvaluator.jsonld#IFunctionArgumentsCacheObj",
+      "@type": "AbstractClass",
+      "requireElement": "IFunctionArgumentsCacheObj",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#IFunctionArgumentsCacheObj__member_func",
+          "memberFieldName": "func"
+        },
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#IFunctionArgumentsCacheObj__member_cache",
+          "memberFieldName": "cache"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "ct:components/ExpressionEvaluator.jsonld#IEvalContext",
+      "@type": "AbstractClass",
+      "requireElement": "IEvalContext",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#IEvalContext__member_args",
+          "memberFieldName": "args"
+        },
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#IEvalContext__member_mapping",
+          "memberFieldName": "mapping"
+        },
+        {
+          "@id": "ct:components/ExpressionEvaluator.jsonld#IEvalContext__member_exprEval",
+          "memberFieldName": "exprEval"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

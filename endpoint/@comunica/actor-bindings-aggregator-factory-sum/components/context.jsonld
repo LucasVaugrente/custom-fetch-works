@@ -1,0 +1,82 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cabafs": "npmd:@comunica/actor-bindings-aggregator-factory-sum/^4.0.0/",
+      "ActorBindingsAggregatorFactorySum": {
+        "@id": "cabafs:components/ActorBindingsAggregatorFactorySum.jsonld#ActorBindingsAggregatorFactorySum",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorFunctionFactory": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySum.jsonld#ActorBindingsAggregatorFactorySum_args_mediatorFunctionFactory"
+          },
+          "args_mediatorExpressionEvaluatorFactory": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySum.jsonld#ActorBindingsAggregatorFactorySum_args_mediatorExpressionEvaluatorFactory"
+          },
+          "args_name": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySum.jsonld#ActorBindingsAggregatorFactorySum_args_name"
+          },
+          "args_bus": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySum.jsonld#ActorBindingsAggregatorFactorySum_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySum.jsonld#ActorBindingsAggregatorFactorySum_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySum.jsonld#ActorBindingsAggregatorFactorySum_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorFunctionFactory": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySum.jsonld#ActorBindingsAggregatorFactorySum_args_mediatorFunctionFactory"
+          },
+          "mediatorExpressionEvaluatorFactory": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySum.jsonld#ActorBindingsAggregatorFactorySum_args_mediatorExpressionEvaluatorFactory"
+          },
+          "name": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySum.jsonld#ActorBindingsAggregatorFactorySum_args_name"
+          },
+          "bus": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySum.jsonld#ActorBindingsAggregatorFactorySum_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySum.jsonld#ActorBindingsAggregatorFactorySum_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySum.jsonld#ActorBindingsAggregatorFactorySum_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorBindingsAggregatorFactorySumArgs": {
+        "@id": "cabafs:components/ActorBindingsAggregatorFactorySum.jsonld#IActorBindingsAggregatorFactorySumArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "SumAggregator": {
+        "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator",
+        "@prefix": true,
+        "@context": {
+          "distinct": {
+            "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator_distinct"
+          },
+          "evaluator": {
+            "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator_evaluator"
+          },
+          "additionFunction": {
+            "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator_additionFunction"
+          },
+          "throwError": {
+            "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator_throwError"
+          },
+          "dataFactory": {
+            "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator_dataFactory"
+          },
+          "tion": {
+            "@id": "cabafs:components/SumAggregator.jsonld#SumAggregator_additionFunction"
+          }
+        }
+      }
+    }
+  ]
+}

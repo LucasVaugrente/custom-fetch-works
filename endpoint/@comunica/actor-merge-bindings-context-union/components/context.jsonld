@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cambcu": "npmd:@comunica/actor-merge-bindings-context-union/^4.0.0/",
+      "ActorMergeBindingsContextUnion": {
+        "@id": "cambcu:components/ActorMergeBindingsContextUnion.jsonld#ActorMergeBindingsContextUnion",
+        "@prefix": true,
+        "@context": {
+          "args_contextKey": {
+            "@id": "cambcu:components/ActorMergeBindingsContextUnion.jsonld#ActorMergeBindingsContextUnion_args_contextKey"
+          },
+          "args_name": {
+            "@id": "cambcu:components/ActorMergeBindingsContextUnion.jsonld#ActorMergeBindingsContextUnion_args_name"
+          },
+          "args_bus": {
+            "@id": "cambcu:components/ActorMergeBindingsContextUnion.jsonld#ActorMergeBindingsContextUnion_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cambcu:components/ActorMergeBindingsContextUnion.jsonld#ActorMergeBindingsContextUnion_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cambcu:components/ActorMergeBindingsContextUnion.jsonld#ActorMergeBindingsContextUnion_args_beforeActors",
+            "@container": "@list"
+          },
+          "contextKey": {
+            "@id": "cambcu:components/ActorMergeBindingsContextUnion.jsonld#ActorMergeBindingsContextUnion_args_contextKey"
+          },
+          "name": {
+            "@id": "cambcu:components/ActorMergeBindingsContextUnion.jsonld#ActorMergeBindingsContextUnion_args_name"
+          },
+          "bus": {
+            "@id": "cambcu:components/ActorMergeBindingsContextUnion.jsonld#ActorMergeBindingsContextUnion_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cambcu:components/ActorMergeBindingsContextUnion.jsonld#ActorMergeBindingsContextUnion_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cambcu:components/ActorMergeBindingsContextUnion.jsonld#ActorMergeBindingsContextUnion_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorMergeBindingsContextUnionArgs": {
+        "@id": "cambcu:components/ActorMergeBindingsContextUnion.jsonld#IActorMergeBindingsContextUnionArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "SetUnionBindingsContextMergeHandler": {
+        "@id": "cambcu:components/SetUnionBindingsContextMergeHandler.jsonld#SetUnionBindingsContextMergeHandler",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

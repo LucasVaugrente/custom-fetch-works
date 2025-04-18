@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-context-preprocess-set-defaults/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-context-preprocess-set-defaults",
+  "@type": "Module",
+  "requireName": "@comunica/actor-context-preprocess-set-defaults",
+  "import": [
+    "cacpsd:components/ActorContextPreprocessSetDefaults.jsonld"
+  ]
+}

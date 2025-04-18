@@ -1,0 +1,71 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/types/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/types",
+  "components": [
+    {
+      "@id": "ct:components/IPhysicalQueryPlanLogger.jsonld#IPhysicalQueryPlanLogger",
+      "@type": "AbstractClass",
+      "requireElement": "IPhysicalQueryPlanLogger",
+      "comment": "A physical query plan logger collects operations, which can then be serialized as a query plan to JSON.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/IPhysicalQueryPlanLogger.jsonld#IPhysicalQueryPlanLogger__member_logOperation",
+          "memberFieldName": "logOperation"
+        },
+        {
+          "@id": "ct:components/IPhysicalQueryPlanLogger.jsonld#IPhysicalQueryPlanLogger__member_stashChildren",
+          "memberFieldName": "stashChildren"
+        },
+        {
+          "@id": "ct:components/IPhysicalQueryPlanLogger.jsonld#IPhysicalQueryPlanLogger__member_unstashChild",
+          "memberFieldName": "unstashChild"
+        },
+        {
+          "@id": "ct:components/IPhysicalQueryPlanLogger.jsonld#IPhysicalQueryPlanLogger__member_appendMetadata",
+          "memberFieldName": "appendMetadata"
+        },
+        {
+          "@id": "ct:components/IPhysicalQueryPlanLogger.jsonld#IPhysicalQueryPlanLogger__member_toJson",
+          "memberFieldName": "toJson"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "ct:components/IPhysicalQueryPlanLogger.jsonld#IPlanNode",
+      "@type": "AbstractClass",
+      "requireElement": "IPlanNode",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/IPhysicalQueryPlanLogger.jsonld#IPlanNode__member_actor",
+          "memberFieldName": "actor"
+        },
+        {
+          "@id": "ct:components/IPhysicalQueryPlanLogger.jsonld#IPlanNode__member_logicalOperator",
+          "memberFieldName": "logicalOperator"
+        },
+        {
+          "@id": "ct:components/IPhysicalQueryPlanLogger.jsonld#IPlanNode__member_physicalOperator",
+          "memberFieldName": "physicalOperator"
+        },
+        {
+          "@id": "ct:components/IPhysicalQueryPlanLogger.jsonld#IPlanNode__member_rawNode",
+          "memberFieldName": "rawNode"
+        },
+        {
+          "@id": "ct:components/IPhysicalQueryPlanLogger.jsonld#IPlanNode__member_children",
+          "memberFieldName": "children"
+        },
+        {
+          "@id": "ct:components/IPhysicalQueryPlanLogger.jsonld#IPlanNode__member_metadata",
+          "memberFieldName": "metadata"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

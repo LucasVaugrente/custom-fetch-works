@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-source-identify-serialized/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-source-identify-serialized",
+  "@type": "Module",
+  "requireName": "@comunica/actor-query-source-identify-serialized",
+  "import": [
+    "caqsis:components/ActorQuerySourceIdentifySerialized.jsonld"
+  ]
+}

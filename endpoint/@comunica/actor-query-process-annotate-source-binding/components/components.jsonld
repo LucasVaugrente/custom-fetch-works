@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-process-annotate-source-binding/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-process-annotate-source-binding",
+  "@type": "Module",
+  "requireName": "@comunica/actor-query-process-annotate-source-binding",
+  "import": [
+    "caqpasb:components/ActorQueryProcessAnnotateSourceBinding.jsonld"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-datatype/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-datatype",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-datatype",
+  "import": [
+    "cafftd:components/ActorFunctionFactoryTermDatatype.jsonld"
+  ]
+}

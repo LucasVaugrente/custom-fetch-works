@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-addition/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-addition",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-addition",
+  "import": [
+    "caffta:components/ActorFunctionFactoryTermAddition.jsonld"
+  ]
+}

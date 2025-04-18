@@ -1,0 +1,13 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-source-identify-rdfjs/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-source-identify-rdfjs",
+  "@type": "Module",
+  "requireName": "@comunica/actor-query-source-identify-rdfjs",
+  "import": [
+    "caqsir:components/ActorQuerySourceIdentifyRdfJs.jsonld",
+    "caqsir:components/IRdfJsSourceExtended.jsonld",
+    "caqsir:components/QuerySourceRdfJs.jsonld"
+  ]
+}

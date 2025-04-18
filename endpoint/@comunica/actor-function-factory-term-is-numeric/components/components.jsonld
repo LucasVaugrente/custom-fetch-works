@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-is-numeric/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-is-numeric",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-is-numeric",
+  "import": [
+    "cafftin:components/ActorFunctionFactoryTermIsNumeric.jsonld"
+  ]
+}

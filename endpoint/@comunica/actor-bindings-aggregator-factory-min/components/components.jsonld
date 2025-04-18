@@ -1,0 +1,12 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-bindings-aggregator-factory-min/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-bindings-aggregator-factory-min",
+  "@type": "Module",
+  "requireName": "@comunica/actor-bindings-aggregator-factory-min",
+  "import": [
+    "cabafm:components/ActorBindingsAggregatorFactoryMin.jsonld",
+    "cabafm:components/MinAggregator.jsonld"
+  ]
+}

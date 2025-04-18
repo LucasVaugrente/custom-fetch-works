@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-rdf-metadata-accumulate-pagesize/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-rdf-metadata-accumulate-pagesize",
+  "@type": "Module",
+  "requireName": "@comunica/actor-rdf-metadata-accumulate-pagesize",
+  "import": [
+    "carmap:components/ActorRdfMetadataAccumulatePageSize.jsonld"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caqsir": "npmd:@comunica/actor-query-source-identify-rdfjs/^4.0.0/",
+      "ActorQuerySourceIdentifyRdfJs": {
+        "@id": "caqsir:components/ActorQuerySourceIdentifyRdfJs.jsonld#ActorQuerySourceIdentifyRdfJs",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorMergeBindingsContext": {
+            "@id": "caqsir:components/ActorQuerySourceIdentifyRdfJs.jsonld#ActorQuerySourceIdentifyRdfJs_args_mediatorMergeBindingsContext"
+          },
+          "args_name": {
+            "@id": "caqsir:components/ActorQuerySourceIdentifyRdfJs.jsonld#ActorQuerySourceIdentifyRdfJs_args_name"
+          },
+          "args_bus": {
+            "@id": "caqsir:components/ActorQuerySourceIdentifyRdfJs.jsonld#ActorQuerySourceIdentifyRdfJs_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caqsir:components/ActorQuerySourceIdentifyRdfJs.jsonld#ActorQuerySourceIdentifyRdfJs_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caqsir:components/ActorQuerySourceIdentifyRdfJs.jsonld#ActorQuerySourceIdentifyRdfJs_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorMergeBindingsContext": {
+            "@id": "caqsir:components/ActorQuerySourceIdentifyRdfJs.jsonld#ActorQuerySourceIdentifyRdfJs_args_mediatorMergeBindingsContext"
+          },
+          "name": {
+            "@id": "caqsir:components/ActorQuerySourceIdentifyRdfJs.jsonld#ActorQuerySourceIdentifyRdfJs_args_name"
+          },
+          "bus": {
+            "@id": "caqsir:components/ActorQuerySourceIdentifyRdfJs.jsonld#ActorQuerySourceIdentifyRdfJs_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caqsir:components/ActorQuerySourceIdentifyRdfJs.jsonld#ActorQuerySourceIdentifyRdfJs_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caqsir:components/ActorQuerySourceIdentifyRdfJs.jsonld#ActorQuerySourceIdentifyRdfJs_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorQuerySourceIdentifyRdfJsArgs": {
+        "@id": "caqsir:components/ActorQuerySourceIdentifyRdfJs.jsonld#IActorQuerySourceIdentifyRdfJsArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IRdfJsSourceExtended": {
+        "@id": "caqsir:components/IRdfJsSourceExtended.jsonld#IRdfJsSourceExtended",
+        "@prefix": true,
+        "@context": {}
+      },
+      "QuerySourceRdfJs": {
+        "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs",
+        "@prefix": true,
+        "@context": {
+          "source": {
+            "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs_source"
+          },
+          "bindingsFactory": {
+            "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs_bindingsFactory"
+          },
+          "dataFactory": {
+            "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs_dataFactory"
+          },
+          "ory": {
+            "@id": "caqsir:components/QuerySourceRdfJs.jsonld#QuerySourceRdfJs_bindingsFactory"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-http-memento/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-http/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-http-memento",
+  "components": [
+    {
+      "@id": "cahm:components/ActorHttpMemento.jsonld#ActorHttpMemento",
+      "@type": "Class",
+      "requireElement": "ActorHttpMemento",
+      "extends": [
+        "cbh:components/ActorHttp.jsonld#ActorHttp"
+      ],
+      "comment": "A comunica Memento Http Actor.",
+      "parameters": [
+        {
+          "@id": "cahm:components/ActorHttpMemento.jsonld#ActorHttpMemento_args_mediatorHttp",
+          "range": "cc:components/Mediator.jsonld#Mediator",
+          "comment": "The HTTP mediator"
+        },
+        {
+          "@id": "cahm:components/ActorHttpMemento.jsonld#ActorHttpMemento_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "cahm:components/ActorHttpMemento.jsonld#ActorHttpMemento_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbh:components/ActorHttp.jsonld#ActorHttp_default_bus",
+            "@type": "cc:components/Bus.jsonld#Bus"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "cahm:components/ActorHttpMemento.jsonld#ActorHttpMemento_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "HTTP request failed: none of the configured actors were able to handle ${action.input}",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "cahm:components/ActorHttpMemento.jsonld#ActorHttpMemento_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cahm:components/ActorHttpMemento.jsonld#ActorHttpMemento__member_mediatorHttp",
+          "memberFieldName": "mediatorHttp",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "cahm:components/ActorHttpMemento.jsonld#ActorHttpMemento__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cahm:components/ActorHttpMemento.jsonld#ActorHttpMemento__member_test",
+          "memberFieldName": "test"
+        },
+        {
+          "@id": "cahm:components/ActorHttpMemento.jsonld#ActorHttpMemento__member_run",
+          "memberFieldName": "run"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cahm:components/ActorHttpMemento.jsonld#ActorHttpMemento_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "mediatorHttp",
+              "value": {
+                "@id": "cahm:components/ActorHttpMemento.jsonld#ActorHttpMemento_args_mediatorHttp"
+              }
+            },
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "cahm:components/ActorHttpMemento.jsonld#ActorHttpMemento_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "cahm:components/ActorHttpMemento.jsonld#ActorHttpMemento_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "cahm:components/ActorHttpMemento.jsonld#ActorHttpMemento_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "cahm:components/ActorHttpMemento.jsonld#ActorHttpMemento_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "cahm:components/ActorHttpMemento.jsonld#IActorHttpMementoArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IActorHttpMementoArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cahm:components/ActorHttpMemento.jsonld#IActorHttpMementoArgs__member_mediatorHttp",
+          "memberFieldName": "mediatorHttp"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

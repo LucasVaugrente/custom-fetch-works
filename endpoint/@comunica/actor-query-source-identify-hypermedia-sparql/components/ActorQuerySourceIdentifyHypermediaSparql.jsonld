@@ -1,0 +1,371 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-source-identify-hypermedia-sparql/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-query-source-identify-hypermedia/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-source-identify-hypermedia-sparql",
+  "components": [
+    {
+      "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql",
+      "@type": "Class",
+      "requireElement": "ActorQuerySourceIdentifyHypermediaSparql",
+      "extends": [
+        "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia"
+      ],
+      "comment": "A comunica SPARQL Query Source Identify Hypermedia Actor.",
+      "parameters": [
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_mediatorHttp",
+          "range": "cc:components/Mediator.jsonld#Mediator",
+          "comment": "The HTTP mediator"
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_mediatorMergeBindingsContext",
+          "range": "cc:components/Mediator.jsonld#Mediator",
+          "comment": "A mediator for creating binding context merge handlers"
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_checkUrlSuffix",
+          "range": "xsd:boolean",
+          "default": "true",
+          "comment": "If URLs ending with '/sparql' should also be considered SPARQL endpoints."
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_forceHttpGet",
+          "range": "xsd:boolean",
+          "default": "false",
+          "comment": "If non-update queries should be sent via HTTP GET instead of POST"
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_cacheSize",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:integer",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "1024",
+          "comment": "The cache size for COUNT queries."
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_bindMethod",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeLiteral",
+                "parameterRangeValueLiteral": "values"
+              },
+              {
+                "@type": "ParameterRangeLiteral",
+                "parameterRangeValueLiteral": "union"
+              },
+              {
+                "@type": "ParameterRangeLiteral",
+                "parameterRangeValueLiteral": "filter"
+              }
+            ]
+          },
+          "default": "values",
+          "comment": "The query operation for communicating bindings."
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_countTimeout",
+          "range": "xsd:number",
+          "default": "3000",
+          "comment": "Timeout in ms of how long count queries are allowed to take. If the timeout is reached, an infinity cardinality is returned."
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_default_bus",
+            "@type": "cc:components/Bus.jsonld#Bus"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "Query source hypermedia identification failed: none of the configured actors were able to identify ${action.url}",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql__member_mediatorHttp",
+          "memberFieldName": "mediatorHttp",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql__member_mediatorMergeBindingsContext",
+          "memberFieldName": "mediatorMergeBindingsContext",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql__member_checkUrlSuffix",
+          "memberFieldName": "checkUrlSuffix",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql__member_forceHttpGet",
+          "memberFieldName": "forceHttpGet",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql__member_cacheSize",
+          "memberFieldName": "cacheSize",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql__member_bindMethod",
+          "memberFieldName": "bindMethod",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeLiteral",
+                "parameterRangeValueLiteral": "values"
+              },
+              {
+                "@type": "ParameterRangeLiteral",
+                "parameterRangeValueLiteral": "union"
+              },
+              {
+                "@type": "ParameterRangeLiteral",
+                "parameterRangeValueLiteral": "filter"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql__member_countTimeout",
+          "memberFieldName": "countTimeout",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql__member_testMetadata",
+          "memberFieldName": "testMetadata"
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql__member_run",
+          "memberFieldName": "run"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "mediatorHttp",
+              "value": {
+                "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_mediatorHttp"
+              }
+            },
+            {
+              "keyRaw": "mediatorMergeBindingsContext",
+              "value": {
+                "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_mediatorMergeBindingsContext"
+              }
+            },
+            {
+              "keyRaw": "checkUrlSuffix",
+              "value": {
+                "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_checkUrlSuffix"
+              }
+            },
+            {
+              "keyRaw": "forceHttpGet",
+              "value": {
+                "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_forceHttpGet"
+              }
+            },
+            {
+              "keyRaw": "cacheSize",
+              "value": {
+                "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_cacheSize"
+              }
+            },
+            {
+              "keyRaw": "bindMethod",
+              "value": {
+                "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_bindMethod"
+              }
+            },
+            {
+              "keyRaw": "countTimeout",
+              "value": {
+                "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_countTimeout"
+              }
+            },
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#ActorQuerySourceIdentifyHypermediaSparql_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#IActorQuerySourceIdentifyHypermediaSparqlArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IActorQuerySourceIdentifyHypermediaSparqlArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#IActorQuerySourceIdentifyHypermediaSparqlArgs__member_mediatorHttp",
+          "memberFieldName": "mediatorHttp"
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#IActorQuerySourceIdentifyHypermediaSparqlArgs__member_mediatorMergeBindingsContext",
+          "memberFieldName": "mediatorMergeBindingsContext"
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#IActorQuerySourceIdentifyHypermediaSparqlArgs__member_checkUrlSuffix",
+          "memberFieldName": "checkUrlSuffix"
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#IActorQuerySourceIdentifyHypermediaSparqlArgs__member_forceHttpGet",
+          "memberFieldName": "forceHttpGet"
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#IActorQuerySourceIdentifyHypermediaSparqlArgs__member_cacheSize",
+          "memberFieldName": "cacheSize"
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#IActorQuerySourceIdentifyHypermediaSparqlArgs__member_bindMethod",
+          "memberFieldName": "bindMethod"
+        },
+        {
+          "@id": "caqsihs:components/ActorQuerySourceIdentifyHypermediaSparql.jsonld#IActorQuerySourceIdentifyHypermediaSparqlArgs__member_countTimeout",
+          "memberFieldName": "countTimeout"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

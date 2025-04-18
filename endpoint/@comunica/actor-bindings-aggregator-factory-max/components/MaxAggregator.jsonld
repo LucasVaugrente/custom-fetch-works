@@ -1,0 +1,81 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-bindings-aggregator-factory-max/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/types/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-term-comparator-factory/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-bindings-aggregator-factory/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-bindings-aggregator-factory-max",
+  "components": [
+    {
+      "@id": "cabafm:components/MaxAggregator.jsonld#MaxAggregator",
+      "@type": "Class",
+      "requireElement": "MaxAggregator",
+      "extends": [
+        "cbbaf:components/ActorBindingsAggregatorFactory.jsonld#IBindingsAggregator"
+      ],
+      "parameters": [
+        {
+          "@id": "cabafm:components/MaxAggregator.jsonld#MaxAggregator_distinct",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "cabafm:components/MaxAggregator.jsonld#MaxAggregator_evaluator",
+          "range": "ct:components/ExpressionEvaluator.jsonld#IExpressionEvaluator"
+        },
+        {
+          "@id": "cabafm:components/MaxAggregator.jsonld#MaxAggregator_orderByEvaluator",
+          "range": "cbtcf:components/ActorTermComparatorFactory.jsonld#ITermComparator"
+        },
+        {
+          "@id": "cabafm:components/MaxAggregator.jsonld#MaxAggregator_throwError",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cabafm:components/MaxAggregator.jsonld#MaxAggregator__member_orderByEvaluator",
+          "memberFieldName": "orderByEvaluator"
+        },
+        {
+          "@id": "cabafm:components/MaxAggregator.jsonld#MaxAggregator__member_state",
+          "memberFieldName": "state"
+        },
+        {
+          "@id": "cabafm:components/MaxAggregator.jsonld#MaxAggregator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cabafm:components/MaxAggregator.jsonld#MaxAggregator__member_putTerm",
+          "memberFieldName": "putTerm"
+        },
+        {
+          "@id": "cabafm:components/MaxAggregator.jsonld#MaxAggregator__member_termResult",
+          "memberFieldName": "termResult"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cabafm:components/MaxAggregator.jsonld#MaxAggregator_evaluator"
+        },
+        {
+          "@id": "cabafm:components/MaxAggregator.jsonld#MaxAggregator_distinct"
+        },
+        {
+          "@id": "cabafm:components/MaxAggregator.jsonld#MaxAggregator_orderByEvaluator"
+        },
+        {
+          "@id": "cabafm:components/MaxAggregator.jsonld#MaxAggregator_throwError"
+        }
+      ]
+    }
+  ]
+}

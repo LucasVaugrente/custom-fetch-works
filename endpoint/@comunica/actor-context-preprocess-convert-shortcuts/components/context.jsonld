@@ -1,0 +1,54 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cacpcs": "npmd:@comunica/actor-context-preprocess-convert-shortcuts/^4.0.0/",
+      "ActorContextPreprocessConvertShortcuts": {
+        "@id": "cacpcs:components/ActorContextPreprocessConvertShortcuts.jsonld#ActorContextPreprocessConvertShortcuts",
+        "@prefix": true,
+        "@context": {
+          "args_contextKeyShortcuts": {
+            "@id": "cacpcs:components/ActorContextPreprocessConvertShortcuts.jsonld#ActorContextPreprocessConvertShortcuts_args_contextKeyShortcuts",
+            "@type": "@json"
+          },
+          "args_name": {
+            "@id": "cacpcs:components/ActorContextPreprocessConvertShortcuts.jsonld#ActorContextPreprocessConvertShortcuts_args_name"
+          },
+          "args_bus": {
+            "@id": "cacpcs:components/ActorContextPreprocessConvertShortcuts.jsonld#ActorContextPreprocessConvertShortcuts_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cacpcs:components/ActorContextPreprocessConvertShortcuts.jsonld#ActorContextPreprocessConvertShortcuts_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cacpcs:components/ActorContextPreprocessConvertShortcuts.jsonld#ActorContextPreprocessConvertShortcuts_args_beforeActors",
+            "@container": "@list"
+          },
+          "contextKeyShortcuts": {
+            "@id": "cacpcs:components/ActorContextPreprocessConvertShortcuts.jsonld#ActorContextPreprocessConvertShortcuts_args_contextKeyShortcuts",
+            "@type": "@json"
+          },
+          "name": {
+            "@id": "cacpcs:components/ActorContextPreprocessConvertShortcuts.jsonld#ActorContextPreprocessConvertShortcuts_args_name"
+          },
+          "bus": {
+            "@id": "cacpcs:components/ActorContextPreprocessConvertShortcuts.jsonld#ActorContextPreprocessConvertShortcuts_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cacpcs:components/ActorContextPreprocessConvertShortcuts.jsonld#ActorContextPreprocessConvertShortcuts_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cacpcs:components/ActorContextPreprocessConvertShortcuts.jsonld#ActorContextPreprocessConvertShortcuts_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorContextPreprocessConvertShortcutsArgs": {
+        "@id": "cacpcs:components/ActorContextPreprocessConvertShortcuts.jsonld#IActorContextPreprocessConvertShortcutsArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

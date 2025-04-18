@@ -1,0 +1,204 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "ct": "npmd:@comunica/types/^4.0.0/",
+      "IActionContext": {
+        "@id": "ct:components/IActionContext.jsonld#IActionContext",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IActionContextKey": {
+        "@id": "ct:components/IActionContext.jsonld#IActionContextKey",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IAggregatedStore": {
+        "@id": "ct:components/IAggregatedStore.jsonld#IAggregatedStore",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ICliArgsHandler": {
+        "@id": "ct:components/ICliArgsHandler.jsonld#ICliArgsHandler",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IJoinEntry": {
+        "@id": "ct:components/IJoinEntry.jsonld#IJoinEntry",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IMetadataValidationState": {
+        "@id": "ct:components/IMetadata.jsonld#IMetadataValidationState",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IPhysicalQueryPlanLogger": {
+        "@id": "ct:components/IPhysicalQueryPlanLogger.jsonld#IPhysicalQueryPlanLogger",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IPlanNode": {
+        "@id": "ct:components/IPhysicalQueryPlanLogger.jsonld#IPlanNode",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IProxyHandler": {
+        "@id": "ct:components/IProxyHandler.jsonld#IProxyHandler",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IRequest": {
+        "@id": "ct:components/IProxyHandler.jsonld#IRequest",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IQueryContextCommon": {
+        "@id": "ct:components/IQueryContext.jsonld#IQueryContextCommon",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IQueryOperationResultBase": {
+        "@id": "ct:components/IQueryOperationResult.jsonld#IQueryOperationResultBase",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IQueryOperationResultStream": {
+        "@id": "ct:components/IQueryOperationResult.jsonld#IQueryOperationResultStream",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IQueryOperationResultBindings": {
+        "@id": "ct:components/IQueryOperationResult.jsonld#IQueryOperationResultBindings",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IQueryOperationResultQuads": {
+        "@id": "ct:components/IQueryOperationResult.jsonld#IQueryOperationResultQuads",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IQueryOperationResultBoolean": {
+        "@id": "ct:components/IQueryOperationResult.jsonld#IQueryOperationResultBoolean",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IQueryOperationResultVoid": {
+        "@id": "ct:components/IQueryOperationResult.jsonld#IQueryOperationResultVoid",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IQueryBindingsEnhanced": {
+        "@id": "ct:components/IQueryOperationResult.jsonld#IQueryBindingsEnhanced",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IQueryQuadsEnhanced": {
+        "@id": "ct:components/IQueryOperationResult.jsonld#IQueryQuadsEnhanced",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IQueryExplained": {
+        "@id": "ct:components/IQueryOperationResult.jsonld#IQueryExplained",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IQuerySourceSerialized": {
+        "@id": "ct:components/IQuerySource.jsonld#IQuerySourceSerialized",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IQuerySourceUnidentifiedExpanded": {
+        "@id": "ct:components/IQuerySource.jsonld#IQuerySourceUnidentifiedExpanded",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IQuerySourceUnidentifiedExpandedRawContext": {
+        "@id": "ct:components/IQuerySource.jsonld#IQuerySourceUnidentifiedExpandedRawContext",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IQuerySourceWrapper": {
+        "@id": "ct:components/IQuerySource.jsonld#IQuerySourceWrapper",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IQueryBindingsOptions": {
+        "@id": "ct:components/IQuerySource.jsonld#IQueryBindingsOptions",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IStatisticBase": {
+        "@id": "ct:components/statistics/IStatisticBase.jsonld#IStatisticBase",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IDiscoverEventData": {
+        "@id": "ct:components/statistics/IDiscoverEventData.jsonld#IDiscoverEventData",
+        "@prefix": true,
+        "@context": {}
+      },
+      "Logger": {
+        "@id": "ct:components/Logger.jsonld#Logger",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ITimeZoneRepresentation": {
+        "@id": "ct:components/ExpressionEvaluator.jsonld#ITimeZoneRepresentation",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IDateRepresentation": {
+        "@id": "ct:components/ExpressionEvaluator.jsonld#IDateRepresentation",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ITimeRepresentation": {
+        "@id": "ct:components/ExpressionEvaluator.jsonld#ITimeRepresentation",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IDayTimeDurationRepresentation": {
+        "@id": "ct:components/ExpressionEvaluator.jsonld#IDayTimeDurationRepresentation",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IYearMonthDurationRepresentation": {
+        "@id": "ct:components/ExpressionEvaluator.jsonld#IYearMonthDurationRepresentation",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ISuperTypeProvider": {
+        "@id": "ct:components/ExpressionEvaluator.jsonld#ISuperTypeProvider",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IExpressionEvaluator": {
+        "@id": "ct:components/ExpressionEvaluator.jsonld#IExpressionEvaluator",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IInternalEvaluator": {
+        "@id": "ct:components/ExpressionEvaluator.jsonld#IInternalEvaluator",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IExpressionProps": {
+        "@id": "ct:components/ExpressionEvaluator.jsonld#IExpressionProps",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IFunctionArgumentsCacheObj": {
+        "@id": "ct:components/ExpressionEvaluator.jsonld#IFunctionArgumentsCacheObj",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IEvalContext": {
+        "@id": "ct:components/ExpressionEvaluator.jsonld#IEvalContext",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cabafm": "npmd:@comunica/actor-bindings-aggregator-factory-max/^4.0.0/",
+      "ActorBindingsAggregatorFactoryMax": {
+        "@id": "cabafm:components/ActorBindingsAggregatorFactoryMax.jsonld#ActorBindingsAggregatorFactoryMax",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorTermComparatorFactory": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMax.jsonld#ActorBindingsAggregatorFactoryMax_args_mediatorTermComparatorFactory"
+          },
+          "args_mediatorExpressionEvaluatorFactory": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMax.jsonld#ActorBindingsAggregatorFactoryMax_args_mediatorExpressionEvaluatorFactory"
+          },
+          "args_name": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMax.jsonld#ActorBindingsAggregatorFactoryMax_args_name"
+          },
+          "args_bus": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMax.jsonld#ActorBindingsAggregatorFactoryMax_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMax.jsonld#ActorBindingsAggregatorFactoryMax_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMax.jsonld#ActorBindingsAggregatorFactoryMax_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorTermComparatorFactory": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMax.jsonld#ActorBindingsAggregatorFactoryMax_args_mediatorTermComparatorFactory"
+          },
+          "mediatorExpressionEvaluatorFactory": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMax.jsonld#ActorBindingsAggregatorFactoryMax_args_mediatorExpressionEvaluatorFactory"
+          },
+          "name": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMax.jsonld#ActorBindingsAggregatorFactoryMax_args_name"
+          },
+          "bus": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMax.jsonld#ActorBindingsAggregatorFactoryMax_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMax.jsonld#ActorBindingsAggregatorFactoryMax_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cabafm:components/ActorBindingsAggregatorFactoryMax.jsonld#ActorBindingsAggregatorFactoryMax_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorBindingsAggregatorFactoryMaxArgs": {
+        "@id": "cabafm:components/ActorBindingsAggregatorFactoryMax.jsonld#IActorBindingsAggregatorFactoryMaxArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "MaxAggregator": {
+        "@id": "cabafm:components/MaxAggregator.jsonld#MaxAggregator",
+        "@prefix": true,
+        "@context": {
+          "distinct": {
+            "@id": "cabafm:components/MaxAggregator.jsonld#MaxAggregator_distinct"
+          },
+          "evaluator": {
+            "@id": "cabafm:components/MaxAggregator.jsonld#MaxAggregator_evaluator"
+          },
+          "orderByEvaluator": {
+            "@id": "cabafm:components/MaxAggregator.jsonld#MaxAggregator_orderByEvaluator"
+          },
+          "throwError": {
+            "@id": "cabafm:components/MaxAggregator.jsonld#MaxAggregator_throwError"
+          }
+        }
+      }
+    }
+  ]
+}

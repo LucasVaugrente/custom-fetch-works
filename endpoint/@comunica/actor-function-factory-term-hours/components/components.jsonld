@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-hours/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-hours",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-hours",
+  "import": [
+    "caffth:components/ActorFunctionFactoryTermHours.jsonld"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cafftib": "npmd:@comunica/actor-function-factory-term-is-blank/^4.0.0/",
+      "ActorFunctionFactoryTermIsBlank": {
+        "@id": "cafftib:components/ActorFunctionFactoryTermIsBlank.jsonld#ActorFunctionFactoryTermIsBlank",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cafftib:components/ActorFunctionFactoryTermIsBlank.jsonld#ActorFunctionFactoryTermIsBlank_args_name"
+          },
+          "args_bus": {
+            "@id": "cafftib:components/ActorFunctionFactoryTermIsBlank.jsonld#ActorFunctionFactoryTermIsBlank_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cafftib:components/ActorFunctionFactoryTermIsBlank.jsonld#ActorFunctionFactoryTermIsBlank_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cafftib:components/ActorFunctionFactoryTermIsBlank.jsonld#ActorFunctionFactoryTermIsBlank_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cafftib:components/ActorFunctionFactoryTermIsBlank.jsonld#ActorFunctionFactoryTermIsBlank_args_name"
+          },
+          "bus": {
+            "@id": "cafftib:components/ActorFunctionFactoryTermIsBlank.jsonld#ActorFunctionFactoryTermIsBlank_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cafftib:components/ActorFunctionFactoryTermIsBlank.jsonld#ActorFunctionFactoryTermIsBlank_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cafftib:components/ActorFunctionFactoryTermIsBlank.jsonld#ActorFunctionFactoryTermIsBlank_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

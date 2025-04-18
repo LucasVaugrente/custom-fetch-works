@@ -1,0 +1,75 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "carjimbs": "npmd:@comunica/actor-rdf-join-inner-multi-bind-source/^4.0.0/",
+      "ActorRdfJoinMultiBindSource": {
+        "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource",
+        "@prefix": true,
+        "@context": {
+          "args_selectivityModifier": {
+            "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_selectivityModifier"
+          },
+          "args_blockSize": {
+            "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_blockSize"
+          },
+          "args_mediatorJoinEntriesSort": {
+            "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_mediatorJoinEntriesSort"
+          },
+          "args_mediatorJoinSelectivity": {
+            "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_mediatorJoinSelectivity"
+          },
+          "args_name": {
+            "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_name"
+          },
+          "args_bus": {
+            "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_beforeActors",
+            "@container": "@list"
+          },
+          "selectivityModifier": {
+            "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_selectivityModifier"
+          },
+          "blockSize": {
+            "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_blockSize"
+          },
+          "mediatorJoinEntriesSort": {
+            "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_mediatorJoinEntriesSort"
+          },
+          "mediatorJoinSelectivity": {
+            "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_mediatorJoinSelectivity"
+          },
+          "name": {
+            "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_name"
+          },
+          "bus": {
+            "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#ActorRdfJoinMultiBindSource_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorRdfJoinInnerMultiBindSourceArgs": {
+        "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#IActorRdfJoinInnerMultiBindSourceArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IActorRdfJoinMultiBindSourceTestSideData": {
+        "@id": "carjimbs:components/ActorRdfJoinMultiBindSource.jsonld#IActorRdfJoinMultiBindSourceTestSideData",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

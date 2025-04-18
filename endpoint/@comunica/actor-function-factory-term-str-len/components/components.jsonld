@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-str-len/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-str-len",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-str-len",
+  "import": [
+    "cafftsl:components/ActorFunctionFactoryTermStrLen.jsonld"
+  ]
+}

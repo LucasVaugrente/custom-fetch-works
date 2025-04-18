@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cafftxtd": "npmd:@comunica/actor-function-factory-term-xsd-to-duration/^4.0.0/",
+      "ActorFunctionFactoryTermXsdToDuration": {
+        "@id": "cafftxtd:components/ActorFunctionFactoryTermXsdToDuration.jsonld#ActorFunctionFactoryTermXsdToDuration",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cafftxtd:components/ActorFunctionFactoryTermXsdToDuration.jsonld#ActorFunctionFactoryTermXsdToDuration_args_name"
+          },
+          "args_bus": {
+            "@id": "cafftxtd:components/ActorFunctionFactoryTermXsdToDuration.jsonld#ActorFunctionFactoryTermXsdToDuration_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cafftxtd:components/ActorFunctionFactoryTermXsdToDuration.jsonld#ActorFunctionFactoryTermXsdToDuration_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cafftxtd:components/ActorFunctionFactoryTermXsdToDuration.jsonld#ActorFunctionFactoryTermXsdToDuration_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cafftxtd:components/ActorFunctionFactoryTermXsdToDuration.jsonld#ActorFunctionFactoryTermXsdToDuration_args_name"
+          },
+          "bus": {
+            "@id": "cafftxtd:components/ActorFunctionFactoryTermXsdToDuration.jsonld#ActorFunctionFactoryTermXsdToDuration_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cafftxtd:components/ActorFunctionFactoryTermXsdToDuration.jsonld#ActorFunctionFactoryTermXsdToDuration_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cafftxtd:components/ActorFunctionFactoryTermXsdToDuration.jsonld#ActorFunctionFactoryTermXsdToDuration_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

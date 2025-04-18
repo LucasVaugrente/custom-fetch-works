@@ -1,0 +1,225 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-operation-nop/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-query-operation/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-operation-nop",
+  "components": [
+    {
+      "@id": "caqon:components/ActorQueryOperationNop.jsonld#ActorQueryOperationNop",
+      "@type": "Class",
+      "requireElement": "ActorQueryOperationNop",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "cbqo:components/ActorQueryOperationTypedMediated.jsonld#ActorQueryOperationTypedMediated",
+          "genericTypeInstances": [
+            "urn:npm:sparqlalgebrajs:Nop"
+          ]
+        }
+      ],
+      "comment": "A [Query Operation](https://github.com/comunica/comunica/tree/master/packages/bus-query-operation) actor that handles SPARQL nop operations.",
+      "parameters": [
+        {
+          "@id": "caqon:components/ActorQueryOperationNop.jsonld#ActorQueryOperationNop_args_mediatorMergeBindingsContext",
+          "range": "cc:components/Mediator.jsonld#Mediator",
+          "comment": "A mediator for creating binding context merge handlers"
+        },
+        {
+          "@id": "caqon:components/ActorQueryOperationNop.jsonld#ActorQueryOperationNop_args_mediatorQueryOperation",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqon:components/ActorQueryOperationNop.jsonld#ActorQueryOperationNop_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "caqon:components/ActorQueryOperationNop.jsonld#ActorQueryOperationNop_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbqo:components/ActorQueryOperation.jsonld#ActorQueryOperation_default_bus",
+            "@type": "cbqo:components/BusQueryOperation.jsonld#BusQueryOperation"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "caqon:components/ActorQueryOperationNop.jsonld#ActorQueryOperationNop_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "Query operation processing failed: none of the configured actors were able to handle the operation type ${action.operation.type}",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "caqon:components/ActorQueryOperationNop.jsonld#ActorQueryOperationNop_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "caqon:components/ActorQueryOperationNop.jsonld#ActorQueryOperationNop__member_mediatorMergeBindingsContext",
+          "memberFieldName": "mediatorMergeBindingsContext",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqon:components/ActorQueryOperationNop.jsonld#ActorQueryOperationNop__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "caqon:components/ActorQueryOperationNop.jsonld#ActorQueryOperationNop__member_testOperation",
+          "memberFieldName": "testOperation"
+        },
+        {
+          "@id": "caqon:components/ActorQueryOperationNop.jsonld#ActorQueryOperationNop__member_runOperation",
+          "memberFieldName": "runOperation"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "caqon:components/ActorQueryOperationNop.jsonld#ActorQueryOperationNop_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "mediatorMergeBindingsContext",
+              "value": {
+                "@id": "caqon:components/ActorQueryOperationNop.jsonld#ActorQueryOperationNop_args_mediatorMergeBindingsContext"
+              }
+            },
+            {
+              "keyRaw": "mediatorQueryOperation",
+              "value": {
+                "@id": "caqon:components/ActorQueryOperationNop.jsonld#ActorQueryOperationNop_args_mediatorQueryOperation"
+              }
+            },
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "caqon:components/ActorQueryOperationNop.jsonld#ActorQueryOperationNop_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "caqon:components/ActorQueryOperationNop.jsonld#ActorQueryOperationNop_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "caqon:components/ActorQueryOperationNop.jsonld#ActorQueryOperationNop_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "caqon:components/ActorQueryOperationNop.jsonld#ActorQueryOperationNop_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "caqon:components/ActorQueryOperationNop.jsonld#IActorQueryOperationNopArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IActorQueryOperationNopArgs",
+      "extends": [
+        "cbqo:components/ActorQueryOperationTypedMediated.jsonld#IActorQueryOperationTypedMediatedArgs"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "caqon:components/ActorQueryOperationNop.jsonld#IActorQueryOperationNopArgs__member_mediatorMergeBindingsContext",
+          "memberFieldName": "mediatorMergeBindingsContext"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

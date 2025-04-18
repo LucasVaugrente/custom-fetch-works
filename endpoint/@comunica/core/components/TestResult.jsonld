@@ -1,0 +1,160 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/core",
+  "components": [
+    {
+      "@id": "cc:components/TestResult.jsonld#TestResultPassed",
+      "@type": "Class",
+      "requireElement": "TestResultPassed",
+      "comment": "A passed test result. This should not be constructed manually. Instead, `testPass` should be used.",
+      "genericTypeParameters": [
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultPassed__generic_T"
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultPassed__generic_TS"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultPassed_passValue",
+          "range": {
+            "@type": "ParameterRangeGenericTypeReference",
+            "parameterRangeGenericType": "cc:components/TestResult.jsonld#TestResultPassed__generic_T"
+          }
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultPassed_sideData",
+          "range": {
+            "@type": "ParameterRangeGenericTypeReference",
+            "parameterRangeGenericType": "cc:components/TestResult.jsonld#TestResultPassed__generic_TS"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultPassed__member_value",
+          "memberFieldName": "value",
+          "range": {
+            "@type": "ParameterRangeGenericTypeReference",
+            "parameterRangeGenericType": "cc:components/TestResult.jsonld#TestResultPassed__generic_T"
+          }
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultPassed__member_sideData",
+          "memberFieldName": "sideData",
+          "range": {
+            "@type": "ParameterRangeGenericTypeReference",
+            "parameterRangeGenericType": "cc:components/TestResult.jsonld#TestResultPassed__generic_TS"
+          }
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultPassed__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultPassed__member_isPassed",
+          "memberFieldName": "isPassed"
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultPassed__member_isFailed",
+          "memberFieldName": "isFailed"
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultPassed__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultPassed__member_getOrThrow",
+          "memberFieldName": "getOrThrow"
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultPassed__member_getSideData",
+          "memberFieldName": "getSideData"
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultPassed__member_getFailMessage",
+          "memberFieldName": "getFailMessage"
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultPassed__member_map",
+          "memberFieldName": "map"
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultPassed__member_mapAsync",
+          "memberFieldName": "mapAsync"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultPassed_passValue"
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultPassed_sideData"
+        }
+      ]
+    },
+    {
+      "@id": "cc:components/TestResult.jsonld#TestResultFailed",
+      "@type": "Class",
+      "requireElement": "TestResultFailed",
+      "comment": "A failed test result. This should not be constructed manually. Instead, `testFail` should be used.",
+      "parameters": [
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultFailed_failMessage",
+          "range": "xsd:string"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultFailed__member_failMessage",
+          "memberFieldName": "failMessage",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultFailed__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultFailed__member_isPassed",
+          "memberFieldName": "isPassed"
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultFailed__member_isFailed",
+          "memberFieldName": "isFailed"
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultFailed__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultFailed__member_getOrThrow",
+          "memberFieldName": "getOrThrow"
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultFailed__member_getSideData",
+          "memberFieldName": "getSideData"
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultFailed__member_getFailMessage",
+          "memberFieldName": "getFailMessage"
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultFailed__member_map",
+          "memberFieldName": "map"
+        },
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultFailed__member_mapAsync",
+          "memberFieldName": "mapAsync"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cc:components/TestResult.jsonld#TestResultFailed_failMessage"
+        }
+      ]
+    }
+  ]
+}

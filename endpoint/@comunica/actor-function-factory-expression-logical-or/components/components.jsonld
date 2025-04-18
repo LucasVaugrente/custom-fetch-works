@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-expression-logical-or/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-expression-logical-or",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-expression-logical-or",
+  "import": [
+    "caffelo:components/ActorFunctionFactoryExpressionLogicalOr.jsonld"
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-rdf-metadata-accumulate/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-rdf-metadata-accumulate",
+  "components": [
+    {
+      "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#ActorRdfMetadataAccumulate",
+      "@type": "AbstractClass",
+      "requireElement": "ActorRdfMetadataAccumulate",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "cc:components/Actor.jsonld#Actor",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeUnion",
+              "parameterRangeElements": [
+                "cbrma:components/ActorRdfMetadataAccumulate.jsonld#IActionRdfMetadataAccumulateInitialize",
+                "cbrma:components/ActorRdfMetadataAccumulate.jsonld#IActionRdfMetadataAccumulateAppend"
+              ]
+            },
+            "cc:components/Actor.jsonld#IActorTest",
+            "cbrma:components/ActorRdfMetadataAccumulate.jsonld#IActorRdfMetadataAccumulateOutput",
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#ActorRdfMetadataAccumulate__generic_TS"
+            }
+          ]
+        }
+      ],
+      "comment": "A comunica actor for rdf-metadata-accumulate events.  Actor types: * Input:  IActionRdfMetadataAccumulate:      The metadata objects to accumulate, or a trigger for initializing a new value. * Test:   <none> * Output: IActorRdfMetadataAccumulateOutput: The accumulated metadata object.",
+      "genericTypeParameters": [
+        {
+          "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#ActorRdfMetadataAccumulate__generic_TS",
+          "default": {
+            "@type": "ParameterRangeUndefined"
+          }
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#ActorRdfMetadataAccumulate_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#ActorRdfMetadataAccumulate_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#ActorRdfMetadataAccumulate_default_bus",
+            "@type": "cc:components/Bus.jsonld#Bus"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#ActorRdfMetadataAccumulate_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "Metadata accumulation failed: none of the configured actors were able to accumulate metadata in mode ${action.mode}",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#ActorRdfMetadataAccumulate_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#ActorRdfMetadataAccumulate__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#ActorRdfMetadataAccumulate_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#ActorRdfMetadataAccumulate_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#ActorRdfMetadataAccumulate_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#ActorRdfMetadataAccumulate_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#ActorRdfMetadataAccumulate_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#IActionRdfMetadataAccumulateInitialize",
+      "@type": "AbstractClass",
+      "requireElement": "IActionRdfMetadataAccumulateInitialize",
+      "extends": [
+        "cc:components/Actor.jsonld#IAction"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#IActionRdfMetadataAccumulateInitialize__member_mode",
+          "memberFieldName": "mode"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#IActionRdfMetadataAccumulateAppend",
+      "@type": "AbstractClass",
+      "requireElement": "IActionRdfMetadataAccumulateAppend",
+      "extends": [
+        "cc:components/Actor.jsonld#IAction"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#IActionRdfMetadataAccumulateAppend__member_mode",
+          "memberFieldName": "mode"
+        },
+        {
+          "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#IActionRdfMetadataAccumulateAppend__member_accumulatedMetadata",
+          "memberFieldName": "accumulatedMetadata"
+        },
+        {
+          "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#IActionRdfMetadataAccumulateAppend__member_appendingMetadata",
+          "memberFieldName": "appendingMetadata"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#IActorRdfMetadataAccumulateOutput",
+      "@type": "AbstractClass",
+      "requireElement": "IActorRdfMetadataAccumulateOutput",
+      "extends": [
+        "cc:components/Actor.jsonld#IActorOutput"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbrma:components/ActorRdfMetadataAccumulate.jsonld#IActorRdfMetadataAccumulateOutput__member_metadata",
+          "memberFieldName": "metadata"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

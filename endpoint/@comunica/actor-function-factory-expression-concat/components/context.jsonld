@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caffec": "npmd:@comunica/actor-function-factory-expression-concat/^4.0.0/",
+      "ActorFunctionFactoryExpressionConcat": {
+        "@id": "caffec:components/ActorFunctionFactoryExpressionConcat.jsonld#ActorFunctionFactoryExpressionConcat",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "caffec:components/ActorFunctionFactoryExpressionConcat.jsonld#ActorFunctionFactoryExpressionConcat_args_name"
+          },
+          "args_bus": {
+            "@id": "caffec:components/ActorFunctionFactoryExpressionConcat.jsonld#ActorFunctionFactoryExpressionConcat_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caffec:components/ActorFunctionFactoryExpressionConcat.jsonld#ActorFunctionFactoryExpressionConcat_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caffec:components/ActorFunctionFactoryExpressionConcat.jsonld#ActorFunctionFactoryExpressionConcat_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "caffec:components/ActorFunctionFactoryExpressionConcat.jsonld#ActorFunctionFactoryExpressionConcat_args_name"
+          },
+          "bus": {
+            "@id": "caffec:components/ActorFunctionFactoryExpressionConcat.jsonld#ActorFunctionFactoryExpressionConcat_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caffec:components/ActorFunctionFactoryExpressionConcat.jsonld#ActorFunctionFactoryExpressionConcat_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caffec:components/ActorFunctionFactoryExpressionConcat.jsonld#ActorFunctionFactoryExpressionConcat_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

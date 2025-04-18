@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-str-after/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-str-after",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-str-after",
+  "import": [
+    "cafftsa:components/ActorFunctionFactoryTermStrAfter.jsonld"
+  ]
+}

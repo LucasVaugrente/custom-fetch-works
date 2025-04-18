@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cafftu": "npmd:@comunica/actor-function-factory-term-ucase/^4.0.0/",
+      "ActorFunctionFactoryTermUcase": {
+        "@id": "cafftu:components/ActorFunctionFactoryTermUcase.jsonld#ActorFunctionFactoryTermUcase",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cafftu:components/ActorFunctionFactoryTermUcase.jsonld#ActorFunctionFactoryTermUcase_args_name"
+          },
+          "args_bus": {
+            "@id": "cafftu:components/ActorFunctionFactoryTermUcase.jsonld#ActorFunctionFactoryTermUcase_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cafftu:components/ActorFunctionFactoryTermUcase.jsonld#ActorFunctionFactoryTermUcase_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cafftu:components/ActorFunctionFactoryTermUcase.jsonld#ActorFunctionFactoryTermUcase_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cafftu:components/ActorFunctionFactoryTermUcase.jsonld#ActorFunctionFactoryTermUcase_args_name"
+          },
+          "bus": {
+            "@id": "cafftu:components/ActorFunctionFactoryTermUcase.jsonld#ActorFunctionFactoryTermUcase_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cafftu:components/ActorFunctionFactoryTermUcase.jsonld#ActorFunctionFactoryTermUcase_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cafftu:components/ActorFunctionFactoryTermUcase.jsonld#ActorFunctionFactoryTermUcase_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

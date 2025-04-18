@@ -1,0 +1,59 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "catcfee": "npmd:@comunica/actor-term-comparator-factory-expression-evaluator/^4.0.0/",
+      "ActorTermComparatorFactoryExpressionEvaluator": {
+        "@id": "catcfee:components/ActorTermComparatorFactoryExpressionEvaluator.jsonld#ActorTermComparatorFactoryExpressionEvaluator",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorQueryOperation": {
+            "@id": "catcfee:components/ActorTermComparatorFactoryExpressionEvaluator.jsonld#ActorTermComparatorFactoryExpressionEvaluator_args_mediatorQueryOperation"
+          },
+          "args_mediatorFunctionFactory": {
+            "@id": "catcfee:components/ActorTermComparatorFactoryExpressionEvaluator.jsonld#ActorTermComparatorFactoryExpressionEvaluator_args_mediatorFunctionFactory"
+          },
+          "args_mediatorMergeBindingsContext": {
+            "@id": "catcfee:components/ActorTermComparatorFactoryExpressionEvaluator.jsonld#ActorTermComparatorFactoryExpressionEvaluator_args_mediatorMergeBindingsContext"
+          },
+          "args_name": {
+            "@id": "catcfee:components/ActorTermComparatorFactoryExpressionEvaluator.jsonld#ActorTermComparatorFactoryExpressionEvaluator_args_name"
+          },
+          "args_bus": {
+            "@id": "catcfee:components/ActorTermComparatorFactoryExpressionEvaluator.jsonld#ActorTermComparatorFactoryExpressionEvaluator_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "catcfee:components/ActorTermComparatorFactoryExpressionEvaluator.jsonld#ActorTermComparatorFactoryExpressionEvaluator_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "catcfee:components/ActorTermComparatorFactoryExpressionEvaluator.jsonld#ActorTermComparatorFactoryExpressionEvaluator_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorQueryOperation": {
+            "@id": "catcfee:components/ActorTermComparatorFactoryExpressionEvaluator.jsonld#ActorTermComparatorFactoryExpressionEvaluator_args_mediatorQueryOperation"
+          },
+          "mediatorFunctionFactory": {
+            "@id": "catcfee:components/ActorTermComparatorFactoryExpressionEvaluator.jsonld#ActorTermComparatorFactoryExpressionEvaluator_args_mediatorFunctionFactory"
+          },
+          "mediatorMergeBindingsContext": {
+            "@id": "catcfee:components/ActorTermComparatorFactoryExpressionEvaluator.jsonld#ActorTermComparatorFactoryExpressionEvaluator_args_mediatorMergeBindingsContext"
+          },
+          "name": {
+            "@id": "catcfee:components/ActorTermComparatorFactoryExpressionEvaluator.jsonld#ActorTermComparatorFactoryExpressionEvaluator_args_name"
+          },
+          "bus": {
+            "@id": "catcfee:components/ActorTermComparatorFactoryExpressionEvaluator.jsonld#ActorTermComparatorFactoryExpressionEvaluator_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "catcfee:components/ActorTermComparatorFactoryExpressionEvaluator.jsonld#ActorTermComparatorFactoryExpressionEvaluator_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "catcfee:components/ActorTermComparatorFactoryExpressionEvaluator.jsonld#ActorTermComparatorFactoryExpressionEvaluator_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

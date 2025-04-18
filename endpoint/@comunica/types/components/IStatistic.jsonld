@@ -1,0 +1,76 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/types/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/types",
+  "components": [
+    {
+      "@id": "ct:components/IStatistic.jsonld#IStatisticDocumentSize",
+      "@type": "AbstractClass",
+      "requireElement": "IStatisticDocumentSize",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/IStatistic.jsonld#IStatisticDocumentSize__member_setDocumentSize",
+          "memberFieldName": "setDocumentSize"
+        },
+        {
+          "@id": "ct:components/IStatistic.jsonld#IStatisticDocumentSize__member_getDocumentSize",
+          "memberFieldName": "getDocumentSize"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "ct:components/IStatistic.jsonld#IStatisticRequestTime",
+      "@type": "AbstractClass",
+      "requireElement": "IStatisticRequestTime",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/IStatistic.jsonld#IStatisticRequestTime__member_setRequestTime",
+          "memberFieldName": "setRequestTime"
+        },
+        {
+          "@id": "ct:components/IStatistic.jsonld#IStatisticRequestTime__member_getDocumentSize",
+          "memberFieldName": "getDocumentSize"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "ct:components/IStatistic.jsonld#IStatisticDiscoveredLinks",
+      "@type": "AbstractClass",
+      "requireElement": "IStatisticDiscoveredLinks",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/IStatistic.jsonld#IStatisticDiscoveredLinks__member_setDiscoveredLink",
+          "memberFieldName": "setDiscoveredLink"
+        },
+        {
+          "@id": "ct:components/IStatistic.jsonld#IStatisticDiscoveredLinks__member_getDiscoveredLinks",
+          "memberFieldName": "getDiscoveredLinks"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "ct:components/IStatistic.jsonld#IStatisticDereferencedLinks",
+      "@type": "AbstractClass",
+      "requireElement": "IStatisticDereferencedLinks",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/IStatistic.jsonld#IStatisticDereferencedLinks__member_setDereferenced",
+          "memberFieldName": "setDereferenced"
+        },
+        {
+          "@id": "ct:components/IStatistic.jsonld#IStatisticDereferencedLinks__member_getDereferencedLinks",
+          "memberFieldName": "getDereferencedLinks"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

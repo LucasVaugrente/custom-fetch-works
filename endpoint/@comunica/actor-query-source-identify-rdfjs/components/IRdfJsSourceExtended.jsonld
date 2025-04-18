@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-source-identify-rdfjs/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-source-identify-rdfjs",
+  "components": [
+    {
+      "@id": "caqsir:components/IRdfJsSourceExtended.jsonld#IRdfJsSourceExtended",
+      "@type": "AbstractClass",
+      "requireElement": "IRdfJsSourceExtended",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "caqsir:components/IRdfJsSourceExtended.jsonld#IRdfJsSourceExtended__member_features",
+          "memberFieldName": "features"
+        },
+        {
+          "@id": "caqsir:components/IRdfJsSourceExtended.jsonld#IRdfJsSourceExtended__member_countQuads",
+          "memberFieldName": "countQuads"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

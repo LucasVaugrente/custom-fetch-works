@@ -1,0 +1,40 @@
+import type * as RDF from '@rdfjs/types';
+import type { FunctionArgumentsCache } from './ExpressionEvaluator';
+import type { IDataDestination } from './IDataDestination';
+import type { IProxyHandler } from './IProxyHandler';
+import type { SourceType } from './IQueryEngine';
+import type { QueryExplainMode } from './IQueryOperationResult';
+import type { Logger } from './Logger';
+/**
+ * Query context when a string-based query was passed.
+ */
+export type QueryStringContext = RDF.QueryStringContext & RDF.QuerySourceContext<SourceType> & IQueryContextCommon;
+/**
+ * Query context when an algebra-based query was passed.
+ */
+export type QueryAlgebraContext = RDF.QueryAlgebraContext & RDF.QuerySourceContext<SourceType> & IQueryContextCommon;
+/**
+ * Common query context interface
+ */
+export interface IQueryContextCommon {
+    destination?: IDataDestination;
+    initialBindings?: RDF.Bindings;
+    log?: Logger;
+    datetime?: Date;
+    httpProxyHandler?: IProxyHandler;
+    lenient?: boolean;
+    httpIncludeCredentials?: boolean;
+    httpAuth?: string;
+    httpTimeout?: number;
+    httpBodyTimeout?: boolean;
+    httpRetryCount?: number;
+    httpRetryDelayFallback?: number;
+    httpRetryDelayLimit?: number;
+    fetch?: typeof fetch;
+    readOnly?: boolean;
+    extensionFunctionCreator?: (functionNamedNode: RDF.NamedNode) => ((args: RDF.Term[]) => Promise<RDF.Term>) | undefined;
+    functionArgumentsCache?: FunctionArgumentsCache;
+    extensionFunctions?: Record<string, (args: RDF.Term[]) => Promise<RDF.Term>>;
+    explain?: QueryExplainMode;
+    recoverBrokenLinks?: boolean;
+}

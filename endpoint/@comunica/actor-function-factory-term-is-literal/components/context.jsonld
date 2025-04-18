@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cafftil": "npmd:@comunica/actor-function-factory-term-is-literal/^4.0.0/",
+      "ActorFunctionFactoryTermIsLiteral": {
+        "@id": "cafftil:components/ActorFunctionFactoryTermIsLiteral.jsonld#ActorFunctionFactoryTermIsLiteral",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cafftil:components/ActorFunctionFactoryTermIsLiteral.jsonld#ActorFunctionFactoryTermIsLiteral_args_name"
+          },
+          "args_bus": {
+            "@id": "cafftil:components/ActorFunctionFactoryTermIsLiteral.jsonld#ActorFunctionFactoryTermIsLiteral_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cafftil:components/ActorFunctionFactoryTermIsLiteral.jsonld#ActorFunctionFactoryTermIsLiteral_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cafftil:components/ActorFunctionFactoryTermIsLiteral.jsonld#ActorFunctionFactoryTermIsLiteral_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cafftil:components/ActorFunctionFactoryTermIsLiteral.jsonld#ActorFunctionFactoryTermIsLiteral_args_name"
+          },
+          "bus": {
+            "@id": "cafftil:components/ActorFunctionFactoryTermIsLiteral.jsonld#ActorFunctionFactoryTermIsLiteral_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cafftil:components/ActorFunctionFactoryTermIsLiteral.jsonld#ActorFunctionFactoryTermIsLiteral_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cafftil:components/ActorFunctionFactoryTermIsLiteral.jsonld#ActorFunctionFactoryTermIsLiteral_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cafftxtt": "npmd:@comunica/actor-function-factory-term-xsd-to-time/^4.0.0/",
+      "ActorFunctionFactoryTermXsdToTime": {
+        "@id": "cafftxtt:components/ActorFunctionFactoryTermXsdToTime.jsonld#ActorFunctionFactoryTermXsdToTime",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cafftxtt:components/ActorFunctionFactoryTermXsdToTime.jsonld#ActorFunctionFactoryTermXsdToTime_args_name"
+          },
+          "args_bus": {
+            "@id": "cafftxtt:components/ActorFunctionFactoryTermXsdToTime.jsonld#ActorFunctionFactoryTermXsdToTime_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cafftxtt:components/ActorFunctionFactoryTermXsdToTime.jsonld#ActorFunctionFactoryTermXsdToTime_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cafftxtt:components/ActorFunctionFactoryTermXsdToTime.jsonld#ActorFunctionFactoryTermXsdToTime_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cafftxtt:components/ActorFunctionFactoryTermXsdToTime.jsonld#ActorFunctionFactoryTermXsdToTime_args_name"
+          },
+          "bus": {
+            "@id": "cafftxtt:components/ActorFunctionFactoryTermXsdToTime.jsonld#ActorFunctionFactoryTermXsdToTime_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cafftxtt:components/ActorFunctionFactoryTermXsdToTime.jsonld#ActorFunctionFactoryTermXsdToTime_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cafftxtt:components/ActorFunctionFactoryTermXsdToTime.jsonld#ActorFunctionFactoryTermXsdToTime_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-query-operation/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-query-operation",
+  "components": [
+    {
+      "@id": "cbqo:components/ClosableIterator.jsonld#ClosableIterator",
+      "@type": "Class",
+      "requireElement": "ClosableIterator",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "urn:npm:asynciterator:AsyncIterator",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "cbqo:components/ClosableIterator.jsonld#ClosableIterator__generic_S"
+            }
+          ]
+        }
+      ],
+      "comment": "An AsyncIterator with a callback for when this iterator is closed in any way. In contrast to ClosableTransformIterator, this does not add the overhead of a TransformIterator.",
+      "genericTypeParameters": [
+        {
+          "@id": "cbqo:components/ClosableIterator.jsonld#ClosableIterator__generic_S"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "cbqo:components/ClosableIterator.jsonld#ClosableIterator_options_onClose",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "cbqo:components/ClosableIterator.jsonld#ClosableIterator_source",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "urn:npm:asynciterator:AsyncIterator",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "cbqo:components/ClosableIterator.jsonld#ClosableIterator__generic_S"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cbqo:components/ClosableIterator.jsonld#ClosableIterator__member__source",
+          "memberFieldName": "_source",
+          "range": {
+            "@type": "ParameterRangeIntersection",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "urn:npm:asynciterator:AsyncIterator",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "cbqo:components/ClosableIterator.jsonld#InternalSource__generic_T"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "cbqo:components/ClosableIterator.jsonld#ClosableIterator__member_onClose",
+          "memberFieldName": "onClose"
+        },
+        {
+          "@id": "cbqo:components/ClosableIterator.jsonld#ClosableIterator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cbqo:components/ClosableIterator.jsonld#ClosableIterator__member_read",
+          "memberFieldName": "read"
+        },
+        {
+          "@id": "cbqo:components/ClosableIterator.jsonld#ClosableIterator__member__end",
+          "memberFieldName": "_end"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cbqo:components/ClosableIterator.jsonld#ClosableIterator_source"
+        },
+        {
+          "@id": "cbqo:components/ClosableIterator.jsonld#ClosableIterator_options__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "onClose",
+              "value": {
+                "@id": "cbqo:components/ClosableIterator.jsonld#ClosableIterator_options_onClose"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

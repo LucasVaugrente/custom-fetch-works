@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-process-sequential/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-process-sequential",
+  "@type": "Module",
+  "requireName": "@comunica/actor-query-process-sequential",
+  "import": [
+    "caqps:components/ActorQueryProcessSequential.jsonld"
+  ]
+}

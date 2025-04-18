@@ -1,0 +1,207 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caqsih": "npmd:@comunica/actor-query-source-identify-hypermedia/^4.0.0/",
+      "ActorQuerySourceIdentifyHypermedia": {
+        "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia",
+        "@prefix": true,
+        "@context": {
+          "args_cacheSize": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_cacheSize"
+          },
+          "args_maxIterators": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_maxIterators"
+          },
+          "args_aggregateTraversalStore": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_aggregateTraversalStore"
+          },
+          "args_mediatorDereferenceRdf": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_mediatorDereferenceRdf"
+          },
+          "args_mediatorMetadata": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_mediatorMetadata"
+          },
+          "args_mediatorMetadataExtract": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_mediatorMetadataExtract"
+          },
+          "args_mediatorMetadataAccumulate": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_mediatorMetadataAccumulate"
+          },
+          "args_mediatorQuerySourceIdentifyHypermedia": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_mediatorQuerySourceIdentifyHypermedia"
+          },
+          "args_mediatorRdfResolveHypermediaLinks": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_mediatorRdfResolveHypermediaLinks"
+          },
+          "args_mediatorRdfResolveHypermediaLinksQueue": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_mediatorRdfResolveHypermediaLinksQueue"
+          },
+          "args_mediatorMergeBindingsContext": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_mediatorMergeBindingsContext"
+          },
+          "args_name": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_name"
+          },
+          "args_bus": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_beforeActors",
+            "@container": "@list"
+          },
+          "cacheSize": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_cacheSize"
+          },
+          "maxIterators": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_maxIterators"
+          },
+          "aggregateTraversalStore": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_aggregateTraversalStore"
+          },
+          "mediatorDereferenceRdf": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_mediatorDereferenceRdf"
+          },
+          "mediatorMetadata": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_mediatorMetadata"
+          },
+          "mediatorMetadataExtract": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_mediatorMetadataExtract"
+          },
+          "mediatorMetadataAccumulate": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_mediatorMetadataAccumulate"
+          },
+          "mediatorQuerySourceIdentifyHypermedia": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_mediatorQuerySourceIdentifyHypermedia"
+          },
+          "mediatorRdfResolveHypermediaLinks": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_mediatorRdfResolveHypermediaLinks"
+          },
+          "mediatorRdfResolveHypermediaLinksQueue": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_mediatorRdfResolveHypermediaLinksQueue"
+          },
+          "mediatorMergeBindingsContext": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_mediatorMergeBindingsContext"
+          },
+          "name": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_name"
+          },
+          "bus": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorQuerySourceIdentifyHypermediaArgs": {
+        "@id": "caqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#IActorQuerySourceIdentifyHypermediaArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "QuerySourceHypermedia": {
+        "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia",
+        "@prefix": true,
+        "@context": {
+          "cacheSize": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_cacheSize"
+          },
+          "firstUrl": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_firstUrl"
+          },
+          "maxIterators": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_maxIterators"
+          },
+          "aggregateStore": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_aggregateStore"
+          },
+          "logWarning": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_logWarning"
+          },
+          "bindingsFactory": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_bindingsFactory"
+          },
+          "forceSourceType": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_forceSourceType"
+          },
+          "mediators_mediatorDereferenceRdf": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorDereferenceRdf"
+          },
+          "dataFactory": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_dataFactory"
+          },
+          "mediators_mediatorMetadata": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorMetadata"
+          },
+          "mediators_mediatorMetadataExtract": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorMetadataExtract"
+          },
+          "mediators_mediatorMetadataAccumulate": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorMetadataAccumulate"
+          },
+          "mediators_mediatorQuerySourceIdentifyHypermedia": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorQuerySourceIdentifyHypermedia"
+          },
+          "mediators_mediatorRdfResolveHypermediaLinks": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorRdfResolveHypermediaLinks"
+          },
+          "mediators_mediatorRdfResolveHypermediaLinksQueue": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorRdfResolveHypermediaLinksQueue"
+          },
+          "rs": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_maxIterators"
+          },
+          "tore": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_aggregateStore"
+          },
+          "": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_logWarning"
+          },
+          "ctory": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_bindingsFactory"
+          },
+          "eType": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_forceSourceType"
+          },
+          "mediatorDereferenceRdf": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorDereferenceRdf"
+          },
+          "y": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_dataFactory"
+          },
+          "mediatorMetadata": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorMetadata"
+          },
+          "mediatorMetadataExtract": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorMetadataExtract"
+          },
+          "mediatorMetadataAccumulate": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorMetadataAccumulate"
+          },
+          "mediatorQuerySourceIdentifyHypermedia": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorQuerySourceIdentifyHypermedia"
+          },
+          "mediatorRdfResolveHypermediaLinks": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorRdfResolveHypermediaLinks"
+          },
+          "mediatorRdfResolveHypermediaLinksQueue": {
+            "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorRdfResolveHypermediaLinksQueue"
+          }
+        }
+      },
+      "IMediatorArgs": {
+        "@id": "caqsih:components/QuerySourceHypermedia.jsonld#IMediatorArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

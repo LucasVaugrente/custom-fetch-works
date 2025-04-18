@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cafftgt": "npmd:@comunica/actor-function-factory-term-greater-than/^4.0.0/",
+      "ActorFunctionFactoryTermGreaterThan": {
+        "@id": "cafftgt:components/ActorFunctionFactoryTermGreaterThan.jsonld#ActorFunctionFactoryTermGreaterThan",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorFunctionFactory": {
+            "@id": "cafftgt:components/ActorFunctionFactoryTermGreaterThan.jsonld#ActorFunctionFactoryTermGreaterThan_args_mediatorFunctionFactory"
+          },
+          "args_name": {
+            "@id": "cafftgt:components/ActorFunctionFactoryTermGreaterThan.jsonld#ActorFunctionFactoryTermGreaterThan_args_name"
+          },
+          "args_bus": {
+            "@id": "cafftgt:components/ActorFunctionFactoryTermGreaterThan.jsonld#ActorFunctionFactoryTermGreaterThan_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cafftgt:components/ActorFunctionFactoryTermGreaterThan.jsonld#ActorFunctionFactoryTermGreaterThan_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cafftgt:components/ActorFunctionFactoryTermGreaterThan.jsonld#ActorFunctionFactoryTermGreaterThan_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorFunctionFactory": {
+            "@id": "cafftgt:components/ActorFunctionFactoryTermGreaterThan.jsonld#ActorFunctionFactoryTermGreaterThan_args_mediatorFunctionFactory"
+          },
+          "name": {
+            "@id": "cafftgt:components/ActorFunctionFactoryTermGreaterThan.jsonld#ActorFunctionFactoryTermGreaterThan_args_name"
+          },
+          "bus": {
+            "@id": "cafftgt:components/ActorFunctionFactoryTermGreaterThan.jsonld#ActorFunctionFactoryTermGreaterThan_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cafftgt:components/ActorFunctionFactoryTermGreaterThan.jsonld#ActorFunctionFactoryTermGreaterThan_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cafftgt:components/ActorFunctionFactoryTermGreaterThan.jsonld#ActorFunctionFactoryTermGreaterThan_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

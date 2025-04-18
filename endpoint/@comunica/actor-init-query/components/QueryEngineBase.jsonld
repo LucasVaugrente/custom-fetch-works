@@ -1,0 +1,165 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-init-query/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/types/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-init-query",
+  "components": [
+    {
+      "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase",
+      "@type": "Class",
+      "requireElement": "QueryEngineBase",
+      "comment": "Base implementation of a Comunica query engine.",
+      "genericTypeParameters": [
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase__generic_QueryContext",
+          "range": "ct:components/IQueryContext.jsonld#IQueryContextCommon",
+          "default": "ct:components/IQueryContext.jsonld#IQueryContextCommon"
+        },
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase__generic_QueryStringContextInner",
+          "range": "urn:npm:@rdfjs/types:QueryStringContext",
+          "default": {
+            "@type": "ParameterRangeIntersection",
+            "parameterRangeElements": [
+              "urn:npm:@rdfjs/types:QueryStringContext",
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "urn:npm:@rdfjs/types:QuerySourceContext",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeUnion",
+                    "parameterRangeElements": [
+                      "xsd:string",
+                      "urn:npm:@rdfjs/types:Source",
+                      "urn:npm:@rdfjs/types:Store",
+                      {
+                        "@type": "ParameterRangeUnion",
+                        "parameterRangeElements": [
+                          "ct:components/IQuerySource.jsonld#IQuerySourceUnidentifiedExpanded",
+                          "ct:components/IQuerySource.jsonld#IQuerySourceSerialized"
+                        ]
+                      },
+                      "ct:components/IQuerySource.jsonld#IQuerySourceUnidentifiedExpandedRawContext"
+                    ]
+                  }
+                ]
+              },
+              "ct:components/IQueryContext.jsonld#IQueryContextCommon"
+            ]
+          }
+        },
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase__generic_QueryAlgebraContextInner",
+          "range": "urn:npm:@rdfjs/types:QueryContext",
+          "default": {
+            "@type": "ParameterRangeIntersection",
+            "parameterRangeElements": [
+              "urn:npm:@rdfjs/types:QueryContext",
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "urn:npm:@rdfjs/types:QuerySourceContext",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeUnion",
+                    "parameterRangeElements": [
+                      "xsd:string",
+                      "urn:npm:@rdfjs/types:Source",
+                      "urn:npm:@rdfjs/types:Store",
+                      {
+                        "@type": "ParameterRangeUnion",
+                        "parameterRangeElements": [
+                          "ct:components/IQuerySource.jsonld#IQuerySourceUnidentifiedExpanded",
+                          "ct:components/IQuerySource.jsonld#IQuerySourceSerialized"
+                        ]
+                      },
+                      "ct:components/IQuerySource.jsonld#IQuerySourceUnidentifiedExpandedRawContext"
+                    ]
+                  }
+                ]
+              },
+              "ct:components/IQueryContext.jsonld#IQueryContextCommon"
+            ]
+          }
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase_actorInitQuery",
+          "range": "caiq:components/ActorInitQueryBase.jsonld#ActorInitQueryBase"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase__member_actorInitQuery",
+          "memberFieldName": "actorInitQuery"
+        },
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase__member_queryBindings",
+          "memberFieldName": "queryBindings"
+        },
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase__member_queryQuads",
+          "memberFieldName": "queryQuads"
+        },
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase__member_queryBoolean",
+          "memberFieldName": "queryBoolean"
+        },
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase__member_queryVoid",
+          "memberFieldName": "queryVoid"
+        },
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase__member_queryOfType",
+          "memberFieldName": "queryOfType"
+        },
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase__member_query",
+          "memberFieldName": "query"
+        },
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase__member_explain",
+          "memberFieldName": "explain"
+        },
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase__member_queryOrExplain",
+          "memberFieldName": "queryOrExplain"
+        },
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase__member_getResultMediaTypes",
+          "memberFieldName": "getResultMediaTypes"
+        },
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase__member_getResultMediaTypeFormats",
+          "memberFieldName": "getResultMediaTypeFormats"
+        },
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase__member_resultToString",
+          "memberFieldName": "resultToString"
+        },
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase__member_invalidateHttpCache",
+          "memberFieldName": "invalidateHttpCache"
+        },
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase__member_internalToFinalResult",
+          "memberFieldName": "internalToFinalResult"
+        },
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase__member_finalToInternalResult",
+          "memberFieldName": "finalToInternalResult"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "caiq:components/QueryEngineBase.jsonld#QueryEngineBase_actorInitQuery"
+        }
+      ]
+    }
+  ]
+}

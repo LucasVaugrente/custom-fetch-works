@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cafftxtf": "npmd:@comunica/actor-function-factory-term-xsd-to-float/^4.0.0/",
+      "ActorFunctionFactoryTermXsdToFloat": {
+        "@id": "cafftxtf:components/ActorFunctionFactoryTermXsdToFloat.jsonld#ActorFunctionFactoryTermXsdToFloat",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cafftxtf:components/ActorFunctionFactoryTermXsdToFloat.jsonld#ActorFunctionFactoryTermXsdToFloat_args_name"
+          },
+          "args_bus": {
+            "@id": "cafftxtf:components/ActorFunctionFactoryTermXsdToFloat.jsonld#ActorFunctionFactoryTermXsdToFloat_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cafftxtf:components/ActorFunctionFactoryTermXsdToFloat.jsonld#ActorFunctionFactoryTermXsdToFloat_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cafftxtf:components/ActorFunctionFactoryTermXsdToFloat.jsonld#ActorFunctionFactoryTermXsdToFloat_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cafftxtf:components/ActorFunctionFactoryTermXsdToFloat.jsonld#ActorFunctionFactoryTermXsdToFloat_args_name"
+          },
+          "bus": {
+            "@id": "cafftxtf:components/ActorFunctionFactoryTermXsdToFloat.jsonld#ActorFunctionFactoryTermXsdToFloat_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cafftxtf:components/ActorFunctionFactoryTermXsdToFloat.jsonld#ActorFunctionFactoryTermXsdToFloat_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cafftxtf:components/ActorFunctionFactoryTermXsdToFloat.jsonld#ActorFunctionFactoryTermXsdToFloat_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

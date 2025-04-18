@@ -1,0 +1,88 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-rdf-join-optional-hash/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-rdf-join-optional-hash",
+  "components": [
+    {
+      "@id": "carjoh:components/BindingsIndexDef.jsonld#BindingsIndexDef",
+      "@type": "Class",
+      "requireElement": "BindingsIndexDef",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "carjoh:components/IBindingsIndex.jsonld#IBindingsIndex",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "carjoh:components/BindingsIndexDef.jsonld#BindingsIndexDef__generic_V"
+            }
+          ]
+        }
+      ],
+      "comment": "A simple efficient hash-based index for maintaining bindings, and checking whether or not a bindings is contained in this index.  This can not handle bindings with undefined values.",
+      "genericTypeParameters": [
+        {
+          "@id": "carjoh:components/BindingsIndexDef.jsonld#BindingsIndexDef__generic_V"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "carjoh:components/BindingsIndexDef.jsonld#BindingsIndexDef_hashFn",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexDef.jsonld#BindingsIndexDef_keys",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "urn:npm:@rdfjs/types:Variable"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "carjoh:components/BindingsIndexDef.jsonld#BindingsIndexDef__member_keys",
+          "memberFieldName": "keys"
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexDef.jsonld#BindingsIndexDef__member_hashFn",
+          "memberFieldName": "hashFn"
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexDef.jsonld#BindingsIndexDef__member_index",
+          "memberFieldName": "index"
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexDef.jsonld#BindingsIndexDef__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexDef.jsonld#BindingsIndexDef__member_put",
+          "memberFieldName": "put"
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexDef.jsonld#BindingsIndexDef__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexDef.jsonld#BindingsIndexDef__member_getFirst",
+          "memberFieldName": "getFirst"
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexDef.jsonld#BindingsIndexDef__member_values",
+          "memberFieldName": "values"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "carjoh:components/BindingsIndexDef.jsonld#BindingsIndexDef_keys"
+        },
+        {
+          "@id": "carjoh:components/BindingsIndexDef.jsonld#BindingsIndexDef_hashFn"
+        }
+      ]
+    }
+  ]
+}

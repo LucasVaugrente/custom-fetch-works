@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-bindings-aggregator-factory/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-bindings-aggregator-factory",
+  "@type": "Module",
+  "requireName": "@comunica/bus-bindings-aggregator-factory",
+  "import": [
+    "cbbaf:components/ActorBindingsAggregatorFactory.jsonld"
+  ]
+}

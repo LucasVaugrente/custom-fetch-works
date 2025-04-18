@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cabafs": "npmd:@comunica/actor-bindings-aggregator-factory-sample/^4.0.0/",
+      "ActorBindingsAggregatorFactorySample": {
+        "@id": "cabafs:components/ActorBindingsAggregatorFactorySample.jsonld#ActorBindingsAggregatorFactorySample",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorExpressionEvaluatorFactory": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySample.jsonld#ActorBindingsAggregatorFactorySample_args_mediatorExpressionEvaluatorFactory"
+          },
+          "args_name": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySample.jsonld#ActorBindingsAggregatorFactorySample_args_name"
+          },
+          "args_bus": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySample.jsonld#ActorBindingsAggregatorFactorySample_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySample.jsonld#ActorBindingsAggregatorFactorySample_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySample.jsonld#ActorBindingsAggregatorFactorySample_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorExpressionEvaluatorFactory": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySample.jsonld#ActorBindingsAggregatorFactorySample_args_mediatorExpressionEvaluatorFactory"
+          },
+          "name": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySample.jsonld#ActorBindingsAggregatorFactorySample_args_name"
+          },
+          "bus": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySample.jsonld#ActorBindingsAggregatorFactorySample_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySample.jsonld#ActorBindingsAggregatorFactorySample_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cabafs:components/ActorBindingsAggregatorFactorySample.jsonld#ActorBindingsAggregatorFactorySample_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "SampleAggregator": {
+        "@id": "cabafs:components/SampleAggregator.jsonld#SampleAggregator",
+        "@prefix": true,
+        "@context": {
+          "distinct": {
+            "@id": "cabafs:components/SampleAggregator.jsonld#SampleAggregator_distinct"
+          },
+          "evaluator": {
+            "@id": "cabafs:components/SampleAggregator.jsonld#SampleAggregator_evaluator"
+          },
+          "throwError": {
+            "@id": "cabafs:components/SampleAggregator.jsonld#SampleAggregator_throwError"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-http-retry/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-http-retry",
+  "@type": "Module",
+  "requireName": "@comunica/actor-http-retry",
+  "import": [
+    "cahr:components/ActorHttpRetry.jsonld"
+  ]
+}

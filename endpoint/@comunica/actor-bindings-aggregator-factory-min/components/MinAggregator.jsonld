@@ -1,0 +1,81 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-bindings-aggregator-factory-min/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/types/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-term-comparator-factory/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-bindings-aggregator-factory/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-bindings-aggregator-factory-min",
+  "components": [
+    {
+      "@id": "cabafm:components/MinAggregator.jsonld#MinAggregator",
+      "@type": "Class",
+      "requireElement": "MinAggregator",
+      "extends": [
+        "cbbaf:components/ActorBindingsAggregatorFactory.jsonld#IBindingsAggregator"
+      ],
+      "parameters": [
+        {
+          "@id": "cabafm:components/MinAggregator.jsonld#MinAggregator_distinct",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "cabafm:components/MinAggregator.jsonld#MinAggregator_evaluator",
+          "range": "ct:components/ExpressionEvaluator.jsonld#IExpressionEvaluator"
+        },
+        {
+          "@id": "cabafm:components/MinAggregator.jsonld#MinAggregator_orderByEvaluator",
+          "range": "cbtcf:components/ActorTermComparatorFactory.jsonld#ITermComparator"
+        },
+        {
+          "@id": "cabafm:components/MinAggregator.jsonld#MinAggregator_throwError",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cabafm:components/MinAggregator.jsonld#MinAggregator__member_orderByEvaluator",
+          "memberFieldName": "orderByEvaluator"
+        },
+        {
+          "@id": "cabafm:components/MinAggregator.jsonld#MinAggregator__member_state",
+          "memberFieldName": "state"
+        },
+        {
+          "@id": "cabafm:components/MinAggregator.jsonld#MinAggregator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cabafm:components/MinAggregator.jsonld#MinAggregator__member_putTerm",
+          "memberFieldName": "putTerm"
+        },
+        {
+          "@id": "cabafm:components/MinAggregator.jsonld#MinAggregator__member_termResult",
+          "memberFieldName": "termResult"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cabafm:components/MinAggregator.jsonld#MinAggregator_evaluator"
+        },
+        {
+          "@id": "cabafm:components/MinAggregator.jsonld#MinAggregator_distinct"
+        },
+        {
+          "@id": "cabafm:components/MinAggregator.jsonld#MinAggregator_orderByEvaluator"
+        },
+        {
+          "@id": "cabafm:components/MinAggregator.jsonld#MinAggregator_throwError"
+        }
+      ]
+    }
+  ]
+}

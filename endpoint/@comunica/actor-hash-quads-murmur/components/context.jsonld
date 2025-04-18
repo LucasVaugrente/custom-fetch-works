@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cahqm": "npmd:@comunica/actor-hash-quads-murmur/^4.0.0/",
+      "ActorHashQuadsMurmur": {
+        "@id": "cahqm:components/ActorHashQuadsMurmur.jsonld#ActorHashQuadsMurmur",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cahqm:components/ActorHashQuadsMurmur.jsonld#ActorHashQuadsMurmur_args_name"
+          },
+          "args_bus": {
+            "@id": "cahqm:components/ActorHashQuadsMurmur.jsonld#ActorHashQuadsMurmur_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cahqm:components/ActorHashQuadsMurmur.jsonld#ActorHashQuadsMurmur_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cahqm:components/ActorHashQuadsMurmur.jsonld#ActorHashQuadsMurmur_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cahqm:components/ActorHashQuadsMurmur.jsonld#ActorHashQuadsMurmur_args_name"
+          },
+          "bus": {
+            "@id": "cahqm:components/ActorHashQuadsMurmur.jsonld#ActorHashQuadsMurmur_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cahqm:components/ActorHashQuadsMurmur.jsonld#ActorHashQuadsMurmur_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cahqm:components/ActorHashQuadsMurmur.jsonld#ActorHashQuadsMurmur_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

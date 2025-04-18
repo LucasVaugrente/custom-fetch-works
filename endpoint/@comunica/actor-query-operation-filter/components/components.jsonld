@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-operation-filter/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-operation-filter",
+  "@type": "Module",
+  "requireName": "@comunica/actor-query-operation-filter",
+  "import": [
+    "caqof:components/ActorQueryOperationFilter.jsonld"
+  ]
+}

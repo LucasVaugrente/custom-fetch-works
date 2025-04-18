@@ -1,8 +1,13 @@
 # custom-fetch-works
 
+Dans custom-fetch :
+
+    cp SparqlEndpointFetcher-patched-version-proxy.js node_modules/fetch-sparql-endpoint/lib/SparqlEndpointFetcher.js
+
+
 Dans le dossier avec les solid_server avec les data alice et bob :
 
-    npx @solid/community-server -c @css:config/file.json -f data/solidproxy --baseUrl http://localhost:3001
+    npx @solid/community-server -c @css:config/file.json -f solid_server/data/solidproxy --baseUrl http://localhost:3001
 
 Ensuite dans custom-fetch :
 

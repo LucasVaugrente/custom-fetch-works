@@ -1,0 +1,277 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-query-source-identify-hypermedia/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-query-source-identify-hypermedia",
+  "components": [
+    {
+      "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia",
+      "@type": "AbstractClass",
+      "requireElement": "ActorQuerySourceIdentifyHypermedia",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "cc:components/Actor.jsonld#Actor",
+          "genericTypeInstances": [
+            "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#IActionQuerySourceIdentifyHypermedia",
+            "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#IActorQuerySourceIdentifyHypermediaTest",
+            "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#IActorQuerySourceIdentifyHypermediaOutput",
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia__generic_TS"
+            }
+          ]
+        }
+      ],
+      "comment": "A comunica actor for query-source-identify-hypermedia events.  Actor types: * Input:  IActionQuerySourceIdentifyHypermedia:      The metadata in the document and a query operation. * Test:   <none> * Output: IActorQuerySourceIdentifyHypermediaOutput: A query source.",
+      "genericTypeParameters": [
+        {
+          "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia__generic_TS",
+          "default": {
+            "@type": "ParameterRangeUndefined"
+          }
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_sourceType",
+          "range": "xsd:string",
+          "comment": "The source type."
+        },
+        {
+          "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_default_bus",
+            "@type": "cc:components/Bus.jsonld#Bus"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "Query source hypermedia identification failed: none of the configured actors were able to identify ${action.url}",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia__member_sourceType",
+          "memberFieldName": "sourceType",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia__member_test",
+          "memberFieldName": "test"
+        },
+        {
+          "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia__member_testMetadata",
+          "memberFieldName": "testMetadata"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_beforeActors"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_sourceType"
+        }
+      ]
+    },
+    {
+      "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#IActionQuerySourceIdentifyHypermedia",
+      "@type": "AbstractClass",
+      "requireElement": "IActionQuerySourceIdentifyHypermedia",
+      "extends": [
+        "cc:components/Actor.jsonld#IAction"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#IActionQuerySourceIdentifyHypermedia__member_url",
+          "memberFieldName": "url"
+        },
+        {
+          "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#IActionQuerySourceIdentifyHypermedia__member_metadata",
+          "memberFieldName": "metadata"
+        },
+        {
+          "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#IActionQuerySourceIdentifyHypermedia__member_quads",
+          "memberFieldName": "quads"
+        },
+        {
+          "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#IActionQuerySourceIdentifyHypermedia__member_handledDatasets",
+          "memberFieldName": "handledDatasets"
+        },
+        {
+          "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#IActionQuerySourceIdentifyHypermedia__member_forceSourceType",
+          "memberFieldName": "forceSourceType"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#IActorQuerySourceIdentifyHypermediaTest",
+      "@type": "AbstractClass",
+      "requireElement": "IActorQuerySourceIdentifyHypermediaTest",
+      "extends": [
+        "cc:components/Actor.jsonld#IActorTest"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#IActorQuerySourceIdentifyHypermediaTest__member_filterFactor",
+          "memberFieldName": "filterFactor"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#IActorQuerySourceIdentifyHypermediaOutput",
+      "@type": "AbstractClass",
+      "requireElement": "IActorQuerySourceIdentifyHypermediaOutput",
+      "extends": [
+        "cc:components/Actor.jsonld#IActorOutput"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#IActorQuerySourceIdentifyHypermediaOutput__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#IActorQuerySourceIdentifyHypermediaOutput__member_dataset",
+          "memberFieldName": "dataset"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

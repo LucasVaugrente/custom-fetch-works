@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-merge-bindings-context/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-merge-bindings-context",
+  "@type": "Module",
+  "requireName": "@comunica/bus-merge-bindings-context",
+  "import": [
+    "cbmbc:components/ActorMergeBindingsContext.jsonld"
+  ]
+}

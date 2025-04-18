@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-predicate/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-predicate",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-predicate",
+  "import": [
+    "cafftp:components/ActorFunctionFactoryTermPredicate.jsonld"
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/types/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/types",
+  "components": [
+    {
+      "@id": "ct:components/IQuerySource.jsonld#IQuerySourceSerialized",
+      "@type": "AbstractClass",
+      "requireElement": "IQuerySourceSerialized",
+      "extends": [
+        "ct:components/IQuerySource.jsonld#IQuerySourceUnidentifiedExpanded"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/IQuerySource.jsonld#IQuerySourceSerialized__member_type",
+          "memberFieldName": "type"
+        },
+        {
+          "@id": "ct:components/IQuerySource.jsonld#IQuerySourceSerialized__member_value",
+          "memberFieldName": "value"
+        },
+        {
+          "@id": "ct:components/IQuerySource.jsonld#IQuerySourceSerialized__member_mediaType",
+          "memberFieldName": "mediaType"
+        },
+        {
+          "@id": "ct:components/IQuerySource.jsonld#IQuerySourceSerialized__member_baseIRI",
+          "memberFieldName": "baseIRI"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "ct:components/IQuerySource.jsonld#IQuerySourceUnidentifiedExpanded",
+      "@type": "AbstractClass",
+      "requireElement": "IQuerySourceUnidentifiedExpanded",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/IQuerySource.jsonld#IQuerySourceUnidentifiedExpanded__member_type",
+          "memberFieldName": "type"
+        },
+        {
+          "@id": "ct:components/IQuerySource.jsonld#IQuerySourceUnidentifiedExpanded__member_value",
+          "memberFieldName": "value"
+        },
+        {
+          "@id": "ct:components/IQuerySource.jsonld#IQuerySourceUnidentifiedExpanded__member_context",
+          "memberFieldName": "context"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "ct:components/IQuerySource.jsonld#IQuerySourceUnidentifiedExpandedRawContext",
+      "@type": "AbstractClass",
+      "requireElement": "IQuerySourceUnidentifiedExpandedRawContext",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/IQuerySource.jsonld#IQuerySourceUnidentifiedExpandedRawContext__member_type",
+          "memberFieldName": "type"
+        },
+        {
+          "@id": "ct:components/IQuerySource.jsonld#IQuerySourceUnidentifiedExpandedRawContext__member_value",
+          "memberFieldName": "value"
+        },
+        {
+          "@id": "ct:components/IQuerySource.jsonld#IQuerySourceUnidentifiedExpandedRawContext__member_context",
+          "memberFieldName": "context"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "ct:components/IQuerySource.jsonld#IQuerySourceWrapper",
+      "@type": "AbstractClass",
+      "requireElement": "IQuerySourceWrapper",
+      "comment": "Attaches a context to a query target.",
+      "genericTypeParameters": [
+        {
+          "@id": "ct:components/IQuerySource.jsonld#IQuerySourceWrapper__generic_Q",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          },
+          "default": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/IQuerySource.jsonld#IQuerySourceWrapper__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "ct:components/IQuerySource.jsonld#IQuerySourceWrapper__member_context",
+          "memberFieldName": "context"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "ct:components/IQuerySource.jsonld#IQueryBindingsOptions",
+      "@type": "AbstractClass",
+      "requireElement": "IQueryBindingsOptions",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "ct:components/IQuerySource.jsonld#IQueryBindingsOptions__member_joinBindings",
+          "memberFieldName": "joinBindings"
+        },
+        {
+          "@id": "ct:components/IQuerySource.jsonld#IQueryBindingsOptions__member_filterBindings",
+          "memberFieldName": "filterBindings"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

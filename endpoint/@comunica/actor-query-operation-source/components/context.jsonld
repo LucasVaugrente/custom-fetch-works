@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caqos": "npmd:@comunica/actor-query-operation-source/^4.0.0/",
+      "ActorQueryOperationSource": {
+        "@id": "caqos:components/ActorQueryOperationSource.jsonld#ActorQueryOperationSource",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "caqos:components/ActorQueryOperationSource.jsonld#ActorQueryOperationSource_args_name"
+          },
+          "args_bus": {
+            "@id": "caqos:components/ActorQueryOperationSource.jsonld#ActorQueryOperationSource_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caqos:components/ActorQueryOperationSource.jsonld#ActorQueryOperationSource_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caqos:components/ActorQueryOperationSource.jsonld#ActorQueryOperationSource_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "caqos:components/ActorQueryOperationSource.jsonld#ActorQueryOperationSource_args_name"
+          },
+          "bus": {
+            "@id": "caqos:components/ActorQueryOperationSource.jsonld#ActorQueryOperationSource_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caqos:components/ActorQueryOperationSource.jsonld#ActorQueryOperationSource_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caqos:components/ActorQueryOperationSource.jsonld#ActorQueryOperationSource_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "carjoh": "npmd:@comunica/actor-rdf-join-optional-hash/^4.0.0/",
+      "ActorRdfJoinOptionalHash": {
+        "@id": "carjoh:components/ActorRdfJoinOptionalHash.jsonld#ActorRdfJoinOptionalHash",
+        "@prefix": true,
+        "@context": {
+          "args_canHandleUndefs": {
+            "@id": "carjoh:components/ActorRdfJoinOptionalHash.jsonld#ActorRdfJoinOptionalHash_args_canHandleUndefs"
+          },
+          "args_blocking": {
+            "@id": "carjoh:components/ActorRdfJoinOptionalHash.jsonld#ActorRdfJoinOptionalHash_args_blocking"
+          },
+          "args_mediatorJoinSelectivity": {
+            "@id": "carjoh:components/ActorRdfJoinOptionalHash.jsonld#ActorRdfJoinOptionalHash_args_mediatorJoinSelectivity"
+          },
+          "args_name": {
+            "@id": "carjoh:components/ActorRdfJoinOptionalHash.jsonld#ActorRdfJoinOptionalHash_args_name"
+          },
+          "args_bus": {
+            "@id": "carjoh:components/ActorRdfJoinOptionalHash.jsonld#ActorRdfJoinOptionalHash_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "carjoh:components/ActorRdfJoinOptionalHash.jsonld#ActorRdfJoinOptionalHash_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "carjoh:components/ActorRdfJoinOptionalHash.jsonld#ActorRdfJoinOptionalHash_args_beforeActors",
+            "@container": "@list"
+          },
+          "canHandleUndefs": {
+            "@id": "carjoh:components/ActorRdfJoinOptionalHash.jsonld#ActorRdfJoinOptionalHash_args_canHandleUndefs"
+          },
+          "blocking": {
+            "@id": "carjoh:components/ActorRdfJoinOptionalHash.jsonld#ActorRdfJoinOptionalHash_args_blocking"
+          },
+          "mediatorJoinSelectivity": {
+            "@id": "carjoh:components/ActorRdfJoinOptionalHash.jsonld#ActorRdfJoinOptionalHash_args_mediatorJoinSelectivity"
+          },
+          "name": {
+            "@id": "carjoh:components/ActorRdfJoinOptionalHash.jsonld#ActorRdfJoinOptionalHash_args_name"
+          },
+          "bus": {
+            "@id": "carjoh:components/ActorRdfJoinOptionalHash.jsonld#ActorRdfJoinOptionalHash_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "carjoh:components/ActorRdfJoinOptionalHash.jsonld#ActorRdfJoinOptionalHash_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "carjoh:components/ActorRdfJoinOptionalHash.jsonld#ActorRdfJoinOptionalHash_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorRdfJoinOptionalHashArgs": {
+        "@id": "carjoh:components/ActorRdfJoinOptionalHash.jsonld#IActorRdfJoinOptionalHashArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

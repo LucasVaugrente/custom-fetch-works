@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-xsd-to-day-time-duration/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-xsd-to-day-time-duration",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-xsd-to-day-time-duration",
+  "import": [
+    "cafftxtdtd:components/ActorFunctionFactoryTermXsdToDayTimeDuration.jsonld"
+  ]
+}

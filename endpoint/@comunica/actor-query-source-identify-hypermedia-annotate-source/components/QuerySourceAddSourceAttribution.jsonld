@@ -1,0 +1,72 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-source-identify-hypermedia-annotate-source/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-source-identify-hypermedia-annotate-source",
+  "components": [
+    {
+      "@id": "caqsihas:components/QuerySourceAddSourceAttribution.jsonld#QuerySourceAddSourceAttribution",
+      "@type": "Class",
+      "requireElement": "QuerySourceAddSourceAttribution",
+      "comment": "A IQuerySource wrapper that skolemizes outgoing quads and bindings.",
+      "parameters": [
+        {
+          "@id": "caqsihas:components/QuerySourceAddSourceAttribution.jsonld#QuerySourceAddSourceAttribution_innerSource",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "caqsihas:components/QuerySourceAddSourceAttribution.jsonld#QuerySourceAddSourceAttribution__member_innerSource",
+          "memberFieldName": "innerSource",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "caqsihas:components/QuerySourceAddSourceAttribution.jsonld#QuerySourceAddSourceAttribution__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "caqsihas:components/QuerySourceAddSourceAttribution.jsonld#QuerySourceAddSourceAttribution__member_getSelectorShape",
+          "memberFieldName": "getSelectorShape"
+        },
+        {
+          "@id": "caqsihas:components/QuerySourceAddSourceAttribution.jsonld#QuerySourceAddSourceAttribution__member_queryBindings",
+          "memberFieldName": "queryBindings"
+        },
+        {
+          "@id": "caqsihas:components/QuerySourceAddSourceAttribution.jsonld#QuerySourceAddSourceAttribution__member_addSourceUrlToBindingContext",
+          "memberFieldName": "addSourceUrlToBindingContext"
+        },
+        {
+          "@id": "caqsihas:components/QuerySourceAddSourceAttribution.jsonld#QuerySourceAddSourceAttribution__member_queryBoolean",
+          "memberFieldName": "queryBoolean"
+        },
+        {
+          "@id": "caqsihas:components/QuerySourceAddSourceAttribution.jsonld#QuerySourceAddSourceAttribution__member_queryQuads",
+          "memberFieldName": "queryQuads"
+        },
+        {
+          "@id": "caqsihas:components/QuerySourceAddSourceAttribution.jsonld#QuerySourceAddSourceAttribution__member_queryVoid",
+          "memberFieldName": "queryVoid"
+        },
+        {
+          "@id": "caqsihas:components/QuerySourceAddSourceAttribution.jsonld#QuerySourceAddSourceAttribution__member_referenceValue",
+          "memberFieldName": "referenceValue"
+        },
+        {
+          "@id": "caqsihas:components/QuerySourceAddSourceAttribution.jsonld#QuerySourceAddSourceAttribution__member_toString",
+          "memberFieldName": "toString"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "caqsihas:components/QuerySourceAddSourceAttribution.jsonld#QuerySourceAddSourceAttribution_innerSource"
+        }
+      ]
+    }
+  ]
+}

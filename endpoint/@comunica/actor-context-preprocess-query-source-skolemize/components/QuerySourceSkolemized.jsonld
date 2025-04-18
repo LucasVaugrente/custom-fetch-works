@@ -1,0 +1,80 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-context-preprocess-query-source-skolemize/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-context-preprocess-query-source-skolemize",
+  "components": [
+    {
+      "@id": "cacpqss:components/QuerySourceSkolemized.jsonld#QuerySourceSkolemized",
+      "@type": "Class",
+      "requireElement": "QuerySourceSkolemized",
+      "comment": "A IQuerySource wrapper that skolemizes outgoing quads and bindings.",
+      "parameters": [
+        {
+          "@id": "cacpqss:components/QuerySourceSkolemized.jsonld#QuerySourceSkolemized_innerSource",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "cacpqss:components/QuerySourceSkolemized.jsonld#QuerySourceSkolemized_sourceId",
+          "range": "xsd:string"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cacpqss:components/QuerySourceSkolemized.jsonld#QuerySourceSkolemized__member_innerSource",
+          "memberFieldName": "innerSource",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "cacpqss:components/QuerySourceSkolemized.jsonld#QuerySourceSkolemized__member_sourceId",
+          "memberFieldName": "sourceId",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "cacpqss:components/QuerySourceSkolemized.jsonld#QuerySourceSkolemized__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cacpqss:components/QuerySourceSkolemized.jsonld#QuerySourceSkolemized__member_getSelectorShape",
+          "memberFieldName": "getSelectorShape"
+        },
+        {
+          "@id": "cacpqss:components/QuerySourceSkolemized.jsonld#QuerySourceSkolemized__member_queryBindings",
+          "memberFieldName": "queryBindings"
+        },
+        {
+          "@id": "cacpqss:components/QuerySourceSkolemized.jsonld#QuerySourceSkolemized__member_queryBoolean",
+          "memberFieldName": "queryBoolean"
+        },
+        {
+          "@id": "cacpqss:components/QuerySourceSkolemized.jsonld#QuerySourceSkolemized__member_queryQuads",
+          "memberFieldName": "queryQuads"
+        },
+        {
+          "@id": "cacpqss:components/QuerySourceSkolemized.jsonld#QuerySourceSkolemized__member_queryVoid",
+          "memberFieldName": "queryVoid"
+        },
+        {
+          "@id": "cacpqss:components/QuerySourceSkolemized.jsonld#QuerySourceSkolemized__member_referenceValue",
+          "memberFieldName": "referenceValue"
+        },
+        {
+          "@id": "cacpqss:components/QuerySourceSkolemized.jsonld#QuerySourceSkolemized__member_toString",
+          "memberFieldName": "toString"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cacpqss:components/QuerySourceSkolemized.jsonld#QuerySourceSkolemized_innerSource"
+        },
+        {
+          "@id": "cacpqss:components/QuerySourceSkolemized.jsonld#QuerySourceSkolemized_sourceId"
+        }
+      ]
+    }
+  ]
+}

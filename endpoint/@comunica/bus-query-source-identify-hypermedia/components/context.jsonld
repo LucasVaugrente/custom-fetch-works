@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cbqsih": "npmd:@comunica/bus-query-source-identify-hypermedia/^4.0.0/",
+      "ActorQuerySourceIdentifyHypermedia": {
+        "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia",
+        "@prefix": true,
+        "@context": {
+          "sourceType": {
+            "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_sourceType"
+          },
+          "args_name": {
+            "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_name"
+          },
+          "args_bus": {
+            "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_beforeActors",
+            "@container": "@list"
+          },
+          "eType": {
+            "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_sourceType"
+          },
+          "name": {
+            "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_name"
+          },
+          "bus": {
+            "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#ActorQuerySourceIdentifyHypermedia_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActionQuerySourceIdentifyHypermedia": {
+        "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#IActionQuerySourceIdentifyHypermedia",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IActorQuerySourceIdentifyHypermediaTest": {
+        "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#IActorQuerySourceIdentifyHypermediaTest",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IActorQuerySourceIdentifyHypermediaOutput": {
+        "@id": "cbqsih:components/ActorQuerySourceIdentifyHypermedia.jsonld#IActorQuerySourceIdentifyHypermediaOutput",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

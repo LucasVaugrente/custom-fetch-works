@@ -1,0 +1,82 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cabafa": "npmd:@comunica/actor-bindings-aggregator-factory-average/^4.0.0/",
+      "ActorBindingsAggregatorFactoryAverage": {
+        "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorFunctionFactory": {
+            "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_mediatorFunctionFactory"
+          },
+          "args_mediatorExpressionEvaluatorFactory": {
+            "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_mediatorExpressionEvaluatorFactory"
+          },
+          "args_name": {
+            "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_name"
+          },
+          "args_bus": {
+            "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorFunctionFactory": {
+            "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_mediatorFunctionFactory"
+          },
+          "mediatorExpressionEvaluatorFactory": {
+            "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_mediatorExpressionEvaluatorFactory"
+          },
+          "name": {
+            "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_name"
+          },
+          "bus": {
+            "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#ActorBindingsAggregatorFactoryAverage_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorBindingsAggregatorFactoryAverageArgs": {
+        "@id": "cabafa:components/ActorBindingsAggregatorFactoryAverage.jsonld#IActorBindingsAggregatorFactoryAverageArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "AverageAggregator": {
+        "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator",
+        "@prefix": true,
+        "@context": {
+          "distinct": {
+            "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator_distinct"
+          },
+          "evaluator": {
+            "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator_evaluator"
+          },
+          "additionFunction": {
+            "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator_additionFunction"
+          },
+          "divisionFunction": {
+            "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator_divisionFunction"
+          },
+          "throwError": {
+            "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator_throwError"
+          },
+          "dataFactory": {
+            "@id": "cabafa:components/AverageAggregator.jsonld#AverageAggregator_dataFactory"
+          }
+        }
+      }
+    }
+  ]
+}

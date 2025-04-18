@@ -1,0 +1,1 @@
+{"version":3,"file":"ComunicaDataFactory.js","sourceRoot":"","sources":["ComunicaDataFactory.ts"],"names":[],"mappings":"","sourcesContent":["import type * as RDF from '@rdfjs/types';\n\nexport type ComunicaDataFactory = RDF.DataFactory & { variable: (value: string) => RDF.Variable };\n"]}

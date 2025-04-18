@@ -1,0 +1,13 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-function-factory/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-function-factory",
+  "@type": "Module",
+  "requireName": "@comunica/bus-function-factory",
+  "import": [
+    "cbff:components/ActorFunctionFactory.jsonld",
+    "cbff:components/ActorFunctionFactoryDedicated.jsonld",
+    "cbff:components/BusFunctionFactory.jsonld"
+  ]
+}

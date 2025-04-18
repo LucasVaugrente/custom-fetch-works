@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cafftl": "npmd:@comunica/actor-function-factory-term-langmatches/^4.0.0/",
+      "ActorFunctionFactoryTermLangmatches": {
+        "@id": "cafftl:components/ActorFunctionFactoryTermLangmatches.jsonld#ActorFunctionFactoryTermLangmatches",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cafftl:components/ActorFunctionFactoryTermLangmatches.jsonld#ActorFunctionFactoryTermLangmatches_args_name"
+          },
+          "args_bus": {
+            "@id": "cafftl:components/ActorFunctionFactoryTermLangmatches.jsonld#ActorFunctionFactoryTermLangmatches_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cafftl:components/ActorFunctionFactoryTermLangmatches.jsonld#ActorFunctionFactoryTermLangmatches_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cafftl:components/ActorFunctionFactoryTermLangmatches.jsonld#ActorFunctionFactoryTermLangmatches_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cafftl:components/ActorFunctionFactoryTermLangmatches.jsonld#ActorFunctionFactoryTermLangmatches_args_name"
+          },
+          "bus": {
+            "@id": "cafftl:components/ActorFunctionFactoryTermLangmatches.jsonld#ActorFunctionFactoryTermLangmatches_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cafftl:components/ActorFunctionFactoryTermLangmatches.jsonld#ActorFunctionFactoryTermLangmatches_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cafftl:components/ActorFunctionFactoryTermLangmatches.jsonld#ActorFunctionFactoryTermLangmatches_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "carjish": "npmd:@comunica/actor-rdf-join-inner-symmetrichash/^4.0.0/",
+      "ActorRdfJoinSymmetricHash": {
+        "@id": "carjish:components/ActorRdfJoinSymmetricHash.jsonld#ActorRdfJoinSymmetricHash",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorHashBindings": {
+            "@id": "carjish:components/ActorRdfJoinSymmetricHash.jsonld#ActorRdfJoinSymmetricHash_args_mediatorHashBindings"
+          },
+          "args_mediatorJoinSelectivity": {
+            "@id": "carjish:components/ActorRdfJoinSymmetricHash.jsonld#ActorRdfJoinSymmetricHash_args_mediatorJoinSelectivity"
+          },
+          "args_name": {
+            "@id": "carjish:components/ActorRdfJoinSymmetricHash.jsonld#ActorRdfJoinSymmetricHash_args_name"
+          },
+          "args_bus": {
+            "@id": "carjish:components/ActorRdfJoinSymmetricHash.jsonld#ActorRdfJoinSymmetricHash_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "carjish:components/ActorRdfJoinSymmetricHash.jsonld#ActorRdfJoinSymmetricHash_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "carjish:components/ActorRdfJoinSymmetricHash.jsonld#ActorRdfJoinSymmetricHash_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorHashBindings": {
+            "@id": "carjish:components/ActorRdfJoinSymmetricHash.jsonld#ActorRdfJoinSymmetricHash_args_mediatorHashBindings"
+          },
+          "mediatorJoinSelectivity": {
+            "@id": "carjish:components/ActorRdfJoinSymmetricHash.jsonld#ActorRdfJoinSymmetricHash_args_mediatorJoinSelectivity"
+          },
+          "name": {
+            "@id": "carjish:components/ActorRdfJoinSymmetricHash.jsonld#ActorRdfJoinSymmetricHash_args_name"
+          },
+          "bus": {
+            "@id": "carjish:components/ActorRdfJoinSymmetricHash.jsonld#ActorRdfJoinSymmetricHash_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "carjish:components/ActorRdfJoinSymmetricHash.jsonld#ActorRdfJoinSymmetricHash_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "carjish:components/ActorRdfJoinSymmetricHash.jsonld#ActorRdfJoinSymmetricHash_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorRdfJoinSymmetricHashArgs": {
+        "@id": "carjish:components/ActorRdfJoinSymmetricHash.jsonld#IActorRdfJoinSymmetricHashArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

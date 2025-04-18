@@ -1,0 +1,320 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-http-limit-rate/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-http-invalidate/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-http/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-http-limit-rate",
+  "components": [
+    {
+      "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate",
+      "@type": "Class",
+      "requireElement": "ActorHttpLimitRate",
+      "extends": [
+        "cbh:components/ActorHttp.jsonld#ActorHttp"
+      ],
+      "parameters": [
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_mediatorHttp",
+          "range": "cc:components/Mediator.jsonld#Mediator",
+          "comment": "The HTTP mediator."
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_httpInvalidator",
+          "range": "cbhi:components/ActorHttpInvalidateListenable.jsonld#ActorHttpInvalidateListenable",
+          "default": {
+            "@id": "cahlr:components/ActorHttpLimitRate.jsonld#IActorHttpLimitRateArgs_default_invalidator",
+            "@type": "npmd:@comunica/bus-http-invalidate/^4.0.0/components/ActorHttpInvalidateListenable.jsonld#ActorHttpInvalidateListenable"
+          },
+          "comment": "An actor that listens to HTTP invalidation events"
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_correctionMultiplier",
+          "range": "xsd:float",
+          "default": "0.1",
+          "comment": "Multiplier for how aggressively the delay should follow the latest response time, ideally in range ]0.0, 1.0]."
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_failureMultiplier",
+          "range": "xsd:float",
+          "default": "10.0",
+          "comment": "The response time of a failed request is taken into account with this multiplier applied."
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_limitByDefault",
+          "range": "xsd:boolean",
+          "default": "false",
+          "comment": "Whether rate limiting should be applied from the first request onwards, instead of waiting for a request to fail. Enabling this behaviour can help avoid spamming a server with large amounts of requests when execution begins."
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_allowOverlap",
+          "range": "xsd:boolean",
+          "default": "false",
+          "comment": "Whether requests should be allowed to overlap, instead of being effectively queued one after another for a host. Enabling this behaviour may help with overall performance, but will make the rate limiter less accurate, and make it impossible for the limiter to smooth out large bursts of requests to a given host."
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbh:components/ActorHttp.jsonld#ActorHttp_default_bus",
+            "@type": "cc:components/Bus.jsonld#Bus"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "HTTP request failed: none of the configured actors were able to handle ${action.input}",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate__member_hostData",
+          "memberFieldName": "hostData"
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate__member_correctionMultiplier",
+          "memberFieldName": "correctionMultiplier"
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate__member_failureMultiplier",
+          "memberFieldName": "failureMultiplier"
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate__member_limitByDefault",
+          "memberFieldName": "limitByDefault"
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate__member_allowOverlap",
+          "memberFieldName": "allowOverlap"
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate__member_httpInvalidator",
+          "memberFieldName": "httpInvalidator"
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate__member_mediatorHttp",
+          "memberFieldName": "mediatorHttp"
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate__member_keyWrapped",
+          "memberFieldName": "keyWrapped"
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate__member_test",
+          "memberFieldName": "test"
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate__member_run",
+          "memberFieldName": "run"
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate__member_handleHttpInvalidateEvent",
+          "memberFieldName": "handleHttpInvalidateEvent"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "mediatorHttp",
+              "value": {
+                "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_mediatorHttp"
+              }
+            },
+            {
+              "keyRaw": "httpInvalidator",
+              "value": {
+                "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_httpInvalidator"
+              }
+            },
+            {
+              "keyRaw": "correctionMultiplier",
+              "value": {
+                "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_correctionMultiplier"
+              }
+            },
+            {
+              "keyRaw": "failureMultiplier",
+              "value": {
+                "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_failureMultiplier"
+              }
+            },
+            {
+              "keyRaw": "limitByDefault",
+              "value": {
+                "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_limitByDefault"
+              }
+            },
+            {
+              "keyRaw": "allowOverlap",
+              "value": {
+                "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_allowOverlap"
+              }
+            },
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "cahlr:components/ActorHttpLimitRate.jsonld#ActorHttpLimitRate_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "cahlr:components/ActorHttpLimitRate.jsonld#IActorHttpLimitRateArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IActorHttpLimitRateArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#IActorHttpLimitRateArgs__member_mediatorHttp",
+          "memberFieldName": "mediatorHttp"
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#IActorHttpLimitRateArgs__member_httpInvalidator",
+          "memberFieldName": "httpInvalidator"
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#IActorHttpLimitRateArgs__member_correctionMultiplier",
+          "memberFieldName": "correctionMultiplier"
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#IActorHttpLimitRateArgs__member_failureMultiplier",
+          "memberFieldName": "failureMultiplier"
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#IActorHttpLimitRateArgs__member_limitByDefault",
+          "memberFieldName": "limitByDefault"
+        },
+        {
+          "@id": "cahlr:components/ActorHttpLimitRate.jsonld#IActorHttpLimitRateArgs__member_allowOverlap",
+          "memberFieldName": "allowOverlap"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

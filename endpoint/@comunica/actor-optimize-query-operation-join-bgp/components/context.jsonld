@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caoqojb": "npmd:@comunica/actor-optimize-query-operation-join-bgp/^4.0.0/",
+      "ActorOptimizeQueryOperationJoinBgp": {
+        "@id": "caoqojb:components/ActorOptimizeQueryOperationJoinBgp.jsonld#ActorOptimizeQueryOperationJoinBgp",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "caoqojb:components/ActorOptimizeQueryOperationJoinBgp.jsonld#ActorOptimizeQueryOperationJoinBgp_args_name"
+          },
+          "args_bus": {
+            "@id": "caoqojb:components/ActorOptimizeQueryOperationJoinBgp.jsonld#ActorOptimizeQueryOperationJoinBgp_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caoqojb:components/ActorOptimizeQueryOperationJoinBgp.jsonld#ActorOptimizeQueryOperationJoinBgp_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caoqojb:components/ActorOptimizeQueryOperationJoinBgp.jsonld#ActorOptimizeQueryOperationJoinBgp_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "caoqojb:components/ActorOptimizeQueryOperationJoinBgp.jsonld#ActorOptimizeQueryOperationJoinBgp_args_name"
+          },
+          "bus": {
+            "@id": "caoqojb:components/ActorOptimizeQueryOperationJoinBgp.jsonld#ActorOptimizeQueryOperationJoinBgp_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caoqojb:components/ActorOptimizeQueryOperationJoinBgp.jsonld#ActorOptimizeQueryOperationJoinBgp_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caoqojb:components/ActorOptimizeQueryOperationJoinBgp.jsonld#ActorOptimizeQueryOperationJoinBgp_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

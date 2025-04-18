@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-iterator-transform/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-iterator-transform",
+  "@type": "Module",
+  "requireName": "@comunica/bus-iterator-transform",
+  "import": [
+    "cbit:components/ActorIteratorTransform.jsonld"
+  ]
+}

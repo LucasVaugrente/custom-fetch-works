@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-timezone/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-timezone",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-timezone",
+  "import": [
+    "cafftt:components/ActorFunctionFactoryTermTimezone.jsonld"
+  ]
+}

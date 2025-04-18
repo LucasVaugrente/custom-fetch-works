@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-day/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-day",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-day",
+  "import": [
+    "cafftd:components/ActorFunctionFactoryTermDay.jsonld"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-operation-wrap-stream/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-operation-wrap-stream",
+  "@type": "Module",
+  "requireName": "@comunica/actor-query-operation-wrap-stream",
+  "import": [
+    "caqows:components/ActorQueryOperationWrapStream.jsonld"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "carjimse": "npmd:@comunica/actor-rdf-join-inner-multi-sequential/^4.0.0/",
+      "ActorRdfJoinMultiSequential": {
+        "@id": "carjimse:components/ActorRdfJoinMultiSequential.jsonld#ActorRdfJoinMultiSequential",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorJoin": {
+            "@id": "carjimse:components/ActorRdfJoinMultiSequential.jsonld#ActorRdfJoinMultiSequential_args_mediatorJoin"
+          },
+          "args_mediatorJoinSelectivity": {
+            "@id": "carjimse:components/ActorRdfJoinMultiSequential.jsonld#ActorRdfJoinMultiSequential_args_mediatorJoinSelectivity"
+          },
+          "args_name": {
+            "@id": "carjimse:components/ActorRdfJoinMultiSequential.jsonld#ActorRdfJoinMultiSequential_args_name"
+          },
+          "args_bus": {
+            "@id": "carjimse:components/ActorRdfJoinMultiSequential.jsonld#ActorRdfJoinMultiSequential_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "carjimse:components/ActorRdfJoinMultiSequential.jsonld#ActorRdfJoinMultiSequential_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "carjimse:components/ActorRdfJoinMultiSequential.jsonld#ActorRdfJoinMultiSequential_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorJoin": {
+            "@id": "carjimse:components/ActorRdfJoinMultiSequential.jsonld#ActorRdfJoinMultiSequential_args_mediatorJoin"
+          },
+          "mediatorJoinSelectivity": {
+            "@id": "carjimse:components/ActorRdfJoinMultiSequential.jsonld#ActorRdfJoinMultiSequential_args_mediatorJoinSelectivity"
+          },
+          "name": {
+            "@id": "carjimse:components/ActorRdfJoinMultiSequential.jsonld#ActorRdfJoinMultiSequential_args_name"
+          },
+          "bus": {
+            "@id": "carjimse:components/ActorRdfJoinMultiSequential.jsonld#ActorRdfJoinMultiSequential_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "carjimse:components/ActorRdfJoinMultiSequential.jsonld#ActorRdfJoinMultiSequential_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "carjimse:components/ActorRdfJoinMultiSequential.jsonld#ActorRdfJoinMultiSequential_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorRdfJoinMultiSequentialArgs": {
+        "@id": "carjimse:components/ActorRdfJoinMultiSequential.jsonld#IActorRdfJoinMultiSequentialArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

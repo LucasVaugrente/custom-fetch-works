@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cabafwc": "npmd:@comunica/actor-bindings-aggregator-factory-wildcard-count/^4.0.0/",
+      "ActorBindingsAggregatorFactoryWildcardCount": {
+        "@id": "cabafwc:components/ActorBindingsAggregatorFactoryWildcardCount.jsonld#ActorBindingsAggregatorFactoryWildcardCount",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorExpressionEvaluatorFactory": {
+            "@id": "cabafwc:components/ActorBindingsAggregatorFactoryWildcardCount.jsonld#ActorBindingsAggregatorFactoryWildcardCount_args_mediatorExpressionEvaluatorFactory"
+          },
+          "args_name": {
+            "@id": "cabafwc:components/ActorBindingsAggregatorFactoryWildcardCount.jsonld#ActorBindingsAggregatorFactoryWildcardCount_args_name"
+          },
+          "args_bus": {
+            "@id": "cabafwc:components/ActorBindingsAggregatorFactoryWildcardCount.jsonld#ActorBindingsAggregatorFactoryWildcardCount_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cabafwc:components/ActorBindingsAggregatorFactoryWildcardCount.jsonld#ActorBindingsAggregatorFactoryWildcardCount_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cabafwc:components/ActorBindingsAggregatorFactoryWildcardCount.jsonld#ActorBindingsAggregatorFactoryWildcardCount_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorExpressionEvaluatorFactory": {
+            "@id": "cabafwc:components/ActorBindingsAggregatorFactoryWildcardCount.jsonld#ActorBindingsAggregatorFactoryWildcardCount_args_mediatorExpressionEvaluatorFactory"
+          },
+          "name": {
+            "@id": "cabafwc:components/ActorBindingsAggregatorFactoryWildcardCount.jsonld#ActorBindingsAggregatorFactoryWildcardCount_args_name"
+          },
+          "bus": {
+            "@id": "cabafwc:components/ActorBindingsAggregatorFactoryWildcardCount.jsonld#ActorBindingsAggregatorFactoryWildcardCount_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cabafwc:components/ActorBindingsAggregatorFactoryWildcardCount.jsonld#ActorBindingsAggregatorFactoryWildcardCount_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cabafwc:components/ActorBindingsAggregatorFactoryWildcardCount.jsonld#ActorBindingsAggregatorFactoryWildcardCount_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "WildcardCountAggregator": {
+        "@id": "cabafwc:components/WildcardCountAggregator.jsonld#WildcardCountAggregator",
+        "@prefix": true,
+        "@context": {
+          "distinct": {
+            "@id": "cabafwc:components/WildcardCountAggregator.jsonld#WildcardCountAggregator_distinct"
+          },
+          "evaluator": {
+            "@id": "cabafwc:components/WildcardCountAggregator.jsonld#WildcardCountAggregator_evaluator"
+          },
+          "throwError": {
+            "@id": "cabafwc:components/WildcardCountAggregator.jsonld#WildcardCountAggregator_throwError"
+          }
+        }
+      }
+    }
+  ]
+}

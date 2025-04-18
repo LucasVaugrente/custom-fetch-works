@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-lesser-than-equal/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-lesser-than-equal",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-lesser-than-equal",
+  "import": [
+    "cafftlte:components/ActorFunctionFactoryTermLesserThanEqual.jsonld"
+  ]
+}

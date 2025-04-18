@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-sha512/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-sha512",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-sha512",
+  "import": [
+    "caffts:components/ActorFunctionFactoryTermSha512.jsonld"
+  ]
+}

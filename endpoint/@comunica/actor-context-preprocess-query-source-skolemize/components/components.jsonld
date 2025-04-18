@@ -1,0 +1,12 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-context-preprocess-query-source-skolemize/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-context-preprocess-query-source-skolemize",
+  "@type": "Module",
+  "requireName": "@comunica/actor-context-preprocess-query-source-skolemize",
+  "import": [
+    "cacpqss:components/ActorContextPreprocessQuerySourceSkolemize.jsonld",
+    "cacpqss:components/QuerySourceSkolemized.jsonld"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-rdf-join-inner-multi-smallest-filter-bindings/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-rdf-join-inner-multi-smallest-filter-bindings",
+  "@type": "Module",
+  "requireName": "@comunica/actor-rdf-join-inner-multi-smallest-filter-bindings",
+  "import": [
+    "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cabafc": "npmd:@comunica/actor-bindings-aggregator-factory-count/^4.0.0/",
+      "ActorBindingsAggregatorFactoryCount": {
+        "@id": "cabafc:components/ActorBindingsAggregatorFactoryCount.jsonld#ActorBindingsAggregatorFactoryCount",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorExpressionEvaluatorFactory": {
+            "@id": "cabafc:components/ActorBindingsAggregatorFactoryCount.jsonld#ActorBindingsAggregatorFactoryCount_args_mediatorExpressionEvaluatorFactory"
+          },
+          "args_name": {
+            "@id": "cabafc:components/ActorBindingsAggregatorFactoryCount.jsonld#ActorBindingsAggregatorFactoryCount_args_name"
+          },
+          "args_bus": {
+            "@id": "cabafc:components/ActorBindingsAggregatorFactoryCount.jsonld#ActorBindingsAggregatorFactoryCount_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cabafc:components/ActorBindingsAggregatorFactoryCount.jsonld#ActorBindingsAggregatorFactoryCount_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cabafc:components/ActorBindingsAggregatorFactoryCount.jsonld#ActorBindingsAggregatorFactoryCount_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorExpressionEvaluatorFactory": {
+            "@id": "cabafc:components/ActorBindingsAggregatorFactoryCount.jsonld#ActorBindingsAggregatorFactoryCount_args_mediatorExpressionEvaluatorFactory"
+          },
+          "name": {
+            "@id": "cabafc:components/ActorBindingsAggregatorFactoryCount.jsonld#ActorBindingsAggregatorFactoryCount_args_name"
+          },
+          "bus": {
+            "@id": "cabafc:components/ActorBindingsAggregatorFactoryCount.jsonld#ActorBindingsAggregatorFactoryCount_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cabafc:components/ActorBindingsAggregatorFactoryCount.jsonld#ActorBindingsAggregatorFactoryCount_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cabafc:components/ActorBindingsAggregatorFactoryCount.jsonld#ActorBindingsAggregatorFactoryCount_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "CountAggregator": {
+        "@id": "cabafc:components/CountAggregator.jsonld#CountAggregator",
+        "@prefix": true,
+        "@context": {
+          "distinct": {
+            "@id": "cabafc:components/CountAggregator.jsonld#CountAggregator_distinct"
+          },
+          "evaluator": {
+            "@id": "cabafc:components/CountAggregator.jsonld#CountAggregator_evaluator"
+          },
+          "throwError": {
+            "@id": "cabafc:components/CountAggregator.jsonld#CountAggregator_throwError"
+          }
+        }
+      }
+    }
+  ]
+}

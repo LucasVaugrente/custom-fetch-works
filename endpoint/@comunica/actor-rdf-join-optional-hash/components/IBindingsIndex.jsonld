@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-rdf-join-optional-hash/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-rdf-join-optional-hash",
+  "components": [
+    {
+      "@id": "carjoh:components/IBindingsIndex.jsonld#IBindingsIndex",
+      "@type": "AbstractClass",
+      "requireElement": "IBindingsIndex",
+      "comment": "An index for mapping bindings to values.",
+      "genericTypeParameters": [
+        {
+          "@id": "carjoh:components/IBindingsIndex.jsonld#IBindingsIndex__generic_V"
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "carjoh:components/IBindingsIndex.jsonld#IBindingsIndex__member_put",
+          "memberFieldName": "put"
+        },
+        {
+          "@id": "carjoh:components/IBindingsIndex.jsonld#IBindingsIndex__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "carjoh:components/IBindingsIndex.jsonld#IBindingsIndex__member_getFirst",
+          "memberFieldName": "getFirst"
+        },
+        {
+          "@id": "carjoh:components/IBindingsIndex.jsonld#IBindingsIndex__member_values",
+          "memberFieldName": "values"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

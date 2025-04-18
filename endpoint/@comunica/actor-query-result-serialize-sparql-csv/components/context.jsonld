@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caqrssc": "npmd:@comunica/actor-query-result-serialize-sparql-csv/^4.0.0/",
+      "ActorQueryResultSerializeSparqlCsv": {
+        "@id": "caqrssc:components/ActorQueryResultSerializeSparqlCsv.jsonld#ActorQueryResultSerializeSparqlCsv",
+        "@prefix": true,
+        "@context": {
+          "args_mediaTypePriorities": {
+            "@id": "caqrssc:components/ActorQueryResultSerializeSparqlCsv.jsonld#ActorQueryResultSerializeSparqlCsv_args_mediaTypePriorities",
+            "@type": "@json"
+          },
+          "args_mediaTypeFormats": {
+            "@id": "caqrssc:components/ActorQueryResultSerializeSparqlCsv.jsonld#ActorQueryResultSerializeSparqlCsv_args_mediaTypeFormats",
+            "@type": "@json"
+          },
+          "args_priorityScale": {
+            "@id": "caqrssc:components/ActorQueryResultSerializeSparqlCsv.jsonld#ActorQueryResultSerializeSparqlCsv_args_priorityScale"
+          },
+          "args_name": {
+            "@id": "caqrssc:components/ActorQueryResultSerializeSparqlCsv.jsonld#ActorQueryResultSerializeSparqlCsv_args_name"
+          },
+          "args_bus": {
+            "@id": "caqrssc:components/ActorQueryResultSerializeSparqlCsv.jsonld#ActorQueryResultSerializeSparqlCsv_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caqrssc:components/ActorQueryResultSerializeSparqlCsv.jsonld#ActorQueryResultSerializeSparqlCsv_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caqrssc:components/ActorQueryResultSerializeSparqlCsv.jsonld#ActorQueryResultSerializeSparqlCsv_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediaTypePriorities": {
+            "@id": "caqrssc:components/ActorQueryResultSerializeSparqlCsv.jsonld#ActorQueryResultSerializeSparqlCsv_args_mediaTypePriorities",
+            "@type": "@json"
+          },
+          "mediaTypeFormats": {
+            "@id": "caqrssc:components/ActorQueryResultSerializeSparqlCsv.jsonld#ActorQueryResultSerializeSparqlCsv_args_mediaTypeFormats",
+            "@type": "@json"
+          },
+          "priorityScale": {
+            "@id": "caqrssc:components/ActorQueryResultSerializeSparqlCsv.jsonld#ActorQueryResultSerializeSparqlCsv_args_priorityScale"
+          },
+          "name": {
+            "@id": "caqrssc:components/ActorQueryResultSerializeSparqlCsv.jsonld#ActorQueryResultSerializeSparqlCsv_args_name"
+          },
+          "bus": {
+            "@id": "caqrssc:components/ActorQueryResultSerializeSparqlCsv.jsonld#ActorQueryResultSerializeSparqlCsv_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caqrssc:components/ActorQueryResultSerializeSparqlCsv.jsonld#ActorQueryResultSerializeSparqlCsv_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caqrssc:components/ActorQueryResultSerializeSparqlCsv.jsonld#ActorQueryResultSerializeSparqlCsv_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-context-preprocess-convert-shortcuts/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-context-preprocess-convert-shortcuts",
+  "@type": "Module",
+  "requireName": "@comunica/actor-context-preprocess-convert-shortcuts",
+  "import": [
+    "cacpcs:components/ActorContextPreprocessConvertShortcuts.jsonld"
+  ]
+}

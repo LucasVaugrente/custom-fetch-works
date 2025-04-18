@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-year/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-year",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-year",
+  "import": [
+    "caffty:components/ActorFunctionFactoryTermYear.jsonld"
+  ]
+}

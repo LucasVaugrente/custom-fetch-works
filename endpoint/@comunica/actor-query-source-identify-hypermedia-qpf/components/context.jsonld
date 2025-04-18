@@ -1,0 +1,164 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caqsihq": "npmd:@comunica/actor-query-source-identify-hypermedia-qpf/^4.0.0/",
+      "ActorQuerySourceIdentifyHypermediaQpf": {
+        "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorMetadata": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_mediatorMetadata"
+          },
+          "args_mediatorMetadataExtract": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_mediatorMetadataExtract"
+          },
+          "args_mediatorDereferenceRdf": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_mediatorDereferenceRdf"
+          },
+          "args_mediatorMergeBindingsContext": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_mediatorMergeBindingsContext"
+          },
+          "args_subjectUri": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_subjectUri"
+          },
+          "args_predicateUri": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_predicateUri"
+          },
+          "args_objectUri": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_objectUri"
+          },
+          "args_graphUri": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_graphUri"
+          },
+          "args_name": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_name"
+          },
+          "args_bus": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorMetadata": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_mediatorMetadata"
+          },
+          "mediatorMetadataExtract": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_mediatorMetadataExtract"
+          },
+          "mediatorDereferenceRdf": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_mediatorDereferenceRdf"
+          },
+          "mediatorMergeBindingsContext": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_mediatorMergeBindingsContext"
+          },
+          "subjectUri": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_subjectUri"
+          },
+          "predicateUri": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_predicateUri"
+          },
+          "objectUri": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_objectUri"
+          },
+          "graphUri": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_graphUri"
+          },
+          "name": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_name"
+          },
+          "bus": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#ActorQuerySourceIdentifyHypermediaQpf_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorQuerySourceIdentifyHypermediaQpfArgs": {
+        "@id": "caqsihq:components/ActorQuerySourceIdentifyHypermediaQpf.jsonld#IActorQuerySourceIdentifyHypermediaQpfArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "QuerySourceQpf": {
+        "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf",
+        "@prefix": true,
+        "@context": {
+          "algebraFactory": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_algebraFactory"
+          },
+          "subjectUri": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_subjectUri"
+          },
+          "predicateUri": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_predicateUri"
+          },
+          "objectUri": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_objectUri"
+          },
+          "url": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_url"
+          },
+          "bindingsRestricted": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_bindingsRestricted"
+          },
+          "bindingsFactory": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_bindingsFactory"
+          },
+          "metadata": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_metadata",
+            "@container": "@list"
+          },
+          "mediatorMetadata": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_mediatorMetadata"
+          },
+          "mediatorMetadataExtract": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_mediatorMetadataExtract"
+          },
+          "mediatorDereferenceRdf": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_mediatorDereferenceRdf"
+          },
+          "graphUri": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_graphUri"
+          },
+          "initialQuads": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_initialQuads"
+          },
+          "dataFactory": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_dataFactory"
+          },
+          "ry": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_algebraFactory"
+          },
+          "": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_initialQuads"
+          },
+          "ricted": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_bindingsRestricted"
+          },
+          "ory": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_bindingsFactory"
+          },
+          "data": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_mediatorMetadata"
+          },
+          "dataExtract": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_mediatorMetadataExtract"
+          },
+          "ferenceRdf": {
+            "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_mediatorDereferenceRdf"
+          }
+        }
+      }
+    }
+  ]
+}

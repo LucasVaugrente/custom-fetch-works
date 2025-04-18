@@ -1,0 +1,76 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "carjimsfb": "npmd:@comunica/actor-rdf-join-inner-multi-smallest-filter-bindings/^4.0.0/",
+      "ActorRdfJoinMultiSmallestFilterBindings": {
+        "@id": "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld#ActorRdfJoinMultiSmallestFilterBindings",
+        "@prefix": true,
+        "@context": {
+          "args_selectivityModifier": {
+            "@id": "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld#ActorRdfJoinMultiSmallestFilterBindings_args_selectivityModifier"
+          },
+          "args_blockSize": {
+            "@id": "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld#ActorRdfJoinMultiSmallestFilterBindings_args_blockSize"
+          },
+          "args_mediatorJoinEntriesSort": {
+            "@id": "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld#ActorRdfJoinMultiSmallestFilterBindings_args_mediatorJoinEntriesSort"
+          },
+          "args_mediatorJoin": {
+            "@id": "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld#ActorRdfJoinMultiSmallestFilterBindings_args_mediatorJoin"
+          },
+          "args_mediatorJoinSelectivity": {
+            "@id": "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld#ActorRdfJoinMultiSmallestFilterBindings_args_mediatorJoinSelectivity"
+          },
+          "args_name": {
+            "@id": "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld#ActorRdfJoinMultiSmallestFilterBindings_args_name"
+          },
+          "args_bus": {
+            "@id": "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld#ActorRdfJoinMultiSmallestFilterBindings_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld#ActorRdfJoinMultiSmallestFilterBindings_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld#ActorRdfJoinMultiSmallestFilterBindings_args_beforeActors",
+            "@container": "@list"
+          },
+          "selectivityModifier": {
+            "@id": "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld#ActorRdfJoinMultiSmallestFilterBindings_args_selectivityModifier"
+          },
+          "blockSize": {
+            "@id": "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld#ActorRdfJoinMultiSmallestFilterBindings_args_blockSize"
+          },
+          "mediatorJoinEntriesSort": {
+            "@id": "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld#ActorRdfJoinMultiSmallestFilterBindings_args_mediatorJoinEntriesSort"
+          },
+          "mediatorJoin": {
+            "@id": "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld#ActorRdfJoinMultiSmallestFilterBindings_args_mediatorJoin"
+          },
+          "mediatorJoinSelectivity": {
+            "@id": "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld#ActorRdfJoinMultiSmallestFilterBindings_args_mediatorJoinSelectivity"
+          },
+          "name": {
+            "@id": "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld#ActorRdfJoinMultiSmallestFilterBindings_args_name"
+          },
+          "bus": {
+            "@id": "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld#ActorRdfJoinMultiSmallestFilterBindings_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld#ActorRdfJoinMultiSmallestFilterBindings_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld#ActorRdfJoinMultiSmallestFilterBindings_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorRdfJoinMultiSmallestFilterBindingsArgs": {
+        "@id": "carjimsfb:components/ActorRdfJoinMultiSmallestFilterBindings.jsonld#IActorRdfJoinMultiSmallestFilterBindingsArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

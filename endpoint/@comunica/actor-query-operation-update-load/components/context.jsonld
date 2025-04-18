@@ -1,0 +1,64 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caqoul": "npmd:@comunica/actor-query-operation-update-load/^4.0.0/",
+      "ActorQueryOperationLoad": {
+        "@id": "caqoul:components/ActorQueryOperationLoad.jsonld#ActorQueryOperationLoad",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorUpdateQuads": {
+            "@id": "caqoul:components/ActorQueryOperationLoad.jsonld#ActorQueryOperationLoad_args_mediatorUpdateQuads"
+          },
+          "args_mediatorQuerySourceIdentify": {
+            "@id": "caqoul:components/ActorQueryOperationLoad.jsonld#ActorQueryOperationLoad_args_mediatorQuerySourceIdentify"
+          },
+          "args_mediatorQueryOperation": {
+            "@id": "caqoul:components/ActorQueryOperationLoad.jsonld#ActorQueryOperationLoad_args_mediatorQueryOperation"
+          },
+          "args_name": {
+            "@id": "caqoul:components/ActorQueryOperationLoad.jsonld#ActorQueryOperationLoad_args_name"
+          },
+          "args_bus": {
+            "@id": "caqoul:components/ActorQueryOperationLoad.jsonld#ActorQueryOperationLoad_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caqoul:components/ActorQueryOperationLoad.jsonld#ActorQueryOperationLoad_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caqoul:components/ActorQueryOperationLoad.jsonld#ActorQueryOperationLoad_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorUpdateQuads": {
+            "@id": "caqoul:components/ActorQueryOperationLoad.jsonld#ActorQueryOperationLoad_args_mediatorUpdateQuads"
+          },
+          "mediatorQuerySourceIdentify": {
+            "@id": "caqoul:components/ActorQueryOperationLoad.jsonld#ActorQueryOperationLoad_args_mediatorQuerySourceIdentify"
+          },
+          "mediatorQueryOperation": {
+            "@id": "caqoul:components/ActorQueryOperationLoad.jsonld#ActorQueryOperationLoad_args_mediatorQueryOperation"
+          },
+          "name": {
+            "@id": "caqoul:components/ActorQueryOperationLoad.jsonld#ActorQueryOperationLoad_args_name"
+          },
+          "bus": {
+            "@id": "caqoul:components/ActorQueryOperationLoad.jsonld#ActorQueryOperationLoad_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caqoul:components/ActorQueryOperationLoad.jsonld#ActorQueryOperationLoad_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caqoul:components/ActorQueryOperationLoad.jsonld#ActorQueryOperationLoad_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorQueryOperationLoadArgs": {
+        "@id": "caqoul:components/ActorQueryOperationLoad.jsonld#IActorQueryOperationLoadArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

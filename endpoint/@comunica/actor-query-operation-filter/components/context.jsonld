@@ -1,0 +1,58 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caqof": "npmd:@comunica/actor-query-operation-filter/^4.0.0/",
+      "ActorQueryOperationFilter": {
+        "@id": "caqof:components/ActorQueryOperationFilter.jsonld#ActorQueryOperationFilter",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorExpressionEvaluatorFactory": {
+            "@id": "caqof:components/ActorQueryOperationFilter.jsonld#ActorQueryOperationFilter_args_mediatorExpressionEvaluatorFactory"
+          },
+          "args_mediatorQueryOperation": {
+            "@id": "caqof:components/ActorQueryOperationFilter.jsonld#ActorQueryOperationFilter_args_mediatorQueryOperation"
+          },
+          "args_name": {
+            "@id": "caqof:components/ActorQueryOperationFilter.jsonld#ActorQueryOperationFilter_args_name"
+          },
+          "args_bus": {
+            "@id": "caqof:components/ActorQueryOperationFilter.jsonld#ActorQueryOperationFilter_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caqof:components/ActorQueryOperationFilter.jsonld#ActorQueryOperationFilter_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caqof:components/ActorQueryOperationFilter.jsonld#ActorQueryOperationFilter_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorExpressionEvaluatorFactory": {
+            "@id": "caqof:components/ActorQueryOperationFilter.jsonld#ActorQueryOperationFilter_args_mediatorExpressionEvaluatorFactory"
+          },
+          "mediatorQueryOperation": {
+            "@id": "caqof:components/ActorQueryOperationFilter.jsonld#ActorQueryOperationFilter_args_mediatorQueryOperation"
+          },
+          "name": {
+            "@id": "caqof:components/ActorQueryOperationFilter.jsonld#ActorQueryOperationFilter_args_name"
+          },
+          "bus": {
+            "@id": "caqof:components/ActorQueryOperationFilter.jsonld#ActorQueryOperationFilter_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caqof:components/ActorQueryOperationFilter.jsonld#ActorQueryOperationFilter_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caqof:components/ActorQueryOperationFilter.jsonld#ActorQueryOperationFilter_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorQueryOperationFilterSparqleeArgs": {
+        "@id": "caqof:components/ActorQueryOperationFilter.jsonld#IActorQueryOperationFilterSparqleeArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

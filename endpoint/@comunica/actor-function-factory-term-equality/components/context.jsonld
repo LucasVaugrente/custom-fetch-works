@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caffte": "npmd:@comunica/actor-function-factory-term-equality/^4.0.0/",
+      "ActorFunctionFactoryTermEquality": {
+        "@id": "caffte:components/ActorFunctionFactoryTermEquality.jsonld#ActorFunctionFactoryTermEquality",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "caffte:components/ActorFunctionFactoryTermEquality.jsonld#ActorFunctionFactoryTermEquality_args_name"
+          },
+          "args_bus": {
+            "@id": "caffte:components/ActorFunctionFactoryTermEquality.jsonld#ActorFunctionFactoryTermEquality_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caffte:components/ActorFunctionFactoryTermEquality.jsonld#ActorFunctionFactoryTermEquality_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caffte:components/ActorFunctionFactoryTermEquality.jsonld#ActorFunctionFactoryTermEquality_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "caffte:components/ActorFunctionFactoryTermEquality.jsonld#ActorFunctionFactoryTermEquality_args_name"
+          },
+          "bus": {
+            "@id": "caffte:components/ActorFunctionFactoryTermEquality.jsonld#ActorFunctionFactoryTermEquality_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caffte:components/ActorFunctionFactoryTermEquality.jsonld#ActorFunctionFactoryTermEquality_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caffte:components/ActorFunctionFactoryTermEquality.jsonld#ActorFunctionFactoryTermEquality_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

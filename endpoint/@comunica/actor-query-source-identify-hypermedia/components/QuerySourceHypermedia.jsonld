@@ -1,0 +1,311 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-source-identify-hypermedia/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-source-identify-hypermedia",
+  "components": [
+    {
+      "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia",
+      "@type": "Class",
+      "requireElement": "QuerySourceHypermedia",
+      "parameters": [
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_cacheSize",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_firstUrl",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_maxIterators",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_aggregateStore",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_logWarning",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_bindingsFactory",
+          "range": "urn:npm:@comunica/utils-bindings-factory:BindingsFactory"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_forceSourceType",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorDereferenceRdf",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_dataFactory",
+          "range": {
+            "@type": "ParameterRangeIntersection",
+            "parameterRangeElements": [
+              "urn:npm:@rdfjs/types:DataFactory",
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorMetadata",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorMetadataExtract",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorMetadataAccumulate",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorQuerySourceIdentifyHypermedia",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorRdfResolveHypermediaLinks",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorRdfResolveHypermediaLinksQueue",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_referenceValue",
+          "memberFieldName": "referenceValue",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_firstUrl",
+          "memberFieldName": "firstUrl",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_forceSourceType",
+          "memberFieldName": "forceSourceType",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_aggregateStore",
+          "memberFieldName": "aggregateStore",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_mediators",
+          "memberFieldName": "mediators",
+          "range": "caqsih:components/QuerySourceHypermedia.jsonld#IMediatorArgs"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_logWarning",
+          "memberFieldName": "logWarning",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_dataFactory",
+          "memberFieldName": "dataFactory",
+          "range": {
+            "@type": "ParameterRangeIntersection",
+            "parameterRangeElements": [
+              "urn:npm:@rdfjs/types:DataFactory",
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_bindingsFactory",
+          "memberFieldName": "bindingsFactory",
+          "range": "urn:npm:@comunica/utils-bindings-factory:BindingsFactory"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_sourcesState",
+          "memberFieldName": "sourcesState",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_cacheSize",
+          "memberFieldName": "cacheSize"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_maxIterators",
+          "memberFieldName": "maxIterators"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_getSelectorShape",
+          "memberFieldName": "getSelectorShape"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_queryBindings",
+          "memberFieldName": "queryBindings"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_queryQuads",
+          "memberFieldName": "queryQuads"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_queryBoolean",
+          "memberFieldName": "queryBoolean"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_queryVoid",
+          "memberFieldName": "queryVoid"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_getSource",
+          "memberFieldName": "getSource"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_getSourceCached",
+          "memberFieldName": "getSourceCached"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_getAggregateStore",
+          "memberFieldName": "getAggregateStore"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia__member_toString",
+          "memberFieldName": "toString"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_cacheSize"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_firstUrl"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_forceSourceType"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_maxIterators"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_aggregateStore"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "mediatorDereferenceRdf",
+              "value": {
+                "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorDereferenceRdf"
+              }
+            },
+            {
+              "keyRaw": "mediatorMetadata",
+              "value": {
+                "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorMetadata"
+              }
+            },
+            {
+              "keyRaw": "mediatorMetadataExtract",
+              "value": {
+                "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorMetadataExtract"
+              }
+            },
+            {
+              "keyRaw": "mediatorMetadataAccumulate",
+              "value": {
+                "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorMetadataAccumulate"
+              }
+            },
+            {
+              "keyRaw": "mediatorQuerySourceIdentifyHypermedia",
+              "value": {
+                "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorQuerySourceIdentifyHypermedia"
+              }
+            },
+            {
+              "keyRaw": "mediatorRdfResolveHypermediaLinks",
+              "value": {
+                "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorRdfResolveHypermediaLinks"
+              }
+            },
+            {
+              "keyRaw": "mediatorRdfResolveHypermediaLinksQueue",
+              "value": {
+                "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_mediators_mediatorRdfResolveHypermediaLinksQueue"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_logWarning"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_dataFactory"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#QuerySourceHypermedia_bindingsFactory"
+        }
+      ]
+    },
+    {
+      "@id": "caqsih:components/QuerySourceHypermedia.jsonld#IMediatorArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IMediatorArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#IMediatorArgs__member_mediatorDereferenceRdf",
+          "memberFieldName": "mediatorDereferenceRdf"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#IMediatorArgs__member_mediatorMetadata",
+          "memberFieldName": "mediatorMetadata"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#IMediatorArgs__member_mediatorMetadataExtract",
+          "memberFieldName": "mediatorMetadataExtract"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#IMediatorArgs__member_mediatorMetadataAccumulate",
+          "memberFieldName": "mediatorMetadataAccumulate"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#IMediatorArgs__member_mediatorQuerySourceIdentifyHypermedia",
+          "memberFieldName": "mediatorQuerySourceIdentifyHypermedia"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#IMediatorArgs__member_mediatorRdfResolveHypermediaLinks",
+          "memberFieldName": "mediatorRdfResolveHypermediaLinks"
+        },
+        {
+          "@id": "caqsih:components/QuerySourceHypermedia.jsonld#IMediatorArgs__member_mediatorRdfResolveHypermediaLinksQueue",
+          "memberFieldName": "mediatorRdfResolveHypermediaLinksQueue"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/utils-metadata/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/utils-metadata",
+  "@type": "Module",
+  "requireName": "@comunica/utils-metadata",
+  "import": []
+}

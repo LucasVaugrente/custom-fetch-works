@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caffeni": "npmd:@comunica/actor-function-factory-expression-not-in/^4.0.0/",
+      "ActorFunctionFactoryExpressionNotIn": {
+        "@id": "caffeni:components/ActorFunctionFactoryExpressionNotIn.jsonld#ActorFunctionFactoryExpressionNotIn",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorFunctionFactory": {
+            "@id": "caffeni:components/ActorFunctionFactoryExpressionNotIn.jsonld#ActorFunctionFactoryExpressionNotIn_args_mediatorFunctionFactory"
+          },
+          "args_name": {
+            "@id": "caffeni:components/ActorFunctionFactoryExpressionNotIn.jsonld#ActorFunctionFactoryExpressionNotIn_args_name"
+          },
+          "args_bus": {
+            "@id": "caffeni:components/ActorFunctionFactoryExpressionNotIn.jsonld#ActorFunctionFactoryExpressionNotIn_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caffeni:components/ActorFunctionFactoryExpressionNotIn.jsonld#ActorFunctionFactoryExpressionNotIn_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caffeni:components/ActorFunctionFactoryExpressionNotIn.jsonld#ActorFunctionFactoryExpressionNotIn_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorFunctionFactory": {
+            "@id": "caffeni:components/ActorFunctionFactoryExpressionNotIn.jsonld#ActorFunctionFactoryExpressionNotIn_args_mediatorFunctionFactory"
+          },
+          "name": {
+            "@id": "caffeni:components/ActorFunctionFactoryExpressionNotIn.jsonld#ActorFunctionFactoryExpressionNotIn_args_name"
+          },
+          "bus": {
+            "@id": "caffeni:components/ActorFunctionFactoryExpressionNotIn.jsonld#ActorFunctionFactoryExpressionNotIn_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caffeni:components/ActorFunctionFactoryExpressionNotIn.jsonld#ActorFunctionFactoryExpressionNotIn_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caffeni:components/ActorFunctionFactoryExpressionNotIn.jsonld#ActorFunctionFactoryExpressionNotIn_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

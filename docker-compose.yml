@@ -1,0 +1,39 @@
+services:
+  solid:
+    build:
+      context: ./solid
+      dockerfile: dockerfile
+    container_name: solid-server
+    expose:
+      - "3000:3000"  # Solid is not exposed to the host, just to the proxy
+    networks:
+      - internal_net
+
+  proxy:
+    build:
+      context: ./proxy
+      dockerfile: dockerfile
+    container_name: proxy-solarql
+    ports:
+      - "3001:3001"  # Exposed to the host
+    depends_on:
+      - solid
+      - endpoint
+    networks:
+      - internal_net
+    command: ["node", "proxy.js", "3001", "http://solid:3000", "http://endpoint:4001/sparql"]
+
+  endpoint:
+    build:
+      context: ./endpoint
+      dockerfile: Dockerfile
+    container_name: comunica-sparql-endpoint
+    expose:
+      - "4001"  # Internal communication with proxy
+    networks:
+      - internal_net
+    command: ["npx", "comunica-sparql-file-http", "-p", "4001", "./data/vendor2.ttl"]
+
+networks:
+  internal_net:
+    driver: bridge

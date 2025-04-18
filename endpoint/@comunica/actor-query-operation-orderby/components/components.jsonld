@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-operation-orderby/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-operation-orderby",
+  "@type": "Module",
+  "requireName": "@comunica/actor-query-operation-orderby",
+  "import": [
+    "caqoo:components/ActorQueryOperationOrderBy.jsonld"
+  ]
+}

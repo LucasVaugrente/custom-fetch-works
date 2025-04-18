@@ -1,0 +1,82 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caoqofp": "npmd:@comunica/actor-optimize-query-operation-filter-pushdown/^4.0.0/",
+      "ActorOptimizeQueryOperationFilterPushdown": {
+        "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown",
+        "@prefix": true,
+        "@context": {
+          "args_aggressivePushdown": {
+            "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown_args_aggressivePushdown"
+          },
+          "args_maxIterations": {
+            "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown_args_maxIterations"
+          },
+          "args_splitConjunctive": {
+            "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown_args_splitConjunctive"
+          },
+          "args_mergeConjunctive": {
+            "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown_args_mergeConjunctive"
+          },
+          "args_pushIntoLeftJoins": {
+            "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown_args_pushIntoLeftJoins"
+          },
+          "args_pushEqualityIntoPatterns": {
+            "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown_args_pushEqualityIntoPatterns"
+          },
+          "args_name": {
+            "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown_args_name"
+          },
+          "args_bus": {
+            "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown_args_beforeActors",
+            "@container": "@list"
+          },
+          "aggressivePushdown": {
+            "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown_args_aggressivePushdown"
+          },
+          "maxIterations": {
+            "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown_args_maxIterations"
+          },
+          "splitConjunctive": {
+            "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown_args_splitConjunctive"
+          },
+          "mergeConjunctive": {
+            "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown_args_mergeConjunctive"
+          },
+          "pushIntoLeftJoins": {
+            "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown_args_pushIntoLeftJoins"
+          },
+          "pushEqualityIntoPatterns": {
+            "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown_args_pushEqualityIntoPatterns"
+          },
+          "name": {
+            "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown_args_name"
+          },
+          "bus": {
+            "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#ActorOptimizeQueryOperationFilterPushdown_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorOptimizeQueryOperationFilterPushdownArgs": {
+        "@id": "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld#IActorOptimizeQueryOperationFilterPushdownArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-optimize-query-operation-describe-to-constructs-subject/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-optimize-query-operation-describe-to-constructs-subject",
+  "@type": "Module",
+  "requireName": "@comunica/actor-optimize-query-operation-describe-to-constructs-subject",
+  "import": [
+    "caoqodtcs:components/ActorOptimizeQueryOperationDescribeToConstructsSubject.jsonld"
+  ]
+}

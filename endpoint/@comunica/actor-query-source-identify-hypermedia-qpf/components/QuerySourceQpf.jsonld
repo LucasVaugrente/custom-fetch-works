@@ -1,0 +1,298 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-source-identify-hypermedia-qpf/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-rdf-metadata-extract-hydra-controls/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-source-identify-hypermedia-qpf",
+  "components": [
+    {
+      "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf",
+      "@type": "Class",
+      "requireElement": "QuerySourceQpf",
+      "parameters": [
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_algebraFactory",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_subjectUri",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_predicateUri",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_objectUri",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_url",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_bindingsRestricted",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_bindingsFactory",
+          "range": "urn:npm:@comunica/utils-bindings-factory:BindingsFactory"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_metadata",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_metadata_key"
+              },
+              {
+                "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_metadata_value",
+                "range": {
+                  "@type": "ParameterRangeWildcard"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_mediatorMetadata",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_mediatorMetadataExtract",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_mediatorDereferenceRdf",
+          "range": "cc:components/Mediator.jsonld#Mediator"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_graphUri",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_initialQuads",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeWildcard"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_dataFactory",
+          "range": {
+            "@type": "ParameterRangeIntersection",
+            "parameterRangeElements": [
+              "urn:npm:@rdfjs/types:DataFactory",
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_selectorShape",
+          "memberFieldName": "selectorShape",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_searchForm",
+          "memberFieldName": "searchForm",
+          "range": "carmehc:components/ActorRdfMetadataExtractHydraControls.jsonld#ISearchForm"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_mediatorMetadata",
+          "memberFieldName": "mediatorMetadata"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_mediatorMetadataExtract",
+          "memberFieldName": "mediatorMetadataExtract"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_mediatorDereferenceRdf",
+          "memberFieldName": "mediatorDereferenceRdf"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_dataFactory",
+          "memberFieldName": "dataFactory"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_algebraFactory",
+          "memberFieldName": "algebraFactory"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_bindingsFactory",
+          "memberFieldName": "bindingsFactory"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_referenceValue",
+          "memberFieldName": "referenceValue",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_subjectUri",
+          "memberFieldName": "subjectUri"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_predicateUri",
+          "memberFieldName": "predicateUri"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_objectUri",
+          "memberFieldName": "objectUri"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_graphUri",
+          "memberFieldName": "graphUri"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_url",
+          "memberFieldName": "url"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_defaultGraph",
+          "memberFieldName": "defaultGraph"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_bindingsRestricted",
+          "memberFieldName": "bindingsRestricted"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_cachedQuads",
+          "memberFieldName": "cachedQuads"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_getSelectorShape",
+          "memberFieldName": "getSelectorShape"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_queryBindings",
+          "memberFieldName": "queryBindings"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_getSearchForm",
+          "memberFieldName": "getSearchForm"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_createFragmentUri",
+          "memberFieldName": "createFragmentUri"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_match",
+          "memberFieldName": "match"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_getBindingsRestrictedLink",
+          "memberFieldName": "getBindingsRestrictedLink"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_reverseMapQuadsToDefaultGraph",
+          "memberFieldName": "reverseMapQuadsToDefaultGraph"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_getPatternId",
+          "memberFieldName": "getPatternId"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_cacheQuads",
+          "memberFieldName": "cacheQuads"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_getCachedQuads",
+          "memberFieldName": "getCachedQuads"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_queryQuads",
+          "memberFieldName": "queryQuads"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_queryBoolean",
+          "memberFieldName": "queryBoolean"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf__member_queryVoid",
+          "memberFieldName": "queryVoid"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_mediatorMetadata"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_mediatorMetadataExtract"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_mediatorDereferenceRdf"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_dataFactory"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_algebraFactory"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_bindingsFactory"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_subjectUri"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_predicateUri"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_objectUri"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_graphUri"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_url"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_metadata__constructorArgument",
+          "fields": [
+            {
+              "collectEntries": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_metadata",
+              "key": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_metadata_key",
+              "value": {
+                "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_metadata_value"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_bindingsRestricted"
+        },
+        {
+          "@id": "caqsihq:components/QuerySourceQpf.jsonld#QuerySourceQpf_initialQuads"
+        }
+      ]
+    }
+  ]
+}

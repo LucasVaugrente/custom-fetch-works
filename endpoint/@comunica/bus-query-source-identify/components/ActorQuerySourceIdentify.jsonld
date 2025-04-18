@@ -1,0 +1,220 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-query-source-identify/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-query-source-identify",
+  "components": [
+    {
+      "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify",
+      "@type": "AbstractClass",
+      "requireElement": "ActorQuerySourceIdentify",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "cc:components/Actor.jsonld#Actor",
+          "genericTypeInstances": [
+            "cbqsi:components/ActorQuerySourceIdentify.jsonld#IActionQuerySourceIdentify",
+            "cc:components/Actor.jsonld#IActorTest",
+            "cbqsi:components/ActorQuerySourceIdentify.jsonld#IActorQuerySourceIdentifyOutput",
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify__generic_TS"
+            }
+          ]
+        }
+      ],
+      "comment": "A comunica actor for query-source-identify events.  Actor types: * Input:  IActionQuerySourceIdentify:      An unidentified query source. * Test:   <none> * Output: IActorQuerySourceIdentifyOutput: An identified query source.",
+      "genericTypeParameters": [
+        {
+          "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify__generic_TS",
+          "default": {
+            "@type": "ParameterRangeUndefined"
+          }
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify_default_bus",
+            "@type": "cc:components/Bus.jsonld#Bus"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "Query source identification failed: none of the configured actors were able to identify ${action.querySourceUnidentified.value}",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#ActorQuerySourceIdentify_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#IActionQuerySourceIdentify",
+      "@type": "AbstractClass",
+      "requireElement": "IActionQuerySourceIdentify",
+      "extends": [
+        "cc:components/Actor.jsonld#IAction"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#IActionQuerySourceIdentify__member_querySourceUnidentified",
+          "memberFieldName": "querySourceUnidentified"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#IActorQuerySourceIdentifyOutput",
+      "@type": "AbstractClass",
+      "requireElement": "IActorQuerySourceIdentifyOutput",
+      "extends": [
+        "cc:components/Actor.jsonld#IActorOutput"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbqsi:components/ActorQuerySourceIdentify.jsonld#IActorQuerySourceIdentifyOutput__member_querySource",
+          "memberFieldName": "querySource"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

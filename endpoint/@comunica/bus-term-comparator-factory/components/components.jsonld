@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-term-comparator-factory/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-term-comparator-factory",
+  "@type": "Module",
+  "requireName": "@comunica/bus-term-comparator-factory",
+  "import": [
+    "cbtcf:components/ActorTermComparatorFactory.jsonld"
+  ]
+}

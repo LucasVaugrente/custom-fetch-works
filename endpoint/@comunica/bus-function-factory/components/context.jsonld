@@ -1,0 +1,142 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cbff": "npmd:@comunica/bus-function-factory/^4.0.0/",
+      "ActorFunctionFactory": {
+        "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory_args_name"
+          },
+          "args_bus": {
+            "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory_args_name"
+          },
+          "bus": {
+            "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "MediatorFunctionFactory": {
+        "@id": "cbff:components/ActorFunctionFactory.jsonld#MediatorFunctionFactory",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cbff:components/ActorFunctionFactory.jsonld#MediatorFunctionFactory_args_name"
+          },
+          "args_bus": {
+            "@id": "cbff:components/ActorFunctionFactory.jsonld#MediatorFunctionFactory_args_bus"
+          },
+          "name": {
+            "@id": "cbff:components/ActorFunctionFactory.jsonld#MediatorFunctionFactory_args_name"
+          },
+          "bus": {
+            "@id": "cbff:components/ActorFunctionFactory.jsonld#MediatorFunctionFactory_args_bus"
+          }
+        }
+      },
+      "IExpressionFunction": {
+        "@id": "cbff:components/ActorFunctionFactory.jsonld#IExpressionFunction",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ITermFunction": {
+        "@id": "cbff:components/ActorFunctionFactory.jsonld#ITermFunction",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IActionFunctionFactory": {
+        "@id": "cbff:components/ActorFunctionFactory.jsonld#IActionFunctionFactory",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IActorFunctionFactoryOutput": {
+        "@id": "cbff:components/ActorFunctionFactory.jsonld#IActorFunctionFactoryOutput",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IActorFunctionFactoryOutputTerm": {
+        "@id": "cbff:components/ActorFunctionFactory.jsonld#IActorFunctionFactoryOutputTerm",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ActorFunctionFactoryDedicated": {
+        "@id": "cbff:components/ActorFunctionFactoryDedicated.jsonld#ActorFunctionFactoryDedicated",
+        "@prefix": true,
+        "@context": {
+          "args_functionNames": {
+            "@id": "cbff:components/ActorFunctionFactoryDedicated.jsonld#ActorFunctionFactoryDedicated_args_functionNames"
+          },
+          "args_termFunction": {
+            "@id": "cbff:components/ActorFunctionFactoryDedicated.jsonld#ActorFunctionFactoryDedicated_args_termFunction"
+          },
+          "args_name": {
+            "@id": "cbff:components/ActorFunctionFactoryDedicated.jsonld#ActorFunctionFactoryDedicated_args_name"
+          },
+          "args_bus": {
+            "@id": "cbff:components/ActorFunctionFactoryDedicated.jsonld#ActorFunctionFactoryDedicated_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cbff:components/ActorFunctionFactoryDedicated.jsonld#ActorFunctionFactoryDedicated_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cbff:components/ActorFunctionFactoryDedicated.jsonld#ActorFunctionFactoryDedicated_args_beforeActors",
+            "@container": "@list"
+          },
+          "functionNames": {
+            "@id": "cbff:components/ActorFunctionFactoryDedicated.jsonld#ActorFunctionFactoryDedicated_args_functionNames"
+          },
+          "termFunction": {
+            "@id": "cbff:components/ActorFunctionFactoryDedicated.jsonld#ActorFunctionFactoryDedicated_args_termFunction"
+          },
+          "name": {
+            "@id": "cbff:components/ActorFunctionFactoryDedicated.jsonld#ActorFunctionFactoryDedicated_args_name"
+          },
+          "bus": {
+            "@id": "cbff:components/ActorFunctionFactoryDedicated.jsonld#ActorFunctionFactoryDedicated_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cbff:components/ActorFunctionFactoryDedicated.jsonld#ActorFunctionFactoryDedicated_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cbff:components/ActorFunctionFactoryDedicated.jsonld#ActorFunctionFactoryDedicated_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorFunctionFactoryDedicatedArgs": {
+        "@id": "cbff:components/ActorFunctionFactoryDedicated.jsonld#IActorFunctionFactoryDedicatedArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "BusFunctionFactory": {
+        "@id": "cbff:components/BusFunctionFactory.jsonld#BusFunctionFactory",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cbff:components/BusFunctionFactory.jsonld#BusFunctionFactory_args_name"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-bindings-aggregator-factory-group-concat/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/types/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-bindings-aggregator-factory/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-bindings-aggregator-factory-group-concat",
+  "components": [
+    {
+      "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator",
+      "@type": "Class",
+      "requireElement": "GroupConcatAggregator",
+      "extends": [
+        "cbbaf:components/ActorBindingsAggregatorFactory.jsonld#IBindingsAggregator"
+      ],
+      "parameters": [
+        {
+          "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator_distinct",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator_evaluator",
+          "range": "ct:components/ExpressionEvaluator.jsonld#IExpressionEvaluator"
+        },
+        {
+          "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator_separator",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator_throwError",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator_dataFactory",
+          "range": {
+            "@type": "ParameterRangeIntersection",
+            "parameterRangeElements": [
+              "urn:npm:@rdfjs/types:DataFactory",
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator__member_dataFactory",
+          "memberFieldName": "dataFactory"
+        },
+        {
+          "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator__member_state",
+          "memberFieldName": "state"
+        },
+        {
+          "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator__member_lastLanguageValid",
+          "memberFieldName": "lastLanguageValid"
+        },
+        {
+          "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator__member_lastLanguage",
+          "memberFieldName": "lastLanguage"
+        },
+        {
+          "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator__member_separator",
+          "memberFieldName": "separator"
+        },
+        {
+          "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator__member_emptyValueTerm",
+          "memberFieldName": "emptyValueTerm"
+        },
+        {
+          "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator__member_putTerm",
+          "memberFieldName": "putTerm"
+        },
+        {
+          "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator__member_termResult",
+          "memberFieldName": "termResult"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator_evaluator"
+        },
+        {
+          "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator_distinct"
+        },
+        {
+          "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator_dataFactory"
+        },
+        {
+          "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator_separator"
+        },
+        {
+          "@id": "cabafgc:components/GroupConcatAggregator.jsonld#GroupConcatAggregator_throwError"
+        }
+      ]
+    }
+  ]
+}

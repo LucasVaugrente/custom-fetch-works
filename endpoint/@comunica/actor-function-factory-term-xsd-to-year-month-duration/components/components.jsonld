@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-xsd-to-year-month-duration/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-xsd-to-year-month-duration",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-xsd-to-year-month-duration",
+  "import": [
+    "cafftxtymd:components/ActorFunctionFactoryTermXsdToYearMonthDuration.jsonld"
+  ]
+}

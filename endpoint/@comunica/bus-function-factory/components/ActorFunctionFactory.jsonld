@@ -1,0 +1,368 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-function-factory/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-function-factory",
+  "components": [
+    {
+      "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory",
+      "@type": "AbstractClass",
+      "requireElement": "ActorFunctionFactory",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "cc:components/Actor.jsonld#Actor",
+          "genericTypeInstances": [
+            "cbff:components/ActorFunctionFactory.jsonld#IActionFunctionFactory",
+            "cc:components/Actor.jsonld#IActorTest",
+            "cbff:components/ActorFunctionFactory.jsonld#IActorFunctionFactoryOutput",
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory__generic_TS"
+            }
+          ]
+        }
+      ],
+      "comment": "A comunica actor for function factory events.  Actor types: * Input:  IActionFunctions: A request to receive a function implementation for a given function name and potentially the function arguments. * Test:   <none> * Output: IActorFunctionsOutput: A function implementation.",
+      "genericTypeParameters": [
+        {
+          "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory__generic_TS",
+          "default": {
+            "@type": "ParameterRangeUndefined"
+          }
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory_default_bus",
+            "@type": "cbff:components/BusFunctionFactory.jsonld#BusFunctionFactory"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "Creation of function evaluator failed: no configured actor was able to evaluate function ${action.functionName}",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory__member_run",
+          "memberFieldName": "run"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "cbff:components/ActorFunctionFactory.jsonld#ActorFunctionFactory_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "cbff:components/ActorFunctionFactory.jsonld#MediatorFunctionFactory",
+      "@type": "AbstractClass",
+      "requireElement": "MediatorFunctionFactory",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "cc:components/Mediator.jsonld#Mediator",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericComponent",
+              "component": "cc:components/Actor.jsonld#Actor",
+              "genericTypeInstances": [
+                "cbff:components/ActorFunctionFactory.jsonld#IActionFunctionFactory",
+                "cc:components/Actor.jsonld#IActorTest",
+                "cbff:components/ActorFunctionFactory.jsonld#IActorFunctionFactoryOutput"
+              ]
+            },
+            "cbff:components/ActorFunctionFactory.jsonld#IActionFunctionFactory",
+            "cc:components/Actor.jsonld#IActorTest",
+            "cbff:components/ActorFunctionFactory.jsonld#IActorFunctionFactoryOutput"
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "cbff:components/ActorFunctionFactory.jsonld#MediatorFunctionFactory_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this mediator."
+        },
+        {
+          "@id": "cbff:components/ActorFunctionFactory.jsonld#MediatorFunctionFactory_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/core/^4.0.0/components/Mediator.jsonld#Mediator__generic_A"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/core/^4.0.0/components/Mediator.jsonld#Mediator__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/core/^4.0.0/components/Mediator.jsonld#Mediator__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/core/^4.0.0/components/Mediator.jsonld#Mediator__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/core/^4.0.0/components/Mediator.jsonld#Mediator__generic_TS"
+              }
+            ]
+          },
+          "comment": "The bus this mediator will mediate over."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cbff:components/ActorFunctionFactory.jsonld#MediatorFunctionFactory__member_mediate",
+          "memberFieldName": "mediate",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cbff:components/ActorFunctionFactory.jsonld#MediatorFunctionFactory_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "cbff:components/ActorFunctionFactory.jsonld#MediatorFunctionFactory_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "cbff:components/ActorFunctionFactory.jsonld#MediatorFunctionFactory_args_bus"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "cbff:components/ActorFunctionFactory.jsonld#IExpressionFunction",
+      "@type": "AbstractClass",
+      "requireElement": "IExpressionFunction",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbff:components/ActorFunctionFactory.jsonld#IExpressionFunction__member_apply",
+          "memberFieldName": "apply"
+        },
+        {
+          "@id": "cbff:components/ActorFunctionFactory.jsonld#IExpressionFunction__member_checkArity",
+          "memberFieldName": "checkArity"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbff:components/ActorFunctionFactory.jsonld#ITermFunction",
+      "@type": "AbstractClass",
+      "requireElement": "ITermFunction",
+      "extends": [
+        "cbff:components/ActorFunctionFactory.jsonld#IExpressionFunction"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbff:components/ActorFunctionFactory.jsonld#ITermFunction__member_supportsTermExpressions",
+          "memberFieldName": "supportsTermExpressions"
+        },
+        {
+          "@id": "cbff:components/ActorFunctionFactory.jsonld#ITermFunction__member_applyOnTerms",
+          "memberFieldName": "applyOnTerms"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbff:components/ActorFunctionFactory.jsonld#IActionFunctionFactory",
+      "@type": "AbstractClass",
+      "requireElement": "IActionFunctionFactory",
+      "extends": [
+        "cc:components/Actor.jsonld#IAction"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbff:components/ActorFunctionFactory.jsonld#IActionFunctionFactory__member_functionName",
+          "memberFieldName": "functionName"
+        },
+        {
+          "@id": "cbff:components/ActorFunctionFactory.jsonld#IActionFunctionFactory__member_arguments",
+          "memberFieldName": "arguments"
+        },
+        {
+          "@id": "cbff:components/ActorFunctionFactory.jsonld#IActionFunctionFactory__member_requireTermExpression",
+          "memberFieldName": "requireTermExpression"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbff:components/ActorFunctionFactory.jsonld#IActorFunctionFactoryOutput",
+      "@type": "AbstractClass",
+      "requireElement": "IActorFunctionFactoryOutput",
+      "extends": [
+        "cc:components/Actor.jsonld#IActorOutput",
+        "cbff:components/ActorFunctionFactory.jsonld#IExpressionFunction"
+      ],
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbff:components/ActorFunctionFactory.jsonld#IActorFunctionFactoryOutputTerm",
+      "@type": "AbstractClass",
+      "requireElement": "IActorFunctionFactoryOutputTerm",
+      "extends": [
+        "cc:components/Actor.jsonld#IActorOutput",
+        "cbff:components/ActorFunctionFactory.jsonld#ITermFunction"
+      ],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,890 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-iterator-transform/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-iterator-transform",
+  "components": [
+    {
+      "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform",
+      "@type": "AbstractClass",
+      "requireElement": "ActorIteratorTransform",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "cc:components/Actor.jsonld#Actor",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeUnion",
+              "parameterRangeElements": [
+                "cbit:components/ActorIteratorTransform.jsonld#IActionIteratorTransformBindings",
+                "cbit:components/ActorIteratorTransform.jsonld#IActionIteratorTransformQuads"
+              ]
+            },
+            "cc:components/Actor.jsonld#IActorTest",
+            {
+              "@type": "ParameterRangeUnion",
+              "parameterRangeElements": [
+                "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformBindingsOutput",
+                "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformQuadOutput"
+              ]
+            },
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform__generic_TS"
+            }
+          ]
+        }
+      ],
+      "comment": "A comunica actor for transform-iterator events.  Actor types: Input:  IActionIteratorTransform: Data that denotes what type of stream is being wrapped, what actor produced this stream, and the stream itself * Test:   <none> * Output: IActorIteratorTransformOutput: The transformed stream and additional metadata.",
+      "genericTypeParameters": [
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform__generic_TS",
+          "default": {
+            "@type": "ParameterRangeUndefined"
+          }
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args_wraps",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeUnion",
+                  "parameterRangeElements": [
+                    {
+                      "@type": "ParameterRangeUnion",
+                      "parameterRangeElements": [
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "alt"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "ask"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "bgp"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "construct"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "describe"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "distinct"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "expression"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "extend"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "filter"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "from"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "graph"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "group"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "inv"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "join"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "leftjoin"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "link"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "minus"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "nop"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "nps"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "OneOrMorePath"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "orderby"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "path"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "pattern"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "project"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "reduced"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "seq"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "service"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "slice"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "union"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "values"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "ZeroOrMorePath"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "ZeroOrOnePath"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "compositeupdate"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "deleteinsert"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "load"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "clear"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "create"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "drop"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "add"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "move"
+                        },
+                        {
+                          "@type": "ParameterRangeLiteral",
+                          "parameterRangeValueLiteral": "copy"
+                        }
+                      ]
+                    },
+                    {
+                      "@type": "ParameterRangeWildcard"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "What types of operations the actor will wrap. If undefined the actor wraps every operation"
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_default_bus",
+            "@type": "cc:components/Bus.jsonld#Bus"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform__member_wraps",
+          "memberFieldName": "wraps",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": {
+              "@type": "ParameterRangeUnion",
+              "parameterRangeElements": [
+                {
+                  "@type": "ParameterRangeUnion",
+                  "parameterRangeElements": [
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "alt"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "ask"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "bgp"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "construct"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "describe"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "distinct"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "expression"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "extend"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "filter"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "from"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "graph"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "group"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "inv"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "join"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "leftjoin"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "link"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "minus"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "nop"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "nps"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "OneOrMorePath"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "orderby"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "path"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "pattern"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "project"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "reduced"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "seq"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "service"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "slice"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "union"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "values"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "ZeroOrMorePath"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "ZeroOrOnePath"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "compositeupdate"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "deleteinsert"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "load"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "clear"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "create"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "drop"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "add"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "move"
+                    },
+                    {
+                      "@type": "ParameterRangeLiteral",
+                      "parameterRangeValueLiteral": "copy"
+                    }
+                  ]
+                },
+                {
+                  "@type": "ParameterRangeWildcard"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform__member_run",
+          "memberFieldName": "run"
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform__member_test",
+          "memberFieldName": "test"
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform__member_testIteratorTransform",
+          "memberFieldName": "testIteratorTransform"
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform__member_transformIteratorBindings",
+          "memberFieldName": "transformIteratorBindings"
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform__member_transformIteratorQuads",
+          "memberFieldName": "transformIteratorQuads"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "wraps",
+              "value": {
+                "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args_wraps"
+              }
+            },
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "cbit:components/ActorIteratorTransform.jsonld#ActorIteratorTransform_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "cbit:components/ActorIteratorTransform.jsonld#IActionIteratorTransform",
+      "@type": "AbstractClass",
+      "requireElement": "IActionIteratorTransform",
+      "extends": [
+        "cc:components/Actor.jsonld#IAction"
+      ],
+      "genericTypeParameters": [
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#IActionIteratorTransform__generic_T",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeLiteral",
+                "parameterRangeValueLiteral": "bindings"
+              },
+              {
+                "@type": "ParameterRangeLiteral",
+                "parameterRangeValueLiteral": "quads"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#IActionIteratorTransform__generic_S"
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#IActionIteratorTransform__generic_M"
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#IActionIteratorTransform__member_type",
+          "memberFieldName": "type"
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#IActionIteratorTransform__member_operation",
+          "memberFieldName": "operation"
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#IActionIteratorTransform__member_stream",
+          "memberFieldName": "stream"
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#IActionIteratorTransform__member_metadata",
+          "memberFieldName": "metadata"
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#IActionIteratorTransform__member_originalAction",
+          "memberFieldName": "originalAction"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbit:components/ActorIteratorTransform.jsonld#IActionIteratorTransformBindings",
+      "@type": "AbstractClass",
+      "requireElement": "IActionIteratorTransformBindings",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "cbit:components/ActorIteratorTransform.jsonld#IActionIteratorTransform",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeLiteral",
+              "parameterRangeValueLiteral": "bindings"
+            },
+            {
+              "@type": "ParameterRangeWildcard"
+            },
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        }
+      ],
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbit:components/ActorIteratorTransform.jsonld#IActionIteratorTransformQuads",
+      "@type": "AbstractClass",
+      "requireElement": "IActionIteratorTransformQuads",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "cbit:components/ActorIteratorTransform.jsonld#IActionIteratorTransform",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeLiteral",
+              "parameterRangeValueLiteral": "quads"
+            },
+            {
+              "@type": "ParameterRangeWildcard"
+            },
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        }
+      ],
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformOutput",
+      "@type": "AbstractClass",
+      "requireElement": "IActorIteratorTransformOutput",
+      "extends": [
+        "cc:components/Actor.jsonld#IActorOutput"
+      ],
+      "genericTypeParameters": [
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformOutput__generic_T",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeLiteral",
+                "parameterRangeValueLiteral": "bindings"
+              },
+              {
+                "@type": "ParameterRangeLiteral",
+                "parameterRangeValueLiteral": "quads"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformOutput__generic_S"
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformOutput__generic_M"
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformOutput__member_type",
+          "memberFieldName": "type"
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformOutput__member_operation",
+          "memberFieldName": "operation"
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformOutput__member_stream",
+          "memberFieldName": "stream"
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformOutput__member_metadata",
+          "memberFieldName": "metadata"
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformOutput__member_originalAction",
+          "memberFieldName": "originalAction"
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformOutput__member_context",
+          "memberFieldName": "context"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformBindingsOutput",
+      "@type": "AbstractClass",
+      "requireElement": "IActorIteratorTransformBindingsOutput",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformOutput",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeLiteral",
+              "parameterRangeValueLiteral": "bindings"
+            },
+            {
+              "@type": "ParameterRangeWildcard"
+            },
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        }
+      ],
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformQuadOutput",
+      "@type": "AbstractClass",
+      "requireElement": "IActorIteratorTransformQuadOutput",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformOutput",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeLiteral",
+              "parameterRangeValueLiteral": "quads"
+            },
+            {
+              "@type": "ParameterRangeWildcard"
+            },
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        }
+      ],
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbit:components/ActorIteratorTransform.jsonld#ITransformIteratorOutput",
+      "@type": "AbstractClass",
+      "requireElement": "ITransformIteratorOutput",
+      "genericTypeParameters": [
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#ITransformIteratorOutput__generic_S"
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#ITransformIteratorOutput__generic_M"
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#ITransformIteratorOutput__member_stream",
+          "memberFieldName": "stream"
+        },
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#ITransformIteratorOutput__member_metadata",
+          "memberFieldName": "metadata"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IActorIteratorTransformArgs",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "cc:components/Actor.jsonld#IActorArgs",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeUnion",
+              "parameterRangeElements": [
+                "cbit:components/ActorIteratorTransform.jsonld#IActionIteratorTransformBindings",
+                "cbit:components/ActorIteratorTransform.jsonld#IActionIteratorTransformQuads"
+              ]
+            },
+            "cc:components/Actor.jsonld#IActorTest",
+            {
+              "@type": "ParameterRangeUnion",
+              "parameterRangeElements": [
+                "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformBindingsOutput",
+                "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformQuadOutput"
+              ]
+            },
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformArgs__generic_TS"
+            }
+          ]
+        }
+      ],
+      "genericTypeParameters": [
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformArgs__generic_TS",
+          "default": {
+            "@type": "ParameterRangeUndefined"
+          }
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbit:components/ActorIteratorTransform.jsonld#IActorIteratorTransformArgs__member_wraps",
+          "memberFieldName": "wraps"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

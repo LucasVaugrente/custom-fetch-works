@@ -1,0 +1,1 @@
+{"version":3,"file":"index-browser.js","sourceRoot":"","sources":["index-browser.ts"],"names":[],"mappings":";;;;;;;;;;;;;;;;AAAA,gDAA8B","sourcesContent":["export * from './QueryEngine';\n"]}

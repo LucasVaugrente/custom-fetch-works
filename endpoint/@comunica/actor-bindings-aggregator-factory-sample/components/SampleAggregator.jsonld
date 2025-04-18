@@ -1,0 +1,69 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-bindings-aggregator-factory-sample/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/types/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-bindings-aggregator-factory/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-bindings-aggregator-factory-sample",
+  "components": [
+    {
+      "@id": "cabafs:components/SampleAggregator.jsonld#SampleAggregator",
+      "@type": "Class",
+      "requireElement": "SampleAggregator",
+      "extends": [
+        "cbbaf:components/ActorBindingsAggregatorFactory.jsonld#IBindingsAggregator"
+      ],
+      "parameters": [
+        {
+          "@id": "cabafs:components/SampleAggregator.jsonld#SampleAggregator_distinct",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "cabafs:components/SampleAggregator.jsonld#SampleAggregator_evaluator",
+          "range": "ct:components/ExpressionEvaluator.jsonld#IExpressionEvaluator"
+        },
+        {
+          "@id": "cabafs:components/SampleAggregator.jsonld#SampleAggregator_throwError",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cabafs:components/SampleAggregator.jsonld#SampleAggregator__member_state",
+          "memberFieldName": "state"
+        },
+        {
+          "@id": "cabafs:components/SampleAggregator.jsonld#SampleAggregator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cabafs:components/SampleAggregator.jsonld#SampleAggregator__member_putTerm",
+          "memberFieldName": "putTerm"
+        },
+        {
+          "@id": "cabafs:components/SampleAggregator.jsonld#SampleAggregator__member_termResult",
+          "memberFieldName": "termResult"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cabafs:components/SampleAggregator.jsonld#SampleAggregator_evaluator"
+        },
+        {
+          "@id": "cabafs:components/SampleAggregator.jsonld#SampleAggregator_distinct"
+        },
+        {
+          "@id": "cabafs:components/SampleAggregator.jsonld#SampleAggregator_throwError"
+        }
+      ]
+    }
+  ]
+}

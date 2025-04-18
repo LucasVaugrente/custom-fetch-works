@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-rdf-metadata-extract-void/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-rdf-metadata-extract-void",
+  "@type": "Module",
+  "requireName": "@comunica/actor-rdf-metadata-extract-void",
+  "import": [
+    "carmev:components/ActorRdfMetadataExtractVoid.jsonld"
+  ]
+}

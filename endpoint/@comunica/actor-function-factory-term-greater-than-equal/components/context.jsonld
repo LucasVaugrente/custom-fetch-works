@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cafftgte": "npmd:@comunica/actor-function-factory-term-greater-than-equal/^4.0.0/",
+      "ActorFunctionFactoryTermGreaterThanEqual": {
+        "@id": "cafftgte:components/ActorFunctionFactoryTermGreaterThanEqual.jsonld#ActorFunctionFactoryTermGreaterThanEqual",
+        "@prefix": true,
+        "@context": {
+          "args_mediatorFunctionFactory": {
+            "@id": "cafftgte:components/ActorFunctionFactoryTermGreaterThanEqual.jsonld#ActorFunctionFactoryTermGreaterThanEqual_args_mediatorFunctionFactory"
+          },
+          "args_name": {
+            "@id": "cafftgte:components/ActorFunctionFactoryTermGreaterThanEqual.jsonld#ActorFunctionFactoryTermGreaterThanEqual_args_name"
+          },
+          "args_bus": {
+            "@id": "cafftgte:components/ActorFunctionFactoryTermGreaterThanEqual.jsonld#ActorFunctionFactoryTermGreaterThanEqual_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cafftgte:components/ActorFunctionFactoryTermGreaterThanEqual.jsonld#ActorFunctionFactoryTermGreaterThanEqual_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cafftgte:components/ActorFunctionFactoryTermGreaterThanEqual.jsonld#ActorFunctionFactoryTermGreaterThanEqual_args_beforeActors",
+            "@container": "@list"
+          },
+          "mediatorFunctionFactory": {
+            "@id": "cafftgte:components/ActorFunctionFactoryTermGreaterThanEqual.jsonld#ActorFunctionFactoryTermGreaterThanEqual_args_mediatorFunctionFactory"
+          },
+          "name": {
+            "@id": "cafftgte:components/ActorFunctionFactoryTermGreaterThanEqual.jsonld#ActorFunctionFactoryTermGreaterThanEqual_args_name"
+          },
+          "bus": {
+            "@id": "cafftgte:components/ActorFunctionFactoryTermGreaterThanEqual.jsonld#ActorFunctionFactoryTermGreaterThanEqual_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cafftgte:components/ActorFunctionFactoryTermGreaterThanEqual.jsonld#ActorFunctionFactoryTermGreaterThanEqual_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cafftgte:components/ActorFunctionFactoryTermGreaterThanEqual.jsonld#ActorFunctionFactoryTermGreaterThanEqual_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

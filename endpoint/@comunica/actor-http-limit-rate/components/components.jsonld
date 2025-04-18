@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-http-limit-rate/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-http-limit-rate",
+  "@type": "Module",
+  "requireName": "@comunica/actor-http-limit-rate",
+  "import": [
+    "cahlr:components/ActorHttpLimitRate.jsonld"
+  ]
+}

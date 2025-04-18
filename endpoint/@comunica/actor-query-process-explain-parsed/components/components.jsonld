@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-process-explain-parsed/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-query-process-explain-parsed",
+  "@type": "Module",
+  "requireName": "@comunica/actor-query-process-explain-parsed",
+  "import": [
+    "caqpep:components/ActorQueryProcessExplainParsed.jsonld"
+  ]
+}

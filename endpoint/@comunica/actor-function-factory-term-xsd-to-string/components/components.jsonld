@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-xsd-to-string/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-xsd-to-string",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-xsd-to-string",
+  "import": [
+    "cafftxts:components/ActorFunctionFactoryTermXsdToString.jsonld"
+  ]
+}

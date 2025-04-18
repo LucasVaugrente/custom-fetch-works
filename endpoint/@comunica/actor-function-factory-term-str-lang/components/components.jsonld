@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-str-lang/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-str-lang",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-str-lang",
+  "import": [
+    "cafftsl:components/ActorFunctionFactoryTermStrLang.jsonld"
+  ]
+}

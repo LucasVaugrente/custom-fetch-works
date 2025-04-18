@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "cafftxtdtd": "npmd:@comunica/actor-function-factory-term-xsd-to-day-time-duration/^4.0.0/",
+      "ActorFunctionFactoryTermXsdToDayTimeDuration": {
+        "@id": "cafftxtdtd:components/ActorFunctionFactoryTermXsdToDayTimeDuration.jsonld#ActorFunctionFactoryTermXsdToDayTimeDuration",
+        "@prefix": true,
+        "@context": {
+          "args_name": {
+            "@id": "cafftxtdtd:components/ActorFunctionFactoryTermXsdToDayTimeDuration.jsonld#ActorFunctionFactoryTermXsdToDayTimeDuration_args_name"
+          },
+          "args_bus": {
+            "@id": "cafftxtdtd:components/ActorFunctionFactoryTermXsdToDayTimeDuration.jsonld#ActorFunctionFactoryTermXsdToDayTimeDuration_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "cafftxtdtd:components/ActorFunctionFactoryTermXsdToDayTimeDuration.jsonld#ActorFunctionFactoryTermXsdToDayTimeDuration_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "cafftxtdtd:components/ActorFunctionFactoryTermXsdToDayTimeDuration.jsonld#ActorFunctionFactoryTermXsdToDayTimeDuration_args_beforeActors",
+            "@container": "@list"
+          },
+          "name": {
+            "@id": "cafftxtdtd:components/ActorFunctionFactoryTermXsdToDayTimeDuration.jsonld#ActorFunctionFactoryTermXsdToDayTimeDuration_args_name"
+          },
+          "bus": {
+            "@id": "cafftxtdtd:components/ActorFunctionFactoryTermXsdToDayTimeDuration.jsonld#ActorFunctionFactoryTermXsdToDayTimeDuration_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "cafftxtdtd:components/ActorFunctionFactoryTermXsdToDayTimeDuration.jsonld#ActorFunctionFactoryTermXsdToDayTimeDuration_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "cafftxtdtd:components/ActorFunctionFactoryTermXsdToDayTimeDuration.jsonld#ActorFunctionFactoryTermXsdToDayTimeDuration_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      }
+    }
+  ]
+}

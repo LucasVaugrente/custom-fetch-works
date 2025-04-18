@@ -1,0 +1,17 @@
+FROM node:20
+
+# Create app directory
+WORKDIR /usr/src/app
+
+# Install Solid Community Server locally (not globally, avoids npx + global path issues)
+RUN npm install @solid/community-server
+
+# Copy your custom config and data into the container
+COPY config/file.json ./config/file.json
+COPY ./data/solidproxy ./solid_server/data
+
+# Expose port 3001 (adjust if needed)
+EXPOSE 3000
+
+# Start Solid Community Server with relative config path
+CMD ["npx", "@solid/community-server", "-c", "config/file.json", "-f", "solid_server/data", "--baseUrl", "http://localhost:3001"]

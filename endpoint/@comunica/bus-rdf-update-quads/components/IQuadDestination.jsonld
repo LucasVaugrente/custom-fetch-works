@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-rdf-update-quads/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-rdf-update-quads",
+  "components": [
+    {
+      "@id": "cbruq:components/IQuadDestination.jsonld#IQuadDestination",
+      "@type": "AbstractClass",
+      "requireElement": "IQuadDestination",
+      "comment": "A quad destination.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cbruq:components/IQuadDestination.jsonld#IQuadDestination__member_update",
+          "memberFieldName": "update"
+        },
+        {
+          "@id": "cbruq:components/IQuadDestination.jsonld#IQuadDestination__member_deleteGraphs",
+          "memberFieldName": "deleteGraphs"
+        },
+        {
+          "@id": "cbruq:components/IQuadDestination.jsonld#IQuadDestination__member_createGraphs",
+          "memberFieldName": "createGraphs"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

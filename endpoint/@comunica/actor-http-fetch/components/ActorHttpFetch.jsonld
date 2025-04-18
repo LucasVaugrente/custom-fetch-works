@@ -1,0 +1,231 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-http-fetch/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-http/^4.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/core/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-http-fetch",
+  "components": [
+    {
+      "@id": "cahf:components/ActorHttpFetch.jsonld#ActorHttpFetch",
+      "@type": "Class",
+      "requireElement": "ActorHttpFetch",
+      "extends": [
+        "cbh:components/ActorHttp.jsonld#ActorHttp"
+      ],
+      "parameters": [
+        {
+          "@id": "cahf:components/ActorHttpFetch.jsonld#ActorHttpFetch_args_agentOptions",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "rdf:JSON",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": {
+            "@type": "@json",
+            "@value": {
+              "keepAlive": true,
+              "maxSockets": 5
+            }
+          },
+          "comment": "The agent options for the HTTP agent"
+        },
+        {
+          "@id": "cahf:components/ActorHttpFetch.jsonld#ActorHttpFetch_args_name",
+          "range": "xsd:string",
+          "default": {
+            "@id": "rdf:subject"
+          },
+          "comment": "The name for this actor."
+        },
+        {
+          "@id": "cahf:components/ActorHttpFetch.jsonld#ActorHttpFetch_args_bus",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "cc:components/Bus.jsonld#Bus",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericComponent",
+                "component": "cc:components/Actor.jsonld#Actor",
+                "genericTypeInstances": [
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                  },
+                  {
+                    "@type": "ParameterRangeGenericTypeReference",
+                    "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                  }
+                ]
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+              }
+            ]
+          },
+          "default": {
+            "@id": "cbh:components/ActorHttp.jsonld#ActorHttp_default_bus",
+            "@type": "cc:components/Bus.jsonld#Bus"
+          },
+          "comment": "The bus this actor subscribes to."
+        },
+        {
+          "@id": "cahf:components/ActorHttpFetch.jsonld#ActorHttpFetch_args_busFailMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "default": "HTTP request failed: none of the configured actors were able to handle ${action.input}",
+          "comment": "The message that will be configured in the bus for reporting failures.  This message may be a template string that contains references to the executed `action`. For example, the following templated string is allowed: \"RDF dereferencing failed: no actors could handle ${action.handle.mediaType}\""
+        },
+        {
+          "@id": "cahf:components/ActorHttpFetch.jsonld#ActorHttpFetch_args_beforeActors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeGenericComponent",
+                  "component": "cc:components/Actor.jsonld#Actor",
+                  "genericTypeInstances": [
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_I"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_T"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_O"
+                    },
+                    {
+                      "@type": "ParameterRangeGenericTypeReference",
+                      "parameterRangeGenericType": "npmd:@comunica/actor-abstract-mediatyped/^4.0.0/components/ActorAbstractMediaTyped.jsonld#ActorAbstractMediaTyped__generic_TS"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Actor that must be registered in the bus before this actor."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "cahf:components/ActorHttpFetch.jsonld#ActorHttpFetch__member_fetchInitPreprocessor",
+          "memberFieldName": "fetchInitPreprocessor"
+        },
+        {
+          "@id": "cahf:components/ActorHttpFetch.jsonld#ActorHttpFetch__member_userAgent",
+          "memberFieldName": "userAgent"
+        },
+        {
+          "@id": "cahf:components/ActorHttpFetch.jsonld#ActorHttpFetch__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "cahf:components/ActorHttpFetch.jsonld#ActorHttpFetch__member_test",
+          "memberFieldName": "test"
+        },
+        {
+          "@id": "cahf:components/ActorHttpFetch.jsonld#ActorHttpFetch__member_run",
+          "memberFieldName": "run"
+        },
+        {
+          "@id": "cahf:components/ActorHttpFetch.jsonld#ActorHttpFetch__member_prepareRequestHeaders",
+          "memberFieldName": "prepareRequestHeaders"
+        },
+        {
+          "@id": "cahf:components/ActorHttpFetch.jsonld#ActorHttpFetch__member_stringToBase64",
+          "memberFieldName": "stringToBase64"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "cahf:components/ActorHttpFetch.jsonld#ActorHttpFetch_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "agentOptions",
+              "value": {
+                "@id": "cahf:components/ActorHttpFetch.jsonld#ActorHttpFetch_args_agentOptions"
+              }
+            },
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "cahf:components/ActorHttpFetch.jsonld#ActorHttpFetch_args_name"
+              }
+            },
+            {
+              "keyRaw": "bus",
+              "value": {
+                "@id": "cahf:components/ActorHttpFetch.jsonld#ActorHttpFetch_args_bus"
+              }
+            },
+            {
+              "keyRaw": "busFailMessage",
+              "value": {
+                "@id": "cahf:components/ActorHttpFetch.jsonld#ActorHttpFetch_args_busFailMessage"
+              }
+            },
+            {
+              "keyRaw": "beforeActors",
+              "value": {
+                "@id": "cahf:components/ActorHttpFetch.jsonld#ActorHttpFetch_args_beforeActors"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "cahf:components/ActorHttpFetch.jsonld#IActorHttpFetchArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IActorHttpFetchArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "cahf:components/ActorHttpFetch.jsonld#IActorHttpFetchArgs__member_agentOptions",
+          "memberFieldName": "agentOptions"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

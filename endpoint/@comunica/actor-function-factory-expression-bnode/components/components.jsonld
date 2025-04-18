@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-expression-bnode/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-expression-bnode",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-expression-bnode",
+  "import": [
+    "caffeb:components/ActorFunctionFactoryExpressionBnode.jsonld"
+  ]
+}

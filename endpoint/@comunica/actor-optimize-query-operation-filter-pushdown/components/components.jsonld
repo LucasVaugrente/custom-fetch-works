@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-optimize-query-operation-filter-pushdown/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-optimize-query-operation-filter-pushdown",
+  "@type": "Module",
+  "requireName": "@comunica/actor-optimize-query-operation-filter-pushdown",
+  "import": [
+    "caoqofp:components/ActorOptimizeQueryOperationFilterPushdown.jsonld"
+  ]
+}

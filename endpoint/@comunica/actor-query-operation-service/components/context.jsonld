@@ -1,0 +1,70 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^6.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "caqoser": "npmd:@comunica/actor-query-operation-service/^4.0.0/",
+      "ActorQueryOperationService": {
+        "@id": "caqoser:components/ActorQueryOperationService.jsonld#ActorQueryOperationService",
+        "@prefix": true,
+        "@context": {
+          "args_forceSparqlEndpoint": {
+            "@id": "caqoser:components/ActorQueryOperationService.jsonld#ActorQueryOperationService_args_forceSparqlEndpoint"
+          },
+          "args_mediatorMergeBindingsContext": {
+            "@id": "caqoser:components/ActorQueryOperationService.jsonld#ActorQueryOperationService_args_mediatorMergeBindingsContext"
+          },
+          "args_mediatorQuerySourceIdentify": {
+            "@id": "caqoser:components/ActorQueryOperationService.jsonld#ActorQueryOperationService_args_mediatorQuerySourceIdentify"
+          },
+          "args_mediatorQueryOperation": {
+            "@id": "caqoser:components/ActorQueryOperationService.jsonld#ActorQueryOperationService_args_mediatorQueryOperation"
+          },
+          "args_name": {
+            "@id": "caqoser:components/ActorQueryOperationService.jsonld#ActorQueryOperationService_args_name"
+          },
+          "args_bus": {
+            "@id": "caqoser:components/ActorQueryOperationService.jsonld#ActorQueryOperationService_args_bus"
+          },
+          "args_busFailMessage": {
+            "@id": "caqoser:components/ActorQueryOperationService.jsonld#ActorQueryOperationService_args_busFailMessage"
+          },
+          "args_beforeActors": {
+            "@id": "caqoser:components/ActorQueryOperationService.jsonld#ActorQueryOperationService_args_beforeActors",
+            "@container": "@list"
+          },
+          "forceSparqlEndpoint": {
+            "@id": "caqoser:components/ActorQueryOperationService.jsonld#ActorQueryOperationService_args_forceSparqlEndpoint"
+          },
+          "mediatorMergeBindingsContext": {
+            "@id": "caqoser:components/ActorQueryOperationService.jsonld#ActorQueryOperationService_args_mediatorMergeBindingsContext"
+          },
+          "mediatorQuerySourceIdentify": {
+            "@id": "caqoser:components/ActorQueryOperationService.jsonld#ActorQueryOperationService_args_mediatorQuerySourceIdentify"
+          },
+          "mediatorQueryOperation": {
+            "@id": "caqoser:components/ActorQueryOperationService.jsonld#ActorQueryOperationService_args_mediatorQueryOperation"
+          },
+          "name": {
+            "@id": "caqoser:components/ActorQueryOperationService.jsonld#ActorQueryOperationService_args_name"
+          },
+          "bus": {
+            "@id": "caqoser:components/ActorQueryOperationService.jsonld#ActorQueryOperationService_args_bus"
+          },
+          "busFailMessage": {
+            "@id": "caqoser:components/ActorQueryOperationService.jsonld#ActorQueryOperationService_args_busFailMessage"
+          },
+          "beforeActors": {
+            "@id": "caqoser:components/ActorQueryOperationService.jsonld#ActorQueryOperationService_args_beforeActors",
+            "@container": "@list"
+          }
+        }
+      },
+      "IActorQueryOperationServiceArgs": {
+        "@id": "caqoser:components/ActorQueryOperationService.jsonld#IActorQueryOperationServiceArgs",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

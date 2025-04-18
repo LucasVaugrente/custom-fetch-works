@@ -1,0 +1,17 @@
+# Use an official Node.js runtime as a base image
+FROM node:20
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Copy the data directory into the container
+COPY ./data ./data
+
+# Install the Comunica SPARQL file HTTP package from the web
+RUN npm install @comunica/query-sparql-file
+
+# Expose the port for external access
+EXPOSE 4001
+
+# Set the default command to run the Comunica SPARQL file HTTP server
+CMD ["npx", "comunica-sparql-file-http", "-p", "4001", "./data/vendor2.ttl"]

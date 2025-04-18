@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-function-factory-term-is-iri/^4.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-function-factory-term-is-iri",
+  "@type": "Module",
+  "requireName": "@comunica/actor-function-factory-term-is-iri",
+  "import": [
+    "cafftii:components/ActorFunctionFactoryTermIsIri.jsonld"
+  ]
+}

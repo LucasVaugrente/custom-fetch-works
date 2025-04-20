@@ -1,6 +1,0 @@
-SELECT (COUNT(*) AS ?count) WHERE {
-  SELECT ?price ?product ?s WHERE {
-    ?s <http://www.example.com/sameAs> ?product.
-    ?s <http://www.example.com/hasPrice> ?price.
-  }
-}

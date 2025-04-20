@@ -48,8 +48,8 @@ class SparqlEndpointFetcher {
     };
   }
 
-  async init() {
-    const { accessToken, dpopKey } = await generateAccessTokenAndDpop();
+  async init(endpoint) {
+    const { accessToken, dpopKey } = await generateAccessTokenAndDpop(endpoint);
     this.accessToken = accessToken;
     this.dpopKey = dpopKey;
 
@@ -104,7 +104,7 @@ class SparqlEndpointFetcher {
    * @return {Promise<NodeJS.ReadableStream>} A stream of {@link IBindings}.
    */
   async fetchBindings(endpoint, query) {
-    await this.init();
+    await this.init(endpoint);
     return __awaiter(this, void 0, void 0, function* () {
       const [contentType, responseStream] = yield this.fetchRawStream(endpoint, query, SparqlEndpointFetcher.CONTENTTYPE_SPARQL);
       const parser = this.sparqlParsers[contentType];
@@ -253,10 +253,12 @@ class SparqlEndpointFetcher {
   }
 }
 
-async function generateAccessTokenAndDpop() {
+async function generateAccessTokenAndDpop(endpoint) {
+  endpoint = endpoint.split('/').slice(0, 3).join('/');  
+
   const email = process.env.EMAILUSER;
   const password = process.env.MDP;
-  const serverUrl = process.env.BASE_URL || "http://localhost:3001";  
+  const serverUrl = endpoint;  
 
   if (!email || !password) {
     throw new Error("❌ Variables EMAILUSER et MDP manquantes dans l'environnement");
@@ -268,22 +270,23 @@ async function generateAccessTokenAndDpop() {
 
   const webId = `${serverUrl}/${email.split('@')[0]}/profile/card#me`;
 
-  const authToken = await login(email, password);
-  const { id, secret } = await getClientCredentials(authToken, webId);
-  const access_token = await getAccessToken(id, secret, dpopKey);
+  const authToken = await login(email, password, serverUrl);
+  const { id, secret } = await getClientCredentials(authToken, webId, serverUrl);
+  const access_token = await getAccessToken(id, secret, dpopKey, serverUrl);
 
   return { accessToken: access_token, dpopKey };
 }
 
-async function fetchControls(auth = null) {
+async function fetchControls(serverUrl, auth = null) {  
   const headers = auth ? { authorization: `CSS-Account-Token ${auth}` } : {};
-  const indexResponse = await fetch(`http://localhost:3001/.account/`, { headers });
+  const indexResponse = await fetch(serverUrl + `/.account/`, { headers });
   const { controls } = await indexResponse.json();
   return controls;
 }
 
-async function login(email, password) {
-  const controls = await fetchControls();
+async function login(email, password, serverUrl) {
+  const controls = await fetchControls(serverUrl);
+
   const loginResponse = await fetch(controls.password.login, {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
@@ -294,9 +297,9 @@ async function login(email, password) {
   return authorization;
 }
 
-async function getClientCredentials(authToken, webId) {
-  const controls = await fetchControls(authToken);
-  const clientCredsUrl = controls.account?.clientCredentials ?? `http://localhost:3001/.account/client-credentials/`;
+async function getClientCredentials(authToken, webId, serverUrl) {
+  const controls = await fetchControls(serverUrl, authToken);
+  const clientCredsUrl = controls.account?.clientCredentials ?? serverUrl + `/.account/client-credentials/`;
   const response = await fetch(clientCredsUrl, {
     method: 'POST',
     headers: {
@@ -309,8 +312,8 @@ async function getClientCredentials(authToken, webId) {
   return { id, secret };
 }
 
-async function getAccessToken(id, secret, dpopKey) {
-  const tokenUrl = `http://localhost:3001/.oidc/token`;
+async function getAccessToken(id, secret, dpopKey, serverUrl) {
+  const tokenUrl = serverUrl + `/.oidc/token`;
   const authString = `${encodeURIComponent(id)}:${encodeURIComponent(secret)}`;
   const response = await fetch(tokenUrl, {
     method: 'POST',

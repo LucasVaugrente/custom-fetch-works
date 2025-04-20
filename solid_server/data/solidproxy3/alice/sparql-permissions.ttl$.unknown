@@ -1,0 +1,1 @@
+SELECT ?s ?price WHERE { ?s <http://www.example.com/hasPrice> ?price. }

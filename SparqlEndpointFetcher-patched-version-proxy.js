@@ -264,7 +264,7 @@ async function generateAccessTokenAndDpop(endpoint) {
     throw new Error("❌ Variables EMAILUSER et MDP manquantes dans l'environnement");
   }
 
-  console.log("Authentifié avec : ", email, " + ", password);
+  // console.log("Authentifié avec : ", email, " + ", password);
 
   const dpopKey = await generateDpopKeyPair();
 

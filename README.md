@@ -6,7 +6,7 @@ Tout d'abord :
 
 On doit importer le patch dans fetchsparqlendpoint :
 
-    cp SparqlEndpointFetcher-patched-version-proxy.js node_modules/fetch-sparql-endpoint/lib/SparqlEnfpointFetcher.js
+    cp SparqlEndpointFetcher-patched-version-proxy.js node_modules/fetch-sparql-endpoint/lib/SparqlEndpointFetcher.js
 
 Puis, lancez le bash :
 

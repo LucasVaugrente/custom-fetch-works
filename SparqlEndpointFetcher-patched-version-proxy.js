@@ -19,6 +19,7 @@ const sparqlxml_parse_1 = require("sparqlxml-parse");
 const stringifyStream = require("stream-to-string");
 const fetch = require('node-fetch');
 const { buildAuthenticatedFetch, createDpopHeader, generateDpopKeyPair } = require('@inrupt/solid-client-authn-core');
+const { Readable } = require('stream');
 
 /**
  * A SparqlEndpointFetcher can send queries to SPARQL endpoints,
@@ -223,32 +224,35 @@ class SparqlEndpointFetcher {
    */
   handleFetchCall(url, init, options) {
     return __awaiter(this, void 0, void 0, function* () {
-      var _a, _b, _c;
       let timeout;
       let responseStream;
-      if (this.timeout) {
-        const controller = new AbortController();
-        init.signal = controller.signal;
-        timeout = setTimeout(() => controller.abort(), this.timeout);
+      try {
+        if (this.timeout) {
+          const controller = new AbortController();
+          init.signal = controller.signal;
+          timeout = setTimeout(() => controller.abort(), this.timeout);
+        }
+  
+        const httpResponse = yield (this.fetchCb ?? fetch)(url, init);
+        clearTimeout(timeout);
+  
+        if (!httpResponse.ok) {
+          throw new Error(`HTTP ${httpResponse.status}`);
+        }
+  
+        responseStream = isStream(httpResponse.body)
+          ? httpResponse.body
+          : readable_from_web_1.readableFromWeb(httpResponse.body);
+  
+        const contentType = httpResponse.headers.get('Content-Type')?.split(';')[0] ?? '';
+        return [contentType, responseStream];
+  
+      } catch (e) {  
+        const emptyStream = Readable.from([]);
+        const fallbackType = SparqlEndpointFetcher.CONTENTTYPE_SPARQL_JSON; // ou autre selon le contexte
+  
+        return [fallbackType, emptyStream];
       }
-
-      const httpResponse = yield ((_a = this.fetchCb) !== null && _a !== void 0 ? _a : fetch)(url, init);
-      clearTimeout(timeout);
-      // Handle response body
-      if (!(options === null || options === void 0 ? void 0 : options.ignoreBody) && httpResponse.body) {
-        // Wrap WhatWG readable stream into a Node.js readable stream
-        // If the body already is a Node.js stream (in the case of node-fetch), don't do explicit conversion.
-        responseStream = (isStream(httpResponse.body) ? httpResponse.body : (0, readable_from_web_1.readableFromWeb)(httpResponse.body));
-      }
-      // Emit an error if the server returned an invalid response
-      if (!httpResponse.ok || (!responseStream && !(options === null || options === void 0 ? void 0 : options.ignoreBody))) {
-        const simpleUrl = url.split('?').at(0);
-        const bodyString = responseStream ? yield stringifyStream(responseStream) : 'empty response';
-        throw new Error(`Invalid SPARQL endpoint response from ${simpleUrl} (HTTP status ${httpResponse.status}):\n${bodyString}`);
-      }
-      // Determine the content type
-      const contentType = (_c = (_b = httpResponse.headers.get('Content-Type')) === null || _b === void 0 ? void 0 : _b.split(';').at(0)) !== null && _c !== void 0 ? _c : '';
-      return [contentType, responseStream];
     });
   }
 }

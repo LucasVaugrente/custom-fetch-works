@@ -12,6 +12,6 @@
 # Autorisation pour Bob en lecture seule sur les requêtes SPARQL
 <#readAuth>
     a acl:Authorization;
-    acl:agent <http://localhost:4000/bob/profile/card#me>;
+    acl:agent <http://localhost:3002/bob/profile/card#me>;
     acl:accessTo <http://localhost:4000/alice/sparql-permissions.ttl>;
     acl:mode acl:Read, acl:Write.

@@ -3,10 +3,10 @@
 
 <>
     a foaf:PersonalProfileDocument;
-    foaf:maker <http://localhost:3001/bob/profile/card#me>;
-    foaf:primaryTopic <http://localhost:3001/bob/profile/card#me>.
+    foaf:maker <http://localhost:3002/bob/profile/card#me>;
+    foaf:primaryTopic <http://localhost:3002/bob/profile/card#me>.
 
-<http://localhost:3001/bob/profile/card#me>
+<http://localhost:3002/bob/profile/card#me>
     
-    solid:oidcIssuer <http://localhost:3001/>;
+    solid:oidcIssuer <http://localhost:3002/>;
     a foaf:Person.

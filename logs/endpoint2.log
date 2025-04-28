@@ -1,0 +1,32 @@
+Server running on http://localhost:5001/sparql
+Server worker (123983) running on http://localhost:5001/sparql
+[200] GET to /sparql
+      Requested media type: text/turtle
+      Received query for service description.
+[200] POST to /sparql
+      Requested media type: null
+      Received query query: SELECT (COUNT(*) AS ?count) WHERE { ?s <http://www.example.com/sameAs> ?product. }
+Worker 123983 got assigned a new query (1).
+      Resolved to result media type: application/sparql-results+json
+Worker 123983 has completed query 1.
+[200] POST to /sparql
+      Requested media type: null
+      Received query query: SELECT (COUNT(*) AS ?count) WHERE { ?s <http://www.example.com/hasPrice> ?price. }
+Worker 123983 got assigned a new query (2).
+      Resolved to result media type: application/sparql-results+json
+Worker 123983 has completed query 2.
+[200] POST to /sparql
+      Requested media type: null
+      Received query query: SELECT ?s ?product WHERE { ?s <http://www.example.com/sameAs> ?product. }
+Worker 123983 got assigned a new query (3).
+      Resolved to result media type: application/sparql-results+json
+Worker 123983 has completed query 3.
+[200] POST to /sparql
+      Requested media type: null
+      Received query query: SELECT ?s ?price WHERE { ?s <http://www.example.com/hasPrice> ?price. }
+Worker 123983 got assigned a new query (4).
+      Resolved to result media type: application/sparql-results+json
+Worker 123983 has completed query 4.
+[200] GET to /sparql
+      Requested media type: text/turtle
+      Received query for service description.

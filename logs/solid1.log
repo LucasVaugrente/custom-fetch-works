@@ -1,0 +1,31 @@
+2025-04-27T16:07:48.231Z [Components.js] [32minfo[39m: Initiating component discovery from /home/lucas/.npm/_npx/519be4cd80562143/node_modules/@solid/community-server/
+2025-04-27T16:07:48.380Z [Components.js] [32minfo[39m: Discovered 168 component packages within 531 packages
+2025-04-27T16:07:48.381Z [Components.js] [32minfo[39m: Initiating component loading
+2025-04-27T16:07:51.329Z [Components.js] [32minfo[39m: Registered 899 components
+2025-04-27T16:07:51.329Z [Components.js] [32minfo[39m: Loaded configs
+2025-04-27T16:07:52.893Z [ServerInitializer] {Primary} [32minfo[39m: Listening to server at http://localhost:3000/
+Process is halting due to an uncaughtException with error listen EADDRINUSE: address already in use :::3000
+node:events:495
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1811:16)
+    at listenInCluster (node:net:1859:12)
+    at Server.listen (node:net:1947:7)
+    at ServerInitializer.handle (/home/lucas/.npm/_npx/519be4cd80562143/node_modules/@solid/community-server/dist/init/ServerInitializer.js:35:25)
+    at async SequenceHandler.handle (/home/lucas/.npm/_npx/519be4cd80562143/node_modules/@solid/community-server/dist/util/handlers/SequenceHandler.js:28:26)
+    at async SequenceHandler.handle (/home/lucas/.npm/_npx/519be4cd80562143/node_modules/@solid/community-server/dist/util/handlers/SequenceHandler.js:28:26)
+    at async App.start (/home/lucas/.npm/_npx/519be4cd80562143/node_modules/@solid/community-server/dist/init/App.js:20:9)
+    at async AppRunner.runCli (/home/lucas/.npm/_npx/519be4cd80562143/node_modules/@solid/community-server/dist/init/AppRunner.js:104:13)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1838:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v18.19.1
